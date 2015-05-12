@@ -1710,7 +1710,6 @@ a.m.
 a.m.m.
 a.s.
 a.u.
-a/c.
 abbrev.
 abl.
 absol.

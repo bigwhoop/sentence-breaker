@@ -1,37 +1,36 @@
-ad.
-ads.
-adsm.
-adj.
 Am. Jur.
 Am. Jur. 2d.
-Ariz. Admin. Reg
 Ariz. Rev. Stat.
 B.A.P.
 C.F.R.
-Cong. Rec. — Congressional Record
-Ct. Cl. — the United States Court of Federal Claims Reporter
-et al. — Latin for "and others".
-F.Cas. — Federal Cases 1789–1880
-Fed. Reg. (sometimes FR) — Federal Register (see Federal Register for full text from 1994 to date)
-Fed. R. Bankr. P. — Federal Rules of Bankruptcy Procedure
-Fed. R. Civ. P. (sometimes FRCP) — Federal Rules of Civil Procedure
-Fed. R. Crim. P. — Federal Rules of Criminal Procedure
-Fed. R. Evid. (sometimes FRE) — Federal Rules of Evidence
-F.Supp. — Federal Supplement
-N.W. — North Western Reporter
-p. — Page
-pp. — Pages
-R.E. — Real Estate
-Rev. Proc. — Revenue Procedure (published in IRB)
-Rev. Rul. — Revenue Ruling (published in IRB)
-s. — Section
-ss. — Sections
-S.C.R. — Supreme Court Reports (Supreme Court of Canada)
-S. Ct. — Supreme Court Reporter (Supreme Court of the United States)
-S.E. — South Eastern Reporter
-So. — Southern Reporter
-Stat. — United States Statutes at Large (See United States Code)
-S.W. — South Western Reporter
-T.D. — Treasury Decision
-U.S. — United States Reports
-v. — versus
+Cong. Rec.
+Ct. Cl.
+F.Cas.
+F.Supp.
+Fed. R. Bankr. P.
+Fed. R. Civ. P.
+Fed. R. Crim. P.
+Fed. R. Evid.
+Fed. Reg.
+N.W.
+R.E.
+Rev. Proc.
+Rev. Rul.
+S. Ct.
+S.C.R.
+S.E.
+S.W.
+So.
+Stat.
+T.D.
+U.S.
+ad.
+adj.
+ads.
+adsm.
+et al.
+p.
+pp.
+s.
+ss.
+v.

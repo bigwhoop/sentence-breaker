@@ -1,5 +1,61 @@
+A TE.
+A TER.
+A.
+A.A.
+A.A.A.F.F.
+A.A.V.
+A.B.
+A.B.A.
+A.B.M.
+A.C.
 A.D.
+A.D.A.
+A.D.V.
+A.F.
+A.G.
+A.L.AE.
+A.L.E.
+A.M.
+A.M.D.G.
+A.MILL.
+A.O.
+A.P.
+A.P.F.
+A.P.M.
+A.P.R.C.
+A.Q.I.C.
+A.R.S.
+A.T.C.
+A.T.M.D.O.
+A.U.
 A.V.
+A.V.C.
+AA.
+AAA.
+ABB.
+AED.
+AEDILIC.
+AEL.
+AEM.
+AEO.
+AEPP.
+AER.
+AER.P.
+AG.
+AIM.
+AN.
+ANN.
+ANT.
+AP.
+AR.V.V.D.D.
+ARG.
+AV.
+AVG.
+AVGG.
+AVGGG.
+AVR.
+AVT.PR.R.
+Ab.
 Abbrev.
 Abd.
 Aberd.
@@ -10,7 +66,9 @@ Abp.
 Abr.
 Abridg.
 Abridgem.
+Abs.
 Absol.
+Absoluo.
 Abst.
 Abstr.
 Acad.
@@ -26,6 +84,7 @@ Add.
 Addit.
 Addr.
 Adm.
+Adm. Rev.
 Admin.
 Admir.
 Admon.
@@ -42,13 +101,18 @@ Aff.
 Affect.
 Afr.
 Agric.
+Alb.
 Alch.
 Alg.
 Alleg.
 Allit.
 Alm.
 Alph.
+Alr.
+Am. Jur.
+Am. Jur. 2d.
 Amer.
+An.
 Anal.
 Analyt.
 Anat.
@@ -67,9 +131,14 @@ Ant.
 Anthrop.
 Anthropol.
 Antiq.
+Ap. Sed.
+Ap. Sed. Leg.
+Aplica.
 Apoc.
 Apol.
+Apost.
 App.
+Appatis.
 Appl.
 Applic.
 Apr.
@@ -77,11 +146,16 @@ Arab.
 Arb.
 Arch.
 Archaeol.
+Archid.
+Archiep.
+Archiepus.
 Archipel.
+Archiprb.
 Archit.
 Argt.
 Arith.
 Arithm.
+Ariz. Rev. Stat.
 Arrangem.
 Artic.
 Artific.
@@ -96,18 +170,56 @@ Astron.
 Astronaut.
 Att.
 Attrib.
+Aucte.
 Aug.
 Austral.
 Auth.
+Authen.
 Autobiog.
 Autobiogr.
+Aux.
 Ayrsh.
+B.
+B. BB.
+B. Se.
+B.A.
+B.A.P.
+B.B.
 B.C.
+B.C.L.
+B.D.
+B.D.S.M.
+B.DD.
+B.F.
+B.H.
+B.I.
+B.I.C.
+B.I.I.
+B.M.
+B.M.F.
+B.M.V.
+B.N.
+B.P.
+B.Q.
+B.RP.N.
+B.S.
+B.T.
+B.U.J.
+B.V.
+B.V.M.
+B.V.V.
+BB.
+BMT.
+BN.H.I.
+BRT.
+BX.
 Bacteriol.
 Bedford.
 Bedfordsh.
 Bel & Dr.
 Belg.
+Ben.
+Benevol.
 Berks.
 Berksh.
 Berw.
@@ -119,31 +231,98 @@ Biogr.
 Biol.
 Bk.
 Bks.
+Bon. Mem.
 Bord.
 Bot.
 Bp.
 Braz.
 Brit.
+Bro.
 Bucks.
 Build.
 Bull.
 Bur.
 C.
+C. SS. R.
+C.B.
+C.C.
+C.C.C.
+C.C.F.
+C.D.
+C.F.
+C.F.R.
+C.H.
+C.I.
+C.J.M.
+C.M.
+C.O..
+C.O.B.Q.
+C.P.
+C.PP.S.
+C.R.
+C.R.C.S.
+C.R.I.C.
+C.R.L.
+C.R.M.
+C.R.M.D.
+C.R.M.I.
+C.R.P.
+C.R.S.P.
+C.R.T.
+C.S.B.
+C.S.C.
+C.S.P.
+C.S.Sp.
+C.S.V.
+C.SS.CC.
+C.V.
+CAL.
+CC.
+CC. VV.
+CC.VV.
+CES.
+CESS.
+CL.
+CL.V.
+CN.
+COH.
+COI.
+COL.
+COLL.
+COM.
+CON.
+COR.
+COS.
+COSS.
+CS.
+CVR.
 Cal.
 Calc.
 Calend.
 Calif.
 Calligr.
+Cam.
+Cam. Ap.
 Camb.
 Cambr.
 Campanol.
+Can.
 Canad.
+Canc.
+Canice.
 Canterb.
+Cap.
+Cap. de seq.
+Capel.
 Capt.
+Card.
 Cartogr.
 Catal.
 Catech.
 Cath.
+Caus.
+Cen. Eccl.
+Cens.
 Cent.
 Ceram.
 Cert.
@@ -163,15 +342,25 @@ Chronol.
 Chrons.
 Cinematogr.
 Circ.
+Circumpeone.
 Civil Engin.
 Cl.
+Cl. V.
+Cla.
 Class.
 Class. Antiq.
 Classif.
+Clico.
 Climatol.
 Clin.
+Clun.
+Cod.
+Cog. Leg.
+Cog. Spir.
+Coione.
 Col.
 Coll.
+Coll. Cone.
 Collect.
 Colloq.
 Coloss.
@@ -179,6 +368,8 @@ Com.
 Comb.
 Combs.
 Comm.
+Comm. Prec.
+Comm. Seq.
 Commandm.
 Commend.
 Commerc.
@@ -192,21 +383,30 @@ Compar.
 Compend.
 Compl.
 Compos.
+Con.
 Conc.
 Conch.
 Concl.
+Cone.
 Conf.
+Conf. Doct.
+Conf. Pont.
+Confeone.
 Confid.
 Confl.
 Confut.
+Cong. Rec.
 Congr.
 Congreg.
 Congress.
 Conn.
+Cons.
 Consc.
+Consciae.
 Consecr.
 Consid.
 Consol.
+Const. Ap.
 Constit.
 Constit. Hist.
 Constr.
@@ -229,6 +429,7 @@ Corr.
 Corresp.
 Counc.
 Courtsh.
+Cr.
 Craniol.
 Craniom.
 Crim.
@@ -238,12 +439,44 @@ Crts.
 Cryptogr.
 Crystallogr.
 Ct.
+Ct. Cl.
 Cumb.
 Cumberld.
 Cumbld.
 Cycl.
 Cytol.
+D.
+D.A.W.
 D.C.
+D.C.L.
+D.D.
+D.D.D.
+D.D.L.M.
+D.E.R.
+D.G.
+D.I.
+D.I.P.
+D.M.
+D.M.P.S.
+D.M.S.
+D.N.
+D.N.I.C.
+D.N.J.C.
+D.O.M.
+D.O.M.A.
+D.P.S.
+D.R.
+D.S.I.M.
+D.Se.
+D.V.
+D.W.
+D.l.M.
+DD.
+DD. NN.
+DEC.
+DEP.
+DES.
+DNO.
 Dan.
 Dau.
 Deb.
@@ -270,8 +503,10 @@ Dis.
 Disc.
 Discipl.
 Discov.
+Discreoni.
 Discrim.
 Discuss.
+Dispensao.
 Diss.
 Dist.
 Distemp.
@@ -280,20 +515,48 @@ Distrib.
 Div.
 Divers.
 Dk.
+Dni.
 Doc.
+Doct.
 Doctr.
+Dom.
 Domest.
+Doxol.
+Dr. iur.
+Dupl.
+Dupl. I. Cl.
+Dupl. II. Cl.
+Dupl. Maj.
 Durh.
+E VIV. DISC.
+E(X)T.
+E(X)V.
 E.
 E. Afr.
 E. Angl.
 E. Ind.
 E.D.D.
 E.E.T.S.
+E.G.
+E.M.
+E.P.
+E.Q.R.
+E.R.A.
+E.V.
+EG.
+EL.
+EP.
+EPI.
+EPO.
+EQ.
+EQ.M.
+EX. TM.
 East Ind.
 Eccl.
 Eccl. Hist.
+Ecclae.
 Eccles.
+Ecclis.
 Ecclus.
 Ecol.
 Econ.
@@ -302,8 +565,10 @@ Edin.
 Edinb.
 Educ.
 Edw.
+Effum.
 Egypt.
 Egyptol.
+El.
 Electr.
 Electr. Engin.
 Electro-magn.
@@ -332,12 +597,14 @@ Epil.
 Episc.
 Epist.
 Epit.
+Epus.
 Equip.
 Esd.
 Ess.
 Essent.
 Establ.
 Esth.
+Et.
 Ethnol.
 Etymol.
 Eval.
@@ -345,13 +612,17 @@ Evang.
 Even.
 Evid.
 Evol.
+Ex.
 Ex. doc.
 Exalt.
 Exam.
 Exch.
+Excoe.
+Exe.
 Exec.
 Exerc.
 Exhib.
+Exit.
 Exod.
 Exped.
 Exper.
@@ -360,10 +631,33 @@ Explic.
 Explor.
 Expos.
 Ezek.
+F.
+F.C.
+F.Cas.
+F.D.
+F.F.
+F.F.C.
+F.F.F.
+F.L.
+F.R.
+F.S.S.P.
+F.Supp.
+FF.
+FL.
+FR.
+FS.
 Fab.
 Fam.
 Farew.
 Feb.
+Fed. R. Bankr. P.
+Fed. R. Civ. P.
+Fed. R. Crim. P.
+Fed. R. Evid.
+Fed. Reg.
+Fel. Mem.
+Fel. Rec.
+Fer.
 Ff.
 Fifesh.
 Footpr.
@@ -375,8 +669,15 @@ Fr.
 Fragm.
 Fratern.
 Friendsh.
+Frum.
 Fund.
 Furnit.
+G.
+G.F.
+G.P.F.
+G.P.R.
+GL.
+GN.
 Gal.
 Gard.
 Gastron.
@@ -390,6 +691,7 @@ Geol.
 Geom.
 Geomorphol.
 Ger.
+Gl.
 Glac.
 Glasg.
 Glos.
@@ -400,9 +702,26 @@ Gosp.
 Gov.
 Govt.
 Gr.
+Grad.
 Gram.
+Grat.
 Gt.
 Gynaecol.
+H.
+H.B.
+H.F.C.
+H.L.
+H.L.S.
+H.M.
+H.M.F.F.
+H.M.P.
+H.S.
+H.S.E.
+H.V.
+HBQ.
+HER.
+HERC.
+HH.
 Hab.
 Haematol.
 Hag.
@@ -428,13 +747,43 @@ Hos.
 Hosp.
 Househ.
 Housek.
+Humil.
+Humoi.
 Husb.
 Hydraul.
 Hydrol.
+I.
+I.C.
+I.C.R.S.P.
+I.C.R.S.S.
+I.D.M.
+I.E.
+I.F.
+I.H.
+I.H.S.
+I.L.H.
+I.N.R.I.
+I.O.M.
+I.P.
+I.S.V.P.
+I.X.
+IA.
+ID.
+IDNE.
+IHS.
+ILL.
+IM.
+IMP.
+INB.
+IND.
+IVL.
+IVN.
 Ichth.
 Icthyol.
+Id.
 Ideol.
 Idol.
+Igr.
 Illustr.
 Imag.
 Immunol.
@@ -445,10 +794,12 @@ Ind.
 Industr.
 Industr. Rel.
 Infl.
+Infraptum.
 Innoc.
 Inorg.
 Inq.
 Inst.
+Inst. Char.
 Instr.
 Intell.
 Intellect.
@@ -458,6 +809,7 @@ Internat.
 Interpr.
 Intro.
 Introd.
+Intropta.
 Inv.
 Invent.
 Invert. Zool.
@@ -467,14 +819,24 @@ Investm.
 Invoc.
 Ir.
 Irel.
+Irregulte.
+Is.
 Isa.
 Ital.
+J.C.
+J.C.D.
+J.D.
+J.M.J.
+J.U.D.
+J.U.L.
 Jahrb.
 Jam.
 Jan.
 Jap.
 Jas.
 Jer.
+Jo.
+Joann.
 Josh.
 Jrnl.
 Jrnls.
@@ -482,19 +844,42 @@ Jud.
 Judg.
 Jul.
 Jun.
+Jur.
 Jurisd.
 Jurisdict.
 Jurispr.
 Justif.
 Justific.
 K.
+K.B.M.
+KAL.
+KL.
+Kal.
 Kent.
 Kgs.
 Kingd.
 King’s Bench Div.
 Knowl.
 Kpr.
+L.
+L.A.S.
+L.C.D.
+L.D.D.D.
+L.H.D.
+L.L.V.S.
+L.M.
+L.S.
+LB.
+LEG.
+LIB.
+LL.
+LL.B.
+LL.D.
+LL.M.
+LV.P.F.
+LVD.
 Lab.
+Laic.
 Lam.
 Lament.
 Lanc.
@@ -503,11 +888,13 @@ Lancs.
 Lang.
 Langs.
 Lat.
+Laud.
 Ld.
 Lds.
 Lect.
 Leechd.
 Leg.
+Legit.
 Leicest.
 Leicester.
 Leicestersh.
@@ -516,7 +903,10 @@ Let.
 Lett.
 Lev.
 Lex.
+Lia.
+Lib.
 Libr.
+Lic.
 Limnol.
 Lincolnsh.
 Lincs.
@@ -525,23 +915,60 @@ Linn.
 Lit.
 Lithogr.
 Lithol.
+Litma.
+Litt.
 Liturg.
+Lo.
+Loc.
 Lond.
+Lov.
+Lovan.
+Lre.
+Ltd.
+Lte.
+Lud.
+M'.
+M.
+M. P.
+M.A.
+M.C.
+M.D.
+M.F.
+M.I.
+M.O.
+M.P.
+M.R.
+M.S.
+M.S.C.
+M.V.S.
+MES.
+MESS.
+MM.
+MNT.
+MON.
+MRT.
 MS.
 MSS.
+MVN.
 Macc.
 Mach.
 Mag.
 Magn.
+Magro.
 Mal.
 Man.
 Managem.
 Manch.
+Mand.
+Mand. Ap.
 Manip.
 Manuf.
 Mar.
+Mart.
 Mass.
+Mat.
 Math.
+Matr.
 Matt.
 Meas.
 Measurem.
@@ -560,6 +987,7 @@ Meteorol.
 Meth.
 Metrop.
 Mex.
+Mgr.
 Mic.
 Mich.
 Microbiol.
@@ -568,11 +996,16 @@ Mil.
 Milit.
 Min.
 Mineral.
+Mir.
+Miraone.
 Misc.
 Miscell.
+Miss.
+Miss. Apost.
 Mod.
 Monum.
 Morphol.
+Mrimonium.
 Mt.
 Mtg.
 Mts.
@@ -586,15 +1019,32 @@ Mythol.
 N.
 N. Afr.
 N. Amer.
+N. D.
 N. Ir.
 N. Irel.
+N.B.
 N.E.
 N.E.D.
+N.F.C.
+N.L.
+N.M.T.
+N.M.V.
+N.N.
+N.P.
+N.S.
 N.S.W.
 N.T.
+N.T.E.
 N.W.
 N.Y.
 N.Z.
+NEP.
+NN.
+NNO.
+NNR.
+NOB.
+NOBR.
+NOV.
 Nah.
 Narr.
 Narrat.
@@ -602,6 +1052,7 @@ Nat.
 Nat. Hist.
 Nat. Philos.
 Nat. Sci.
+Nativ. D.N.J.C.
 Naut.
 Nav.
 Navig.
@@ -613,8 +1064,12 @@ Neurosurg.
 New Hampsh.
 Newc.
 Newspr.
+Nigr.
 No.
+Nob.
+Noct.
 Non-conf.
+Non.
 Nonconf.
 Norf.
 Northamptonsh.
@@ -624,13 +1079,54 @@ Northumbld.
 Northumbr.
 Norw.
 Norweg.
+Nostr.
+Not.
 Notts.
 Nov.
+Ntri.
 Nucl.
+Nultus.
 Num.
 Numism.
+Nup.
+O.
+O. Camald.
+O. Cart.
+O. Cist.
+O. Merced.
+O. Trinit.
+O.C.
+O.C.C.
+O.C.D.
+O.C.R.
+O.C.S.
 O.E.D.
+O.F.M.
+O.F.M. Cap.
+O.H.F.
+O.H.S.S.
+O.M.
+O.M. Cap.
+O.M.C.
+O.M.I.
+O.P.
+O.S.
+O.S.A.
+O.S.B.
+O.S.C.
+O.S.F.C.
+O.S.F.S.
+O.S.H.
+O.S.M.
+O.SS.C.
 O.T.
+O.T.B.Q.
+OB.
+OB. IN XTO.
+OMS.
+OP.
+OR.
+Ob.
 Obad.
 Obed.
 Obj.
@@ -647,13 +1143,21 @@ Oct.
 Off.
 Offic.
 Okla.
+Omn.
 Ont.
+Op. Cit.
 Ophthalm.
 Ophthalmol.
 Oppress.
 Opt.
+Or.
 Orac.
+Orat.
+Ord Fratr. Praed.
 Ord.
+Ord. Praem.
+Ordinaoni.
+Ordio.
 Org.
 Org. Chem.
 Organ. Chem.
@@ -666,8 +1170,34 @@ Outl.
 Oxf.
 Oxfordsh.
 Oxon.
+P.
+P. CONS.
 P. R.
+P.C.
+P.F.
+P.I.
+P.K.
+P.M.
+P.O.
+P.P.
+P.P.P.
+P.R.
+P.R.C.
+P.S.
+P.S.M.
+P.S.S.
+P.T.C.S.
+P.V.
+PP.
+PP. AA.
+PR.
+PR.K.
+PR.N.
+PR.PR.
+PRB.
+PZ.
 Pa.
+Pact.
 Palaeobot.
 Palaeogr.
 Palaeont.
@@ -676,10 +1206,16 @@ Paraphr.
 Parasitol.
 Parl.
 Parnass.
+Pasch.
 Path.
 Pathol.
+Patr.
+Pbr.
 Peculat.
+Penia.
+Peniaria.
 Penins.
+Pent.
 Perf.
 Periodontol.
 Pers.
@@ -688,6 +1224,9 @@ Perthsh.
 Pet.
 Petrogr.
 Petrol.
+Ph.B.
+Ph.D.
+Ph.M.
 Pharm.
 Pharmaceut.
 Pharmacol.
@@ -708,18 +1247,28 @@ Physical Geogr.
 Physiogr.
 Physiol.
 Pict.
+Pntium.
+Poe.
+Poenit.
+Poenit. Ap.
 Poet.
 Pol.
 Pol. Econ.
 Polit.
 Polytechn.
+Pont.
+Pont. Max.
+Pontus.
 Pop.
 Porc.
 Port.
+Poss.
 Posth.
 Postm.
 Pott.
+Pr.
 Pract.
+Praef.
 Predict.
 Pref.
 Preh.
@@ -727,6 +1276,7 @@ Prehist.
 Prerog.
 Pres.
 Presb.
+Presbit.
 Preserv.
 Prim.
 Princ.
@@ -735,9 +1285,13 @@ Probab.
 Probl.
 Proc.
 Prod.
+Prof.
 Prol.
 Pronunc.
 Prop.
+Prop. Fid.
+Propr.
+Pror.
 Pros.
 Prov.
 Provid.
@@ -750,17 +1304,49 @@ Psychoanalyt.
 Psychol.
 Psychopathol.
 Pt.
+Ptur.
+Ptus.
+Pub.
 Publ.
 Purg.
+Purg. Can.
 Q.
 Q. Eliz.
+Q.B.AN.
+Q.B.F.F.F.Q.S.
+Q.D.
+Q.D.R.
+Q.E.D.
+Q.I.D.
+Q.I.P.
+Q.I.S.S.
+Q.R.
+Q.S.S.S.
+Q.V.
+QQ.
+Qd.
 Qld.
+Qmlbt.
+Qtnus.
+Quadrag.
 Quantum Mech.
 Queen’s Bench Div.
+Qui.
+Quinquag.
 R.
+R. P.
 R.A.F.
 R.C.
+R.D.
+R.E.
+R.I.P.
 R.N.
+R.O.S.M.A.
+R.R.
+RESP.
+RET.P.
+RP.
+RR.
 Radiol.
 Reas.
 Reb.
@@ -779,6 +1365,7 @@ Regist.
 Regr.
 Rel.
 Relig.
+Relione.
 Reminisc.
 Remonstr.
 Renfrewsh.
@@ -786,28 +1373,89 @@ Rep.
 Reprod.
 Rept.
 Repub.
+Req.
 Res.
+Rescr.
 Resid.
+Resp.
 Ret.
 Retrosp.
 Rev.
+Rev. Proc.
+Rev. Rul.
 Revol.
 Rhet.
 Rhode Isl.
 Rich.
+Rit.
+Rlari.
 Rom.
 Rom. Antiq.
+Roma.
 Ross-sh.
 Roxb.
 Roy.
+Rt. Rev.
+Rub.
+Rubr.
 Rudim.
 Russ.
 S.
 S. Afr.
+S. Ct.
+S. Off.
+S. Petr.
+S. R. E.
+S. R. I.
+S.C.
+S.C.C.
+S.C.EE.RR.
+S.C.I.
+S.C.P.F.
+S.C.R.
+S.D.
+S.D.M.
+S.D.S.
+S.D.V.
 S.E.
+S.E.T.L.
+S.I.D.
+S.J.
+S.M.
+S.M.O.M.
+S.P.
+S.P.A.
+S.P.D.
+S.P.M.
+S.P.Q.R.
+S.R.C.
+S.R.E.
+S.S.
+S.S.S.
+S.T.B.
+S.T.B.V.E.B.V.
+S.T.D.
+S.T.L.
 S.T.S.
+S.T.T.L.
+S.V.
+S.V.B.E.E.Q.V.
 S.W.
+SAC.
+SC. M.
+SD.
+SER.
+SN.
 SS.
+SS.D.N.
+SSA.
+Sab.
+Sabb.
+Sacr.
+Saec.
+Sal.
+Salmant.
+Salri.
 Sam.
 Sask.
 Sat.
@@ -824,17 +1472,26 @@ Seismol.
 Sel.
 Sel. comm.
 Select.
+Semid.
 Sept.
 Ser.
 Serm.
 Sess.
 Settlem.
 Sev.
+Sexag.
 Shakes.
 Shaks.
 Sheph.
 Shetl.
 Shropsh.
+Sic.
+Sig.
+Simpl.
+Sine Com.
+Snia.
+Sntae.
+So.
 Soc.
 Sociol.
 Som.
@@ -842,11 +1499,14 @@ Song Sol.
 Song of Sol.
 Sonn.
 Span.
+Spealer.
 Spec.
 Specif.
 Specim.
 Spectrosc.
+Sr.
 St.
+Stae.
 Staff.
 Stafford.
 Staffordsh.
@@ -862,15 +1522,32 @@ Subj.
 Subscr.
 Subscript.
 Suff.
+Suffr.
 Suppl.
 Supplic.
+Supplioni.
 Suppress.
 Surg.
 Surv.
 Sus.
 Symmetr.
 Symp.
+Syn.
 Syst.
+T.
+T.D.
+T.F.
+T.P.
+T.P.N.
+T.R.E.
+TB.
+TI.
+TIB.
+TM.
+TR.
+TRB.
+TT.
+TVL.
 Taxon.
 Techn.
 Technol.
@@ -878,6 +1555,7 @@ Tel.
 Telecomm.
 Telegr.
 Teleph.
+Temp.
 Teratol.
 Terminol.
 Terrestr.
@@ -886,12 +1564,16 @@ Textbk.
 Theat.
 Theatr.
 Theol.
+Theolia.
 Theoret.
 Thermonucl.
 Thes.
 Thess.
 Tim.
 Tit.
+Tli.
+Tm.
+Tn.
 Topogr.
 Trad.
 Trag.
@@ -913,36 +1595,71 @@ Typogr.
 U.K.
 U.S.
 U.S.A.F.
+U.S.P.
 U.S.S.R.
+Ult.
 Univ.
 Unnat.
 Unoffic.
 Urin.
+Usq.
 Utilit.
+Ux.
+V.
+V. Rev.
+V. X.
+V.C.
+V.E.
+V.F.
+V.G.
+V.H.
+V.M.
+V.P.
+V.R.
+V.S.L.M.
+V.T.
+VA.
+VB.
+VV.
+VV. CC.
 Va.
 Vac.
+Val.
 Valedict.
+Vat.
+Vba.
 Veg.
 Veg. Phys.
 Veg. Physiol.
+Ven.
 Venet.
+Vers.
 Vertebr.
+Vesp.
+Vest.
 Vet.
 Vet. Med.
 Vet. Path.
 Vet. Sci.
 Vet. Surg.
 Vic.
+Vic. For.
 Vict.
+Vid.
+Videl.
+Vig.
 Vind.
 Vindic.
+Viol.
 Virg.
+Virid.
 Virol.
 Voc.
 Vocab.
 Vol.
 Vols.
 Voy.
+Vrae.
 Vulg.
 W.
 W. Afr.
@@ -967,6 +1684,13 @@ Worc.
 Worcestersh.
 Worcs.
 Writ.
+X.
+XC.
+XCS.
+XPC.
+XS.
+XV V.
+Y.O.
 Yearbk.
 Yng.
 Yorks.
@@ -978,32 +1702,60 @@ Zeitschr.
 Zeph.
 Zoogeogr.
 Zool.
+a.c.
+a.d.
+a.i.
+a.l.
+a.m.
+a.m.m.
+a.s.
+a.u.
+a/c.
 abbrev.
 abl.
 absol.
 abstr.
 acc.
 accus.
+ad lib.
 ad.
 adj.
 adj. phr.
 adjs.
+admov.
+ads.
+adsm.
 adv.
 advb.
 advs.
+agcy.
 agst.
+agt.
+al.
 alt.
+alt. h.
 aphet.
 app.
 appos.
 arch.
 art.
+asst.
 attrib.
+b.d.
+b.i.d.
+b.t.
 bef.
 betw.
+bldg.
+bol.
 c.
+ca.
+cap.
+caps.
+cca.
 cent.
 cf.
+cib.
 cl.
 cogn. w.
 collect.
@@ -1019,23 +1771,39 @@ const.
 contempt.
 contr.
 corresp.
+cp.
 cpd.
+cr.
+cwt.
+d.
+d.t.d.
 dat.
 def.
 dem.
 deriv.
 derog.
 dial.
+dieb. alt.
+dil.
 dim.
+disp.
+div.
 dyslog.
 e.
 e. midl.
+e.g.
+e.m.p.
+ead.
 east.
 ed.
+elix.
 ellipt.
 emph.
+emuls.
 erron.
 esp.
+et al.
+etc.
 etym.
 etymol.
 euphem.
@@ -1044,13 +1812,25 @@ f.
 fam.
 famil.
 fem.
+ff.
 fig.
 fl.
+fld.
 freq.
+ft.
 fut.
 gen.
 gerund.
+h.
+h.s.
+hebd.
 hist.
+hor.
+i.a.
+i.e.
+i.p.i.
+ibid.
+id.
 imit.
 imp.
 imperf.
@@ -1073,34 +1853,60 @@ iron.
 irreg.
 joc.
 l.
+l.D.
+l.c.
+lb.
 lit.
 ll.
+loc. cit.
+lot.
 m.
+m.d.u.
+m.t.v.
 masc.
 med.
 metaphor.
 metr. gr.
+mfg.
 midl.
 mispr.
+mist.
 mod.
 n.
 n.e.
 n.w.
+nem. con.
+noct.
 nom.
+non rep.
 nonce-wd.
 north.
 ns.
+o.p.d.
+o.s.
+o.u.
 obj.
 obl.
 obs.
 occas.
+op.
+op. cit.
 opp.
 orig.
 p.
+p.a.
+p.c.
+p.m.
+p.m.a.
+p.o.
+p.p.
+p.r.
 pa.
 pa. pple.
 pa. t.
 pass.
+per cent.
+per pro.
 perf.
 perh.
 pers.
@@ -1108,11 +1914,14 @@ personif.
 pf.
 phonet.
 phr.
+pig.
+pigm.
 pl.
 plur.
 poet.
 pop.
 poss.
+pp.
 ppl.
 ppl. a.
 ppl. adj.
@@ -1129,6 +1938,7 @@ prep.
 pres.
 pres. pple.
 priv.
+pro tem.
 prob.
 pron.
 pronunc.
@@ -1138,25 +1948,48 @@ prov.
 pseudo-Sc.
 pseudo-arch.
 pseudo-dial.
+pulv.
+q.1.d.
+q.a.d.
+q.a.m.
+q.d.
+q.d.s.
+q.h.
+q.h.s.
+q.i.d.
+q.o.d.
+q.p.m.
+q.s.
 q.v.
 quot.
 quots.
+r.
 redupl.
 refash.
 refl.
 reg.
 rel.
+rep.
 repr.
+rept.
 rhet.
 s.
+s.a.
+s.d.
 s.e.
+s.l.
+s.l.n.d.
+s.o.s.
 s.v.
 s.w.
 sc.
+scil.
 sing.
 south.
 sp.
 spec.
+ss.
+stat.
 str.
 subj.
 subjunct.
@@ -1168,16 +2001,28 @@ suff.
 superl.
 syll.
 t.
+t.d.s.
+t.i.d.
+t.i.w.
+tal.
 techn.
+tinc.
+tinct.
+top.
 tr.
 trans.
 transf.
 transl.
+u.d.
 ult.
+ung.
 unkn.
 unstr.
 usu.
+ut. dict.
 v.
+v.g.
+v.gr.
 var.
 varr.
 vars.
@@ -1187,6 +2032,7 @@ vbl. ns.
 vbl.n.
 vbs.
 viz.
+vs.
 vulg.
 w.
 wd.

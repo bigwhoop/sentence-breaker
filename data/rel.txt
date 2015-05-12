@@ -1,8 +1,7 @@
-
 A.A.
 A.B.A.
+C. SS. R.
 C.J.M.
-C.M.
 C.M.
 C.O..
 C.P.
@@ -16,7 +15,6 @@ C.R.M.D.
 C.R.M.I.
 C.R.P.
 C.R.S.P.
-C.R.S.P.
 C.R.T.
 C.S.B.
 C.S.C.
@@ -24,34 +22,29 @@ C.S.P.
 C.S.Sp.
 C.S.V.
 C.SS.CC.
-C. SS. R.
 F.S.S.P.
-F.S.S.P.X
-Inst. Char.
-I.C.R.S.S.
 I.C.R.S.P.
+I.C.R.S.S.
+Inst. Char.
 M.C.
 M.S.
 M.S.C.
-M.S.C.
-O.C.
 O. Camald.
 O. Cart.
 O. Cist.
+O. Merced.
+O. Trinit.
+O.C.
 O.C.C.
 O.C.D.
 O.C.R.
 O.F.M.
-O.M.
-O. Merced.
-O.M.C.
-O.M. Cap.
 O.F.M. Cap.
+O.M.
+O.M. Cap.
 O.M.C.
 O.M.I.
 O.P.
-Ord Fratr. Praed.
-Ord. Praem.
 O.S.A.
 O.S.B.
 O.S.C.
@@ -60,7 +53,8 @@ O.S.F.S.
 O.S.H.
 O.S.M.
 O.SS.C.
-O. Trinit.
+Ord Fratr. Praed.
+Ord. Praem.
 P.O.
 P.S.M.
 P.S.S.
@@ -71,6 +65,5 @@ S.D.V.
 S.J.
 S.M.
 S.M.O.M.
-SMOCSG
 S.P.M.
 S.S.S.

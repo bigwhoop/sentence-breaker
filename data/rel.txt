@@ -1,0 +1,76 @@
+
+A.A. -- Augustiniani Assumptionis (Assumptionists)
+A.B.A. -- Antoniani Benedictini Armeni (Mechitarists)
+C.J.M. -- Congregatio Jesu et Mariæ (Eudist Fathers)
+C.M. -- Congregatio Missionis (Lazarists)
+C.M. -- Congregatio Mariæ (Fathers of the Company of Mary)
+C.O.. -- Congregatio Oratorii
+C.P. -- Congregatio Passionis (Passionists)
+C.PP.S. -- Congregatio Pretiosissimi Sanguinis (Fathers of the Most Precious Blood)
+C.R. -- Congregatio Resurrectionis (Resurrectionist Fathers)
+C.R.C.S. -- Clerici Regulares Congregationis Somaschæ (Somaschi Fathers)
+C.R.I.C. -- Canonici Regulares Immaculate Conecptionis ("Canons Regular of the Immaculate Conception")
+C.R.L. -- Canonici Regulares Lateranenses ("Canons Regular of the Lateran")
+C.R.M. -- Clerici Regulares Minores ("Clerks Regular Minor", Mariani)
+C.R.M.D. -- Clerici Regulares Matris Dei ("Clerks Regular of the Mother of God")
+C.R.M.I. -- Clerici Regulares Ministrantes Infirmis ("Clerks Regular Attendant on the Sick", Camillini, Camilliani)
+C.R.P. -- Congregatio Reformatorum Præmonstratensium (Premonstratensians)
+C.R.S.P. -- Clerici Regulares Sancti Pauli (Barnabites)
+C.R.S.P. -- Clerici Regulares Pauperum Matris Dei Scholarum Piarum ("Clerks Regular of the Poor Men of the Mother of God for Pious Schools", Piarists)
+C.R.T. -- Clerici Regulares Theatini (Theatines)
+C.S.B. -- Congregatio Sancti Basilii (Basilians)
+C.S.C. -- Congregatio Sanctæ Crucis (Fathers and Brothers of the Holy Cross)
+C.S.P. -- Congregatio Sancti Pauli (Paulists)
+C.S.Sp. -- Congregatio Sancti Spiritus (Fathers of the Holy Ghost)
+C.S.V. -- Clerici Sancti Viatoris (Clerks, or Clerics, of St. Viateur)
+C.SS.CC. -- Congregatio Sacratissimorum Cordium (Missionaries of the Sacred Hearts of Jesus and Mary)
+C. SS. R. -- Congregatio Sanctissimi Redemptoris (Redemptorists)
+F.S.S.P. -- Fraternitas Sacerdotalis Sancti Petri
+F.S.S.P.X -- Fraternitas Sacerdotalis Sancti Pii X
+Inst. Char. -- Institutum Charitatis (Rosminians)
+I.C.R.S.S. -- Instituttum Christi Regis Summi Sacerdotis
+I.C.R.S.P. -- Institutum Christi Regis Summi Sacerdotis
+M.C. -- Missionaries of Charity
+M.S. -- Missionaries of La Salette [France]
+M.S.C. -- Missionarii Sancti Caroli ("Missionaries of St. Charles")
+M.S.C. -- Missionarii Sacratissimi Cordis ("Missionaries of the Most Sacred Heart")
+O.C. -- Ordo Charitatis (Fathers of the Order of Charity)
+O. Camald. -- Ordo Camaldulensium (Camaldolese)
+O. Cart. -- Ordo Cartusiensis (Carthusians)
+O. Cist. -- Ordo Cisterciensium (Cistercians)
+O.C.C. -- Ordo Carmelitarum Calceatorum (Carmelites)
+O.C.D. -- Ordo Carmelitarum Discalceatorum (Discalced, or Barefoot, Carmelites)
+O.C.R. -- Ordo Reformatorum Cisterciensium (Cistercians, Trappists)
+O.F.M. -- Ordo Fratrum Minorum (Observant Franciscans)
+O.M. -- Ordo [Fratrum] Minimorum (Minims of St. Francis of Paul)
+O. Merced. -- Ordo Beatæ Mariæ Virginis de Redemptione Captivorum (Mercedarians, Nolaschi)
+O.M.C. -- Ordo Minorum Conventualium (Conventual Franciscans)
+O.M. Cap. -- Ordo Minorum Cappucinorum
+O.F.M. Cap. -- Ordo Minorum Cappucinorum
+O.M.C. -- Ordo Minorum Cappucinorum (Capuchins)
+O.M.I. -- Oblati Mariæ Immaculatæ (Oblate Fathers of Mary Immaculate)
+O.P. -- Ordo Prædicatorum
+Ord Fratr. Praed. -- Ordo Prædicatorum (Dominicans)
+Ord. Praem. -- Ordo Præmonstratensium (Premonstratensians, Norbertines)
+O.S.A. -- Ordo [Eremitarum] Sancti Augustini (Augustinians)
+O.S.B. -- Ordo Sancti Benedicti (Benedictines)
+O.S.C. -- Oblati Sancti Caroli (Oblate Fathers of St. Charles)
+O.S.F.C. -- Ordinis Sancti Francisci Capuccini (Franciscan Capuchins)
+O.S.F.S. -- Oblati Sancti Francisci Salesii (Oblate Fathers of St. Francis of Sales)
+O.S.H. -- Ordo [Eremitarum] Sancti Hieronymi (Hieronymites)
+O.S.M. -- Ordo Servorum Mariæ (Servites)
+O.SS.C. -- Oblati Sacratissimi Cordis ("Oblate Fathers of the Sacred Heart")
+O. Trinit. -- Ordo Sanctissimæ Trinitatis (Trinitarians)
+P.O. -- Presbyteri Oratorii (Oratorians)
+P.S.M. -- Pia Societas Missionum (Fathers of the Pious Society of Missions, Pallottini)
+P.S.S. -- Presbyteri Sancti Sulpicii (Sulpicians)
+R.O.S.M.A. -- Realis Ordo Sancti Michaëli ab Ansa
+S.C. -- Salesianorum Congregatio (Congregation of St. Francis of Sales — Salesian Fathers)
+S.D.S. -- Societas Divini Salvatoris ("Society of the Divine Saviour")
+S.D.V. -- Societas Divini Verbi (Fathers of the Divine Word)
+S.J. -- Societas Jesu ("Society of Jesus", i.e. the Jesuits)
+S.M. -- Societas Mariæ (Marists)
+S.M.O.M. -- Supremus ac Militaris Ordo Melitensis
+SMOCSG -- Sacer ac Militaris Ordo Constantinianus Sancti Georgii
+S.P.M. -- Societas Patrum Misericordiae (Fathers of Mercy)
+S.S.S. -- Societas Sanctissimi Sacramenti (Fathers of the Blessed Sacrament)

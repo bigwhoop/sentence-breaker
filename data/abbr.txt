@@ -1,1087 +1,1117 @@
-A. -- Absolvo, Actum, Aedilis, Aes, Aedilis, Ager, Ago, Aio, Amicus, Annus, Antiquo, Auctor, Auditor, Augustus, Aulus, Aurum, Aut.[1]
-A.A. -- Aes alienum, Ante audita, Apud agrum, Aurum argentum.
-AA. -- Augusti duo.[1]
-AAA. -- Augusti tres.
-A.A.A.F.F. -- Auro argento acre flando feriundo. or Aere Argento Auro Flando Feriundo.[1]
-A.A.V. -- Alter ambove.
-A.C. -- Acta causa, Alins civis.
-A.D. -- Ante diem
-A.D.V. -- Ante diem quintum.
-A.D.A. -- Ad dandos agros.
-AEO. -- Aedes, Aedilis, Aedilitas.
-AEM., AIM. -- Aemilius, Aemilia.
-AER. -- Aerarium.
-AER.P. -- Aere publico.
-A.F. -- Acture fide, Auli filius.
-AG. -- Ager, Ago, Agrippa.
-A.G. -- Ammo grato, Aulus Gellius.
-A.L.AE., A.L.E. -- Arbitrium litis aestimandae.
-A.M., A.MILL. -- Ad milliarium. Ante Meridian.
-AN. -- Aniensis, Annus, Ante.
-ANN. -- Annales, Anni, Annona.
-ANT. -- Ante, Antonius.
-A.O. -- Alii omnes, Amico optimo.
-AP. -- Atppius, Apud.
-A.P. -- Ad pedes, Aedilitia potestate.
-A.P.F. -- Auro (or argento) publico feriundo.
-A.P.M. -- Amico posuit monumentum, Annorum plus minus.
-A.P.R.C. -- Anno post Romam conditam.
-ARG. -- Argentum.
-AR.V.V.D.D. -- Aram votam volens dedicavit, Arma votiva dono dedit.
-AT, A TE., A TER. -- A tergo.
-A.T.M.D.O. -- Aio te mihi dare oportere.
-AV. -- Augur, Augustus, Aurelius.
-A.V. -- Annos vixit.
-A.V.C. -- Ab urbe condita.
-AVG. -- Augur, Augustus.
-AVGG. -- Augusti duo[1]
-AVGGG. -- Augusti tres.
-AVT.PR.R. -- Auctoritas provinciae Romanorum.
-A. -- Absolvo, Aedilis, Aes, Ager, Ago, Aio, Amicus, Annus, Antiquo, Auctor, Auditor, Augustus, Aulus, Aurum, Aut.
-A.A. -- Aes alienum, Ante audita, Apud agrum, Aurum argentum.
-AA. -- Augusti.
-AAA., AAAGGG -- Augusti tres.
-A.A.A.F.F. -- Auro argento acre flando feriundo.
-A.A.V. -- Alter ambove.
-A.B. -- Artium Baccalaureus ("Bachelor of Arts")
-Ab. -- Abbas ("Abbot")
-Abp. -- Archbishop
-Abs. -- Absens ("Absent")
-Absoluo. -- Absolutio ("Absolution")
-ABB. -- Abbas
-A.B.M. -- Amico bene merenti
-A.C. -- Auditor Cameræ (Auditor of the Papal Treasury)
-AC -- Ante Christum ("Before Christ")
-ACN -- Ante Christum Natum ("Before the Birth of Christ")
-A.D. -- Anno Domini ("Year of Our Lord")
-a.d. -- ante diem ("The day before")
-A.C. -- Acta causa, Alins civis.
-A.D. -- A domino, Anno Domini, Ante diem
-A.D.V. -- Ante diem quintum.
-A.D.A. -- Ad dandos agros.
-AED. -- Aedilis
-AEDILIC. -- Aedilicia potestate, Aedilicius
-AED CVR -- Aedilis curulis
-AEL. -- Aelius
-AEPP. -- Archiepiscopus
-AEO. -- Aedes, Aedilis, Aedilitas.
-AEM., AIM. -- Aemilius, Aemilia.
-AER. -- Aerarium.
-AER.P. -- Aere publico.
-A.F. -- Acture fide, Auli filius.
-AG. -- Ager, Ago, Agrippa.
-A.G. -- Ammo grato, Aulus Gellius.
-A.L.AE., A.L.E. -- Arbitrium litis aestimandae.
-Alr. -- Aliter ("Otherwise")
-A.M., A.MILL. -- Ad milliarium.
-AN. -- Aniensis, Annus, Ante.
-ANN. -- Annales, Anni, Annona.
-ANT. -- Ante, Antonius.
-A.O. -- Alii omnes, Amico optimo.
-AP. -- Atppius, Apud.
-A.P. -- Ad pedes, Aedilitia potestate.
-A.P.F. -- Auro (sive argento) publico feriundo.
-A.P.M. -- Amico posuit monumentum, Annorum plus minus.
-A.P.R.C. -- Anno post Romam conditam.
-Aplica. -- Apostolica ("Apostolic")
-Appatis. -- Approbatis ("Having been approved")
-Archiepus. -- Archiepiscopus ("Archbishop")
-ARG. -- Argentum.
-AR.V.V.D.D. -- Aram votam volens dedicavit, Arma votiva dono dedit.
-AT, A TE., A TER. -- A tergo.
-A.T.M.D.O. -- Aio te mihi dare oportere.
-Aucte. -- Auctoritate ("By the Authority")
-AV. -- Augur, Augustus, Aurelius.
-A.V. -- Annos vixit.
-A.V.C. -- Ab urbe condita.
-AVG. -- Augur, Augustus, Augustus mensis.
-AVGG. -- Augusti
-AVGGG. -- Augusti tres.
-AVR. -- Aurelius
-AVSPP -- Auspicia
-AVT.PR.R. -- Auctoritas provinciae Romanorum.
-Adm. Rev. -- Admodum Reverendus ("Very Reverend")
-Adv. -- Adventus ("Advent")
-Alb. -- Albus ("White" — Breviary)
-al. -- alii, alibi, alias ("others", "elsewhere", "otherwise")
-A.M. -- Anno Mundi ("Year of the World")
-A.M. -- Artium Magister ("Master of Arts")
-A.M.D.G. -- Ad Majorem Dei Gloriam ("For the greater glory of God")
-An. -- Annus ("Year")
-Ann. -- Anni ("Years")
-Ana -- Antiphona
-Ant. -- Antiphona
-Apost. -- Apostolus ("Apostle")
-Ap. Sed. -- Apostolica Sedes ("Apostolic See")
-Ap. Sed. Leg. -- Apostolicæ Sedis Legatus ("Legate of the Apostolic See")
-Archiep. -- Archiepiscopus ("Archbishop")
-Archid. -- Archidiaconus ("Archdeacon")
-Archiprb. -- Archipresbyter ("Archpriest")
-A.R.S. -- Anno Reparatæ Salutis ("In the year of Our Redemption")
-A.U. -- Alma Urbs ("Beloved City" — i.e., Rome)
-Authen. -- Authentica ("Authentic" — e.g. letters)
-Aux. -- Auxilium, Auxilio ("Help", "With the help of")
-A.D. -- Ante Diem (e.g. in the phrase, "Ante Diem VI [or Sextum] Kal. Apriles", is equivalent to the sixth day before the Calends of April, counting both the Calends and the day intended to be indicated); or Anima Dulcis ("Sweet Soul")
-A.Q.I.C. -- Anima Quiescat In Christo ("May his [or her] Soul Repose in Christ")
+A.
+A.A.
+AA.
+AAA.
+A.A.A.F.F.
+A.A.V.
+A.C.
+A.D.
+A.D.V.
+A.D.A.
+AEO.
+AEM.
+AIM.
+AER.
+AER.P.
+A.F.
+AG.
+A.G.
+A.L.AE.
+A.L.E.
+A.M.
+A.MILL.
+AN.
+ANN.
+ANT.
+A.O.
+AP.
+A.P.
+A.P.F.
+A.P.M.
+A.P.R.C.
+ARG.
+AR.V.V.D.D.
+A TE.
+A TER.
+A.T.M.D.O.
+AV.
+A.V.
+A.V.C.
+AVG.
+AVGG.
+AVGGG.
+AVT.PR.R.
+A.
+A.A.
+AA.
+AAA.
+A.A.A.F.F.
+A.A.V.
+A.B.
+Ab.
+Abp.
+Abs.
+Absoluo.
+ABB.
+A.B.M.
+A.C.
+AC
+ACN
+A.D.
+a.d.
+A.C.
+A.D.
+A.D.V.
+A.D.A.
+AED.
+AEDILIC.
+AED CVR
+AEL.
+AEPP.
+AEO.
+AEM.
+AIM.
+AER.
+AER.P.
+A.F.
+AG.
+A.G.
+A.L.AE.
+A.L.E.
+Alr.
+A.M.
+A.MILL.
+AN.
+ANN.
+ANT.
+A.O.
+AP.
+A.P.
+A.P.F.
+A.P.M.
+A.P.R.C.
+Aplica.
+Appatis.
+Archiepus.
+ARG.
+AR.V.V.D.D.
+A TE.
+A TER.
+A.T.M.D.O.
+Aucte.
+AV.
+A.V.
+A.V.C.
+AVG.
+AVGG.
+AVGGG.
+AVR.
+AVSPP
+AVT.PR.R.
+Adm. Rev.
+Adv.
+Alb.
+al.
+A.M.
+A.M.
+A.M.D.G.
+An.
+Ann.
+Ana
+Ant.
+Apost.
+Ap. Sed.
+Ap. Sed. Leg.
+Archiep.
+Archid.
+Archiprb.
+A.R.S.
+A.U.
+Authen.
+Aux.
+A.D.
+A.Q.I.C.
 
-B. -- Balbius, Balbus, Beatus, Bene, Beneficiarius, Beneficium, Bonus, Brutus, Bustum.
-B. (for V.) -- Berna Bivus, Bixit.
-B.A. -- Bixit anos, Bonis auguriis, Bonus amabilis.
-BB., B.B. -- Bene bene, i.e. optime, Optimus.
-B.D. -- Bonae deae, Bonum datum.
-B.DD. -- Bonis deabus.
-B.D.S.M. -- Bene de se merenti.
-B.F. -- Bona femina, Bona fides, Bona fortuna, Bonum factum.
-B.F. -- Bona femina, Bona filia.
-B.H. -- Bona hereditaria, Bonorum heres.
-B.I. -- Bonum judicium.
-B.I.I. -- Boni judicis judicium.
-B.M. -- Beatae memoriae, Bene merenti.
-B.N. -- Bona nostra, Bonum nomen.
-BN.H.I. -- Bona hic invenies.
-B.P. -- Bona paterna, Bonorum potestas, Bonum publicum.
-B.Q. -- Bene quiescat, Bona quaesita.
-B.RP.N. -- Boho reipublicae natus.
-BRT. -- Britannicus.
-B.T. -- Bonorum tutor, Brevi tempore.
-B.V. -- Bene vale, Bene vixit, Bonus vir.
-B.V.V. -- Balnea vina Venus.
-BX. -- Bixit (for vixit).
-B. -- Balbius, Balbus, Beatus, Bene, Beneficiarius, Beneficium, Bonus, Brutus, Bustum.
-B. (in loco V.) -- Berna Bivus, Bixit.
-B.A. -- Bixit annos [recte Vixit annos], Bonis auguriis, Bonus amabilis.
-BB., B.B. -- Bene bene, i.e. optime, Optimus.
-B.D. -- Bonae deae, Bonum datum.
-B.DD. -- Bonis deabus.
-B.D.S.M. -- Bene de se merenti.
-B.F. -- Bona femina, Bona fides, Bona fortuna, Bonum factum.
-B.F. -- Bona femina, Bona filia.
-B.H. -- Bona hereditaria, Bonorum heres.
-B.I. -- Bonum iudicium.
-B.I.I. -- Boni iudicis iudicium.
-B.M. -- Beatae memoriae, Bene merenti.
-B.M.V. -- Beatae Mariae virginis
-B.N. -- Bona nostra, Bonum nomen.
-BN.H.I. -- Bona hic invenies.
-B.P. -- Bona paterna, Bonorum potestas, Bonum publicum.
-B.Q. -- Bene quiescat, Bona quaesita.
-B.RP.N. -- Boho reipublicae natus.
-BRT. -- Britannicus.
-B.T. -- Bonorum tutor, Brevi tempore.
-B.V. -- Bene vale, Bene vixit, Bonus vir.
-B.V.V. -- Balnea vina Venus.
-BX. -- Bixit [recte vixit].
-B. -- Bene Merenti
-BMT. -- Bene Merenti ("To the Well-Deserving")
-B.M. -- Bonae Memoriæ ("Of Happy Memory")
-B.F. -- Bonae Feminæ ("To the Good Woman")
-B.I.C. -- Bibas [for Vivas] In Christo ("May you Live In Christ")
-B.M.F. -- Bene Merenti Fecit ("He erected this to the Well-Deserving")
-B.Q. -- Bene Quiescat ("May he [or she] Rest Well")
-B.A. -- Baccalaureus Artium ("Bachelor of Arts")
-B. BB. -- Beatus, Beati ("Blessed")
-B.C. -- Before Christ
-B.C.L. -- Baccalaureus Civilis [or Canonicae] Legis ("Bachelor of Civil [or Canon] Law")
-B.D. -- Bachelor of Divinity
-B.F. -- Bona Fide ("In Good Faith")
-Ben. -- Benedictio ("Blessing")
-Benevol. -- Benevolentia ("Benevolence")
-Bon. Mem. -- Bonæ Memoriæ ("Of Happy Memory")
-B.P. -- Beatissime Pater ("Most Holy Father")
-Bro. -- Brother
-B. Se. -- Baccalaureus Scientiarum ("Bachelor of Sciences")
-B.U.J. -- Baccalaureus Utriusque Juris ("Bachelor of Both Laws" — i.e., civil and canon)
-B.T. -- Baccalaureus Theologiæ ("Bachelor of Theology")
-B.V. -- Beatitudo Vestra ("Your Holiness")
-B.V. -- Beata Virgo ("Blessed Virgin")
-B.V.M. -- Beata Virgo Maria ("Blessed Virgin Mary")
+B.
+B.A.
+BB.
+B.B.
+B.D.
+B.DD.
+B.D.S.M.
+B.F.
+B.F.
+B.H.
+B.I.
+B.I.I.
+B.M.
+B.N.
+BN.H.I.
+B.P.
+B.Q.
+B.RP.N.
+BRT.
+B.T.
+B.V.
+B.V.V.
+BX.
+B.
+B.A.
+BB.
+B.B.
+B.D.
+B.DD.
+B.D.S.M.
+B.F.
+B.F.
+B.H.
+B.I.
+B.I.I.
+B.M.
+B.M.V.
+B.N.
+BN.H.I.
+B.P.
+B.Q.
+B.RP.N.
+BRT.
+B.T.
+B.V.
+B.V.V.
+BX.
+B.
+BMT.
+B.M.
+B.F.
+B.I.C.
+B.M.F.
+B.Q.
+B.A.
+B. BB.
+B.C.
+B.C.L.
+B.D.
+B.F.
+Ben.
+Benevol.
+Bon. Mem.
+B.P.
+Bro.
+B. Se.
+B.U.J.
+B.T.
+B.V.
+B.V.
+B.V.M.
 
-C. -- Caesar, Cains, Caput, Causa, Censor, Civis, Conors, Colonia Comitialis (dies), Condemno, Consul, Cum, Curo, Custos, Caia, Centuria, Cum, Con. (prefix).
-C.B. -- Civis bonus, Commune bonum, Conjugi benemerenti, Cui bono.
-C.C. -- Calumniae causa, Causa cognita, Conjugi carissimae, Consilium cepit, Curiae consulto.
-C.C.C. -- Calumniae cavendae causa.
-C.C.F. -- Caesar (or Caius) curavit faciendum, Caius Caii filius.
-CC.VV. -- Clarissimi viri. (=senators)
-C.D. -- Caesaris decreto, Cains Decius, Comitialibus diebus.
-CES. -- Censor, Censores.
-CESS. -- Censores.
-C.F. -- Causa fiduciae, Conjugi fecit, Curavit faciendum.
-C.H. -- Custos heredum, Custos hortorum.
-C.I. -- Caius Julius, Consul jussit, Curavit judex.
-CL. -- Clarissimus, Claudius, Clodius, Colonia.
-CL.V. -- Clarissimus vir, Clypeum vovit.
-C.M. -- Caius Marius, Causa mortis.
-CN. -- Cnaeus.
-COH. -- Coheres, Conors.
-COL. -- Collega, Collegium, Colonia, Columna.
-COLL. -- Collega, Coloni, Coloniae.
-COM. -- Comes, Comitium, Comparatum.
-CON. -- Conjux, Consensus, Consiliarius, Consul, Consularis.
-COR. -- Cornelia (tribus), Cornelius, Corona, Corpus.
-COS. -- Consiliarius, Consul, Consulares.
-COSS. -- Consules.
-C.P. -- Carissimus (or Clarissimus) puer, Civis publicus, Curavit ponendum.
-C.R. -- Caius Rufus, Civis Romanus, Curavit reficiendum.
-CS. -- Caesar, Communis, Consul.
-C.V. -- Clarissimus (or Consularis) vir.
-CVR. -- Cura, Curator, Curavit, Curia.
-C. -- Caesar, Caius, Caput, Carrissimus, Causa, Censor, Centurio, Civis, Cohors, Colonia Comitialis (dies), Condemno, Coniunx, Comes, Consul, Cum, Curavit, Curo, Custos, Caia, Centuria, Cum, Con. (praeverbium).
-c. -- circa
-CAL. -- Calendis
-C.B. -- Civis bonus, Commune bonum, Coniugi benemerenti, Cui bono.
-C.C. -- Calumniae causa, Causa cognita, Coniugi carissimae, Consilium cepit, Curiae consulto.
-C.C.C. -- Calumniae cavendae causa.
-C.C.F. -- Caesar (vel Caius) curavit faciendum, Caius Caii filius.
-CC.VV. -- Clarissimi viri.
-C.D. -- Caesaris decreto, Cains Decius, Comitialibus diebus.
-CES. -- Censor, Censores.
-CESS. -- Censores.
-C.F. -- Causa fiduciae, Coniugi fecit, Curavit faciendum.
-C.H. -- Custos heredum, Custos hortorum.
-C.I. -- Caius Iulius, Consul iussit, Curavit iudex.
-CL. -- Clarissimus, Claudius, Clodius, Colonia.
-CL.V. -- Clarissimus vir, Clypeum vovit.
-C.M. -- Caius Marius, Causa mortis.
-CN. -- Cnaeus.
-COH. -- Coheres, Conors.
-COL. -- Collega, Collegium, Colonia, Columna.
-COLL. -- Collega, Coloni, Coloniae.
-COM. -- Comes, Comitium, Comparatum.
-CON. -- Coniunx, Consensus, Consiliarius, Consul, Consularis.
-COR. -- Cornelia (tribus), Cornelius, Corona, Corpus.
-COS. -- Consiliarius, Consul, Consulares.
-COSS. -- Consules.
-C.P. -- Carissimus (sive Clarissimus) puer, Civis publicus, Curavit ponendum.
-C.R. -- Caius Rufus, Civis Romanus, Curavit reficiendum.
-CS. -- Caesar, Communis, Consul.
-C.V. -- Clarissimus (sive Consularis) vir.
-CVR. -- Cura, Curator, Curavit, Curia.
-Cam. -- Camera (Papal Treasury)
-Cam. Ap. -- Camera Apostolica ("Apostolic Camera" — i.e. Papal Treasury)
-Can. -- Canonicus
-Canc. -- Cancellarius ("Chancellor")
-Cap. -- Capitulum ("Little Chapter" — Breviary)
-Cap. de seq. -- Capitulum de Sequenti ("Little chapter of the following feast" — Breviary)
-Capel. -- Capella ("Chapel")
-Caus. -- Causa ("Cause")
-C.C. -- Curatus ("Curate" — used chiefly in Ireland)
-CC. VV. -- Clarissimi Viri ("Illustrious Men")
-Cen. Eccl. -- Censura Ecclesiastica ("Ecclesiastical Censure")
-Cla. -- Clausula ("Clause")
-Cl. -- Clericus
-Clico. -- Clericus, Clerico ("Cleric")
-Clun. -- Cluniacenses ("Monks of Cluny")
-C.M. -- Causa Mortis ("On occasion of death")
-Cod. -- Codex (Manuscript)
-Cog. Leg. -- Cognatio Legalis ("Legal Cognation")
-Cog. Spir. -- Cognatio Spiritualis ("Spiritual Cognation")
-Coll. Cone. -- Collectio Conciliorum ("Collection of the Councils")
-Comm. Prec. -- Commemoratio Praecedentis ("Commemoration of the preceding feast" — Breviary)
-Comm. Seq. -- Commemoratio Sequentis ("Commemoration of the following feast" — Breviary)
-Compl. -- Completorium ("Compline" — Breviary)
-Con. -- Contra ("against")
-Cone. -- Concilium ("Council")
-Conf. -- Confessor
-Conf. Doct. -- Confessor et Doctor (Breviary)
-Conf. Pont. -- Confessor Pontifex ("Confessor and Bishop" — Breviary)
-Cons. -- Consecratio ("Consecration")
-Consecr. -- Consecratus ("Consecrated")
-Const. Ap. -- Constitutio Apostolica ("Apostolic Constitution")
-Cr. -- Credo ("Creed" — Breviary)
-Canice. -- Canonice ("Canonically")
-Card. -- Cardinalis ("Cardinal")
-Cens. -- Censuris ("Censures" — abl. or dat. case)
-Circumpeone. -- Circumspectione ("Circumspection" — abl. case)
-Coione. -- Communione ("Communion" — abl. case)
-Confeone. -- Confessione ("Confession" — abl. case)
-Consciae. -- Conscientiæ ("Of [or to] conscience")
-Constbus -- Constitutionibus ("Constitutions" — abl. or dat. Case)
-C. -- Consul
-CC. -- Consules ("Consuls")
-C.F. -- Clarissima Femina ("Most Illustrious Woman")
-Cl. V. -- Clarissimus Vir ("Most Illustrious Man")
-'C.O. — Conjugi Optimo ("To my Excellent Husband")
-C.O.B.Q. -- Cum Omnibus Bonis Quiescat ("May he [or she] Repose With All Good souls")
-COI. -- Conjugi ("To my Husband [or Wife]")
-CS. -- Consul
-COS. -- Consul
-COSS. -- Consules ("Consuls")
-C.P. -- Clarissima Puella ("Most Illustrious Maiden")
+C.
+C.B.
+C.C.
+C.C.C.
+C.C.F.
+CC.VV.
+C.D.
+CES.
+CESS.
+C.F.
+C.H.
+C.I.
+CL.
+CL.V.
+C.M.
+CN.
+COH.
+COL.
+COLL.
+COM.
+CON.
+COR.
+COS.
+COSS.
+C.P.
+C.R.
+CS.
+C.V.
+CVR.
+C.
+c.
+CAL.
+C.B.
+C.C.
+C.C.C.
+C.C.F.
+CC.VV.
+C.D.
+CES.
+CESS.
+C.F.
+C.H.
+C.I.
+CL.
+CL.V.
+C.M.
+CN.
+COH.
+COL.
+COLL.
+COM.
+CON.
+COR.
+COS.
+COSS.
+C.P.
+C.R.
+CS.
+C.V.
+CVR.
+Cam.
+Cam. Ap.
+Can.
+Canc.
+Cap.
+Cap. de seq.
+Capel.
+Caus.
+C.C.
+CC. VV.
+Cen. Eccl.
+Cla.
+Cl.
+Clico.
+Clun.
+C.M.
+Cod.
+Cog. Leg.
+Cog. Spir.
+Coll. Cone.
+Comm. Prec.
+Comm. Seq.
+Compl.
+Con.
+Cone.
+Conf.
+Conf. Doct.
+Conf. Pont.
+Cons.
+Consecr.
+Const. Ap.
+Cr.
+Canice.
+Card.
+Cens.
+Circumpeone.
+Coione.
+Confeone.
+Consciae.
+Constbus
+C.
+CC.
+C.F.
+Cl. V.
+C.O.B.Q.
+COI.
+CS.
+COS.
+COSS.
+C.P.
 
-D. -- Dat, Dedit, De, Decimus, Decius, Decretum, Decurio, Deus, Dicit, Dies, Divus, Dominus, Domus, Donum.
-D.C. -- Decurio coloniae, Diebus comitialibus, Divus Caesar.
-D.D. -- Dea Dia, Decurionum decreto, Dedicavit, Deo dedit, Dono dedit, Domus Divina.[1]
-D.D.D. -- Datum decreto decurionum, Dono dedit dedicavit, Deo Donum Dedit[1]
-D.E.R. -- De ea re.
-DES. -- Designatus.
-D.I. -- Dedit imperator, Diis immortalibus, Diis inferis.
-D.l.M. -- Deo invicto Mithrae, Diis inferis Manibus.
-D.M. -- Deo Magno, Dignus memoria, Diis Manibus, Dolo malo.
-D.O.M. -- Deo Optimo Maximo.
-D.P.S. -- Dedit proprio sumptu, Deo perpetuo sacrum, De pecunia sua.
-D. -- Dat, Dedit, De, Decimus, Decius, Decretum, Decurio, Deus, Dicit, Dies, Divus, Dominus, Domus, Donum.
-D.C. -- Decurio coloniae, Diebus comitialibus, Divus Caesar.
-D.D. -- Dea Dia, Decurionum decreto, Dedicavit, Deo dedit, Dii deaeque, Dono dedit.
-DD. -- Divi
-D.D.D. -- Datum decreto decurionum, Dono dedit dedicavit.
-D.D.L.M. -- Donum dedit libens merito.
-DEC. -- Decurio
-D.E.R. -- De ea re.
-DES. -- Designatus.
-D.M. -- Dominus
-D.M.P.S. -- Dis Manibus (et) perpetuae securitati
-D.N. -- Dominus noster
-Dni. -- Domini
-DNO. -- Domino
-DNS -- Dominus
-D.I. -- Dedit imperator, Diis immortalibus, Diis inferis.
-D.l.M. -- Deo invicto Mithrae, Diis inferis Manibus.
-D.M. -- Deo Magno, Dignus memoria, Diis Manibus, Dolo malo.
-D.N.I.C. -- Domini nostri Iesu Christi
-D.O.M. -- Deo optimo maximo, Dominus.
-'D.O.M.A. -- Deo Optimo maximo aeterno
-D.P.S. -- Dedit proprio sumptu, Deo perpetuo sacrum, De pecunia sua.
-D.S.I.M. -- Deo soli invicto mithrae
-Dr. iur. -- Doctor iuris
-D. -- Depositus ("Laid to rest"); or Dulcis ("Dear One")
-D.D. -- Dedit, Dedicavit ("Gave", "Dedicated")
-DEP. -- Depositus ("Laid to rest")
-D.I.P. -- Dormit In Pace ("Sleeps in Peace")
-D.M. -- Diis Manibus ("To the Manes [of]")
-D.M.S. -- Diis Manibus Sacrum ("Sacred to the Manes [of]")
-D.N. -- Domino Nostro ("To Our Lord")
-DD. NN. -- Dominis Nostris ("To Our Lords")
-Discreoni. -- Discretioni ("To the Discretion")
-Dispensao. -- Dispensatio ("Dispensation")
-Dnus -- Dominus ("Lord", "Sir", or "Mr.")
-D. -- Dominus ("Lord")
-d. -- dies ("day")
-D.C.L. -- Doctor Civilis [or Canonicae] Legis ("Doctor of Civil [or Canon] Law")
-D.D. -- Doctores ("Doctors")
-D.D. -- Donum dedit; Dedicavit ("Gave", "dedicated")
-D.D. -- Doctor Divinitatis ("Doctor of Divinity" — i.e. Theology)
-Dec. -- Decanus ("Dean")
-Def. -- Defunctus ("Deceased")
-D.G. -- Dei Gratia ("By the Grace of God")
-D.N. -- Dominus Noster ("Our Lord")
-D.N.J.C. -- Dominus Noster Jesus Christus ("Our Lord Jesus Christ")
-DN -- Dominus
-DNS -- Dominus
-DNUS -- Dominus ("Lord")
-Doct. -- Doctor (Breviary)
-Dom. -- Dominica ("Sunday")
-D.O.M. -- Deo Optimo Maximo ("To God, the Best and Greatest")
-Doxol. -- Doxologia ("Doxology" — Breviary)
-D.R. -- Decanus Ruralis ("Rural Dean")
-DS -- Deus ("God")
-D.Se. -- Doctor Scientiarum ("Doctor of Sciences")
-D.V. -- Deo Volente ("God willing")
-Dupl. -- Duplex ("Double feast" — Breviary)
-Dupl. Maj. -- Duplex Major ("Double Major feast")
-Dupl. I. Cl. -- Duplex Primæ Classis ("Double First Class feast" — Breviary)
-Dupl. II. Cl. -- Duplex Secundae Classis ("Double Second Class feast" — Breviary)
+D.
+D.C.
+D.D.
+D.D.D.
+D.E.R.
+DES.
+D.I.
+D.l.M.
+D.M.
+D.O.M.
+D.P.S.
+D.
+D.C.
+D.D.
+DD.
+D.D.D.
+D.D.L.M.
+DEC.
+D.E.R.
+DES.
+D.M.
+D.M.P.S.
+D.N.
+Dni.
+DNO.
+DNS
+D.I.
+D.l.M.
+D.M.
+D.N.I.C.
+D.O.M.
+'D.O.M.A.
+D.P.S.
+D.S.I.M.
+Dr. iur.
+D.
+D.D.
+DEP.
+D.I.P.
+D.M.
+D.M.S.
+D.N.
+DD. NN.
+Discreoni.
+Dispensao.
+Dnus
+D.
+d.
+D.C.L.
+D.D.
+D.D.
+D.D.
+Dec.
+Def.
+D.G.
+D.N.
+D.N.J.C.
+DN
+DNS
+DNUS
+Doct.
+Dom.
+D.O.M.
+Doxol.
+D.R.
+DS
+D.Se.
+D.V.
+Dupl.
+Dupl. Maj.
+Dupl. I. Cl.
+Dupl. II. Cl.
 
-E. -- Ecclesia, Ejus, Eius, Eques, Erexft, Ergo, Est, Et, Earvin, Etiam, Evangelista, Ex.
-EG. -- Aeger, Egit, Egregius.
-E.G. -- exempli gratia (e.g.) (for the sake of example)
-EQ.M. -- Equitum magister.
-EL. -- Electus
-E.M. -- Egregiae memoriae, Eiusmodi, Ejusmodi, Erexit monumentum.
-EPI. -- Episcopi
-EPO. -- Episcopo
-EQ. -- Eques
-EQ.M. -- Equitum magister.
-E.Q.R. -- Eques Romanus.
-E.P. -- Equo publico.
-E.R.A. -- Ea res agitur.
-E(X)T. -- Ex testamento
-E(X)V. -- Ex voto
-Eccl. -- Ecclesiasticus ("Ecclesiastic")
-Eccl. -- Ecclesia ("The Church")
-El. -- Electio, Electus ("Election", "Elect")
-Emus -- Eminentissimus ("Most Eminent")
-EPS -- Episcopus
-EP. -- Episcopus
-Episc. -- Episcopus ("Bishop")
-Et. -- Etiam ("Also, Even")
-Evang. -- Evangelium ("Gospel" — Breviary)
-Ex. -- Extra ("Outside of")
-Exe. -- Excommunicatus, Excommunicatio ("Excommunicated, Excommunication")
-Ecclae. -- Ecclesiæ ("Of [or to] the Church")
-Ecclis. -- Ecclesiasticis ("Ecclesiastical")
-Effum. -- Effectum ("Effect")
-Epus. -- Episcopus ("Bishop")
-Excoe. -- Excommunicatione ("Excommunication" — abl. case)
-Exit. -- Existit ("Exists")
-E.V. -- Ex Voto ("In Fulfilment of a Vow")
-EX. TM. -- Ex Testamento ("In accordance with the Testament of")
-E VIV. DISC. -- E Vivis Discessit ("Departed from Life")
+E.
+EG.
+E.G.
+EQ.M.
+EL.
+E.M.
+EPI.
+EPO.
+EQ.
+EQ.M.
+E.Q.R.
+E.P.
+E.R.A.
+E(X)T.
+E(X)V.
+Eccl.
+Eccl.
+El.
+Emus
+EPS
+EP.
+Episc.
+Et.
+Evang.
+Ex.
+Exe.
+Ecclae.
+Ecclis.
+Effum.
+Epus.
+Excoe.
+Exit.
+E.V.
+EX. TM.
+E VIV. DISC.
 
-F. -- Fabius, Facere, Fecit, &c., Familia, Fastus (dies), Felix, Femina, Fides, Filius, Flamen, Fortuna, Frater, Fuit, Functus.
-F.C. -- Faciendum curavit, Fidei commissume, Fiduciae causa.
-F.D. -- Fidem dedit, Flamen Dialis, Fraude donavit.
-F.F.F. -- Ferro flamma fame, Fortior fortuna fato.
-FL. -- Filius, Flamen, Flaminius, Flavius.
-F.L. -- Favete linguis, Fecit libens, Felix liber.
-FR. -- Forum, Fronte, Frumentarius.
-F.R. -- Forum Romanum.
-F. -- Fabius, Facere, Fecit, &c., Familia, Fastus (dies), Felix, Femina, Fides, Filius, Flamen, Fortuna, Frater, Fuit, Functus.
-F.F. -- Fratres
-F.F.C. -- Filii faciendum curaverunt
-F.C. -- Faciendum curavit, Fidei commissume, Fiduciae causa.
-F.D. -- Fidem dedit, Flamen Dialis, Fraude donavit.
-F.F.F. -- Ferro flamma fame, Fortior fortuna fato.
-FL. -- Filius, Flamen, Flaminius, Flavius, floruit.
-F.L. -- Favete linguis, Fecit libens, Felix liber.
-FR. -- Forum, Fronte, Frumentarius., Frater
-F.R. -- Forum Romanum.
-FS ET S -- Fecit sibi et sui
-F. -- Fecit ("Did"); or Filius ("Son"); or Feliciter ("Happily")
-F.C. -- Fieri Curavit ("Caused to be made")
-F.F. -- Fieri Fecit ("Caused to be made")
-FF. -- Fratres ("Brothers"); Filii ("Sons")
-FS. -- Fossor ("Digger")
-Fr. -- Frater ("Brother")
-Frum. -- Fratrum ("Of the Brothers")
-Fel. Mem. -- Felicis Memoriæ ("Of Happy Memory")
-Fel. Rec. -- Felicis Recordationis ("Of Happy Memory")
-Fer. -- Feria ("Weekday")
-Fr. -- Frater
-F. -- Frater, Frere ("Brother")
-Fund. -- Fundatio ("Foundation")
+F.
+F.C.
+F.D.
+F.F.F.
+FL.
+F.L.
+FR.
+F.R.
+F.
+F.F.
+F.F.C.
+F.C.
+F.D.
+F.F.F.
+FL.
+F.L.
+FR.
+F.R.
+FS ET S
+F.
+F.C.
+F.F.
+FF.
+FS.
+Fr.
+Frum.
+Fel. Mem.
+Fel. Rec.
+Fer.
+Fr.
+F.
+Fund.
 
-G. -- Gaius (Caius), Gallia, Gaudium, Gellius, Gemma, Gens, Gesta, Gratia.
-G.F. -- Gemina fidelis (legioni).
-G.P.F. -- Gemina pia fidelis (legioni).
-GL. -- Gloria.
-GN. -- Genius, Gens, Genus, Gnaeus (Cnaeus).
-G.P.R. -- Genro populi Romani.
-Gen. -- Generalis ("General")
-Gl. -- Gloria ("Glory to God", etc.)
-Gr. -- Gratia ("Grace")
-Grad. -- Gradus ("Grade")
-Grat. -- Gratias ("Thanks"); or Gratis ("Without expense")
-Gnalis -- Generalis ("General")
-G.P.R. -- Genro populi Romani.
+G.
+G.F.
+G.P.F.
+GL.
+GN.
+G.P.R.
+Gen.
+Gl.
+Gr.
+Grad.
+Grat.
+Gnalis
+G.P.R.
 
-H. -- Habet, Heres, Hic, Homo, Honor, Hora.
-HBQ. -- Hic Bene Quiescat (Latin: May He Rest Peacefully Here, epigraphy)"
-HER. -- Heres, Herennius.
-HER., HERC. -- Hercules.
-H.L. -- Hac lege, Hoc loco, Honesto loco.
-H.M. -- Hoc monumentum, Honesta mulier, Hora mala.
-H.S.E. -- Hic sepultus est, Hic situs est.
-H.V. -- Haec urbs, Hic vivit, Honeste vixit, Honestus vir.
-H. -- Habet, Heres, Hic, Homo, Honor, Hora.
-H.B. -- Hungaria (et) Bohmia
-HER. -- Heres, Herennius.
-HER., HERC. -- Hercules.
-H.F.C. -- Heres faciendum curavit
-HH. -- Heredes
-H.L. -- Hac lege, Hoc loco, Honesto loco.
-H.M. -- Hoc monumentum, Honesta mulier, Hora mala.
-H.M.P. -- Hoc monumentum posuit
-H.S.E. -- Hic sepultus est, Hic situs est.
-H.V. -- Haec urbs, Hic vivit, Honeste vixit, Honestus vir.
-Humil. -- Humiliter ("Humbly")
-Humoi. -- Huiusmodi ("Of this kind")
-hebd. -- Hebdomada ("Week")
-Hom. -- Homilia ("Homily" — Breviary)
-hor. -- hora ("hour")
-H. -- Haeres ("Heir"); Hic ("Here")
-H.L.S. -- Hoc Loco Situs ("Laid [or Put] in This Place")
-H.M.F.F. -- Hoc Monumentum Fieri Fecit ("Caused This Monument to be Made")
-H.S. -- Hic Situs ("Laid Here")
+H.
+HBQ.
+HER.
+HER.
+HERC.
+H.L.
+H.M.
+H.S.E.
+H.V.
+H.
+H.B.
+HER.
+HER.
+HERC.
+H.F.C.
+HH.
+H.L.
+H.M.
+H.M.P.
+H.S.E.
+H.V.
+Humil.
+Humoi.
+hebd.
+Hom.
+hor.
+H.
+H.L.S.
+H.M.F.F.
+H.S.
 
-I. -- Immortalis, Imperator, In, Infra, Inter, Invictus, Ipse, Isis, Judex, Julius, Junius, Jupiter, Justus.
-IA. -- Jam, Intra.
-I.C. -- Julius Caesar, Juris Consultum, Jus civile.
-ID. -- Idem, Idus, Interdum.
-l.D. -- Inferis diis, Jovi dedicatnm, Jus dicendum, Jussu Dei.
-I.D.M. -- Jovi deo magno.
-I.E. -- Id est.
-I.F. -- In foro, In fronte.
-I.H. -- Jacet hic, In honestatem, Justus homo.
-IM. -- Imago, Immortalis, Immunis, Impensa.
-IMP. -- Imperator, Imperium.
-I.N.R.I. -- Iesus Nazarenus Rex Iudaeorum.
-I.O.M. -- Jovi optimo maximo.
-I.P. -- In publico, Intra provinciam, Justa persona.
-I.S.V.P. -- Impensa sua vivus posuit.
-I. -- Immortalis, Imperator, In, Infra, Inter, Invictus, Ipse, Isis, Iudex, Iulius, Iunius, Iupiter, Iustus.
-IA. -- Iam, Intra.
-I.C. -- Iulius Caesar, Iuris Consultum, Ius civile.
-ICTVS -- Iuris consultus
-ID. -- Idem, Idus, Interdum.
-l.D. -- Inferis diis, Iovi dedicatnm, Ius dicendum, Iussu Dei.
-I.D.M. -- Iovi deo magno.
-I.F. -- In foro, In fronte.
-I.H. -- Iacet hic, In honestatem, Iustus homo.
-IHS. -- see I.H.S. below
-II VIR I D -- Duovir/Duumvir iure dicundo.
-IIIIII VIR AVG -- Sevir/Sexvir Augustalis.
-ILL. -- Illustrissimus
-ILLMA -- Illustrissima
-IM. -- Imago, Immortalis, Immunis, Impensa.
-IMP. -- Imperator, Imperium.
-I.N.R.I. -- Iesus Nazarenus Rex Iudaeorum.
-I.O.M. -- Iovi optimo maximo.
-I.P. -- In publico, Intra provinciam, Iusta persona.
-I.S.V.P. -- Impensa sua vivus posuit.
-IVL. -- Iulius
-IVN. -- Iunior
-ID. -- Idibus ("On the Ides")
-IDNE. -- Indictione ("In the Indiction" — a chronological term)
-I.L.H. -- Jus Liberorum Habens ("Possessing the Right of Children" — i.e., eligibility to public office under age)
-INB. -- In Bono ("In Good [odour]")
-IND. -- Same as IDNE
-INP -- In Pace ("In Peace")
-I.X. -- In Christo ("In Christ")
-IC -- Jesus (first and third letters of His name in Greek)
-Id. -- Idus ("Ides")
-Igr. -- Igitur ("Therefore")
-I.H.S. -- Iesus Hominum Salvator ("Jesus Saviour of Men" — usual interpretation). Really a faulty Latin transliteration of the first three letters of JESUS in Greek (IHS for IHC).
-Ind. -- Indictio ("Indiction")
-Ind. -- Index
-Inq. -- Inquisitio ("Inquisition")
-i.p.i. -- in partibus infidelium ("among the infidels")
-Is. -- Idus ("Ides")
-Igr. -- Igitur ("Therefore")
-Infraptum. -- Infrascriptum ("Written below")
-Intropta. -- Introscripta ("Written within")
-Irregulte. -- Irregularitate ("Irregularity" — abl. case)
+I.
+IA.
+I.C.
+ID.
+l.D.
+I.D.M.
+I.E.
+I.F.
+I.H.
+IM.
+IMP.
+I.N.R.I.
+I.O.M.
+I.P.
+I.S.V.P.
+I.
+IA.
+I.C.
+ICTVS
+ID.
+l.D.
+I.D.M.
+I.F.
+I.H.
+IHS.
+II VIR I D
+IIIIII VIR AVG
+ILL.
+ILLMA
+IM.
+IMP.
+I.N.R.I.
+I.O.M.
+I.P.
+I.S.V.P.
+IVL.
+IVN.
+ID.
+IDNE.
+I.L.H.
+INB.
+IND.
+INP
+I.X.
+IC
+Id.
+Igr.
+I.H.S.
+Ind.
+Ind.
+Inq.
+i.p.i.
+Is.
+Igr.
+Infraptum.
+Intropta.
+Irregulte.
 
-J.C. -- Jesus Christus ("Jesus Christ")
-J.C.D. -- Juris Canonici Doctor, Juris Civilis Doctor ("Doctor of Canon Law", "Doctor of Civil Law")
-J.D. -- Juris Doctor ("Doctor of Law")
-J.M.J. -- Jesus, Maria, Joseph ("Jesus, Mary, Joseph")
-Jo. -- Johannes
-Joann. -- Joannes ("John")
-J.U.D. -- Juris Utriusque Doctor ("Doctor of Both Laws" — Civil and Canon)
-Jud. -- Judicium ("Judgment")
-J.U.L. -- Juris Utriusque Licentiatus ("Licentiate of Both Laws")
-Jur. -- Juris ("Of Law")
+J.C.
+J.C.D.
+J.D.
+J.M.J.
+Jo.
+Joann.
+J.U.D.
+Jud.
+J.U.L.
+Jur.
 
-K. -- Kaeso, Caia, Calumnia, Caput, Carus, Castra.
-K., KAL., KL. -- Kalendae.
-K. -- Kaeso, Caia, Calumnia, Caput, Carus, Castra.
-K., KAL., KL. -- Kalendae.
-Kal. -- Kalendae ("Calends")
-K. -- Kalendas ("Calends"); or Care, Carus, Cara ("Dear One"); or Carissimus[a] ("Dearest")
-K.B.M. -- Karissimo Bene Merenti ("To the Most Dear and Well-deserving")
+K.
+K.
+KAL.
+KL.
+K.
+K.
+KAL.
+KL.
+Kal.
+K.
+K.B.M.
 
-L. -- Laelius, Legio, Lex, Libens, Liber, Libra, Locus, Lollius, Lucius, Ludus.
-LB. -- Libens, Liberi, Libertus.
-L.D.D.D. -- Locus datus decreto decurionum.
-LEG. -- Legatus, Legio.
-LIB. -- Liber, Liberalitas, Libertas, Libertus, Librarius.
-LL. -- Leges, Libentissime, Liberti.
-L.M. -- Libens merito, Locus monumenti.
-L.S. -- Laribus sacrum, Libens solvit, Locus sacer, Lectori Salutem.
-LVD. -- Ludus.
-LV.P.F. -- Ludos publicos fecit.
-L. -- Laelius, Legio, Lex, Libens, Liber, Libra, Locus, Lollius, Lucius, Ludus.
-LB. -- Libens, Liberi, Libertus.
-L.D.D.D. -- Locus datus decreto decurionum.
-LEG. -- Legatus, Legio.
-LEG AVG PR PR -- Legatus Augusti pro praetore
-LEG LEG -- Legatus legionis
-LIB. -- Liber, Liberalitas, Libertas, Libertus, Librarius.
-LIB BAR(O) -- Liber baro
-LL. -- Leges, Libentissime, Liberti.
-L.L.V.S. -- Libens laetus votum solvit.
-L.M. -- Libens merito, Locus monumenti.
-L.S. -- Laribus sacrum, Libens solvit, Locus sacer, Lectori Salutem.
-LVD. -- Ludus.
-LV.P.F. -- Ludos publicos fecit.
-L. -- Locus ("Place")
-L.M. -- Locus Monumenti ("Place of the Monument")
-L.S. -- Locus Sepulchri ("Place of the Sepulchre")
-Lia. -- Licentia ("License")
-Litma. -- Legitima ("Lawful")
-Lre. -- Litteræ ("Letters")
-Lte. -- Licite ("Lawfully", or "licitly")
-Laic. -- Laicus ("Layman")
-Laud. -- Laudes ("Lauds" — Breviary)
-L.C.D. -- Legis Civilis Doctor ("Doctor of Civil Law")
-l.c. -- Loco citato
-loc. cit. -- Loco citato ("at the place already cited")
-Lect. -- Lectio ("Lesson")
-Legit. -- Legitime, Legitimus ("Legally", "legitimate")
-L.H.D. -- Litterarum Humaniorum Doctor ("Doctor of Literature")
-Lib. -- Liber
-Lo. -- Liber, Libro ("Book", "In the book")
-Lic. -- Licentia, Licentiatus ("License", "Licentiate")
-Litt. -- Littera ("Letter")
-LL.B. -- Legum Baccalaureus ("Bachelor of Laws")
-LL.D. -- Legum Doctor ("Doctor of Laws")
-LL.M. -- Legum Magister ("Master of Laws")
-Loc. -- Locus ("Place")
-Lov. -- Lovanium ("Louvain")
-Lovan. -- Lovanienses (Theologians of Louvain)
-L.S. -- Loco Sigilli ("Place of the Seal")
-Lud. -- Ludovicus
+L.
+LB.
+L.D.D.D.
+LEG.
+LIB.
+LL.
+L.M.
+L.S.
+LVD.
+LV.P.F.
+L.
+LB.
+L.D.D.D.
+LEG.
+LEG AVG PR PR
+LEG LEG
+LIB.
+LL.
+L.L.V.S.
+L.M.
+L.S.
+LVD.
+LV.P.F.
+L.
+L.M.
+L.S.
+Lia.
+Litma.
+Lre.
+Lte.
+Laic.
+Laud.
+L.C.D.
+l.c.
+loc. cit.
+Lect.
+Legit.
+L.H.D.
+Lib.
+Lo.
+Lic.
+Litt.
+LL.B.
+LL.D.
+LL.M.
+Loc.
+Lov.
+Lovan.
+L.S.
+Lud.
 
-M. -- Magister, Magistratus, Magnus, Manes, Marcus, Marins, Marti, Mater, Memoria, Mensis, Miles, Monumentum, Mortuus, Mucius, Mulier.
-M'. -- Manius.
-M.D. -- Magno Deo, Manibus diis, Matri deum, Merenti dedit.
-MES. -- Mensis.
-MESS. -- Menses.
-M.F. -- Mala fides, Marci filius, Monumentum fecit.
-M.I. -- Matri Idaeae, Matii Isidi, Maximo Jovi.
-MNT., MON. -- Moneta.
-M.P. -- Male positus, Monumentum posuit.
-M.S. -- Manibus sacrum, Memoriae sacrum, Manu scriptum.
-MVN. -- Municeps, municipium (also MN., MV. and MVNIC.)
-M.V.S. -- Marti ultori sacrum, Merito votum solvit.
-M. -- Magister, Magistratus, Magnus, Manes, Marcus, Marins, Marti, Mater, Memoria, Mensis, Miles, Monumentum, Mortuus, Mucius, Mulier.
-M'. -- Manius.
-M.D. -- Magno Deo, Manibus diis, Matri deum, Merenti dedit.
-MEN -- Mensis
-MES. -- Mensis.
-MESS. -- Menses.
-M.F. -- Mala fides, Marci filius, Monumentum fecit.
-M.I. -- Matri Idaeae, Matii Isidi, Maximo Iovi.
-MIL -- Miles.
-M L -- Monumentum legavit.
-MNT. -- Moneta.
-MON -- Moneta, Monumentum.
-M.P. -- Male positus, Monumentum posuit.
-M.S. -- Manibus sacrum, Memoriae sacrum, Manu scriptum.
-MVN. -- Municeps, municipium (MN., MV. et MVNIC. quoque)
-M.V.S. -- Marti ultori sacrum, Merito votum solvit.
-M. -- Maria ("Mary")
-M.A. -- Magister Artium ("Master of Arts")
-Mag. -- Magister ("Master")
-Mand. -- Mandamus ("We command")
-Mand. Ap. -- Mandatum Apostolicum ("Apostolic Mandate", e.g. for a bishop's consecration)
-Mart. -- Martyr
-M. -- Martyr
-MM. -- Martyr, Martyres ("Martyr", "Martyrs" — Breviary)
-Mat. -- Matutinum ("Matins" — Breviary)
-Matr. -- Matrimonum ("Marriage")
-Mgr. -- Monseigneur, Monsignore ("My Lord")
-Miss. -- Missa ("Mass" — Breviary); Missionarius ("Missionary")
-Miss. Apost. -- Missionarius Apostolicus
-M.A. -- Missionarius Apostolicus ("Missionary Apostolic")
-M.R. -- Missionarius Rector ("Missionary Rector")
-m.t.v. -- mutatur terminatio versiculi ("the termination of the little verse is changed" — Breviary)
-Magro. -- Magistro ("Master" — dat. or abl. case)
-Mir. -- Misericorditer ("Mercifully")
-Miraone. -- Miseratione ("Pity" — abl. case)
-Mrimonium. -- Matrimonium ("Matrimony")
-M. -- Martyr, or Memoria ("Memory") or Monumentum ("Monument")
-MM. -- Martyres ("Martyrs")
-M.P. -- Monumentum Posuit ("Erected a Monument")
-MRT. -- Merenti ("To the Deserving")
+M.
+M'.
+M.D.
+MES.
+MESS.
+M.F.
+M.I.
+MNT.
+MON.
+M.P.
+M.S.
+MVN.
+M.V.S.
+M.
+M'.
+M.D.
+MEN
+MES.
+MESS.
+M.F.
+M.I.
+MIL
+M L
+MNT.
+MON
+M.P.
+M.S.
+MVN.
+M.V.S.
+M.
+M.A.
+Mag.
+Mand.
+Mand. Ap.
+Mart.
+M.
+MM.
+Mat.
+Matr.
+Mgr.
+Miss.
+Miss. Apost.
+M.A.
+M.R.
+m.t.v.
+Magro.
+Mir.
+Miraone.
+Mrimonium.
+M.
+MM.
+M.P.
+MRT.
 
-N. -- Natio, Natus, Nefastus (dies), Nepos, Neptunus, Nero, Nomen, Non, Nonae, Noster, Novus, Numen, Numerius, Numerus, Nummus.
-NB -- Nota Bene
-NEP. -- Nepos, Neptunus.
-N.F.C. -- Nostrae fidei commissum.
-N.L. -- Non licet, Non liquet, Non longe.
-N.M.V. -- Nobilis memoriae vir.
-NN. -- Nostri.
-N.N. -- Nomen nescio
-NN., NNO., NNR. -- Nostrorum.
-NOB. -- Nobilis.
-NOB., NOBR., NOV. -- Novembris.
-N.P. -- Nefastus primo (priore parto diei), Non potest.
-N. -- Natio, Natus, Nefastus (dies), Nepos, Neptunus, Nero, Nomen, Non, Nonae, Noster, Novus, Numen, Numerius, Numerus, Nummus.
-NB -- Nota Bene
-NEP. -- Nepos, Neptunus.
-N.F.C. -- Nostrae fidei commissum.
-N.L. -- Non licet, Non liquet, Non longe.
-N.M.V. -- Nobilis memoriae vir.
-NN. -- Nostri.
-NN., NNO., NNR. -- Nostrorum.
-N.N. -- nomen nominandum seu nomen nescio
-NO -- Nonis
-NOB. -- Nobilis.
-NOB., NOBR., NOV. -- Novembris.
-N.P. -- Nefastus primo (priore parto diei), Non potest.
-N. -- Nonas ("Nones"); or Numero ("Number")
-NN. -- Nostris ("To Our" — with a plural) or Numeri ("Numbers")
-Nultus. -- Nullatenus ("Nowise")
-Nativ. D.N.J.C. -- Nativitas Domini Nostri Jesu Christi ("Nativity of Our Lord Jesus Christ")
-N. D. -- Nostra Domina, Notre Dame ("Our Lady")
-Nigr. -- Niger ("Black" — Breviary)
-No. -- Nobis ("to us", "for us")
-Nob. -- Nobilis, Nobiles ("Noble", "Nobles")
-Noct. -- Nocturnum ("Nocturn")
-Non. -- Nonæ ("Nones")
-Nostr. -- Noster, nostri ("Our", "of our")
-Not. -- Notitia ("Knowledge")
-N.S. -- Notre Seigneur, Nostro Signore ("Our Lord")
-N.S. -- New Style
-N.T. -- Novum Testamentum ("New Testament")
-Ntri. -- Nostri ("Of our")
-Nup. -- Nuptiæ ("Nuptials")
+N.
+NB
+NEP.
+N.F.C.
+N.L.
+N.M.V.
+NN.
+N.N.
+NN.
+NNO.
+NNR.
+NOB.
+NOB.
+NOBR.
+NOV.
+N.P.
+N.
+NB
+NEP.
+N.F.C.
+N.L.
+N.M.V.
+NN.
+NN.
+NNO.
+NNR.
+N.N.
+NO
+NOB.
+NOB.
+NOBR.
+NOV.
+N.P.
+N.
+NN.
+Nultus.
+Nativ. D.N.J.C.
+N. D.
+Nigr.
+No.
+Nob.
+Noct.
+Non.
+Nostr.
+Not.
+N.S.
+N.S.
+N.T.
+Ntri.
+Nup.
 
-O. -- Ob, Officium, Omnis, Oportet, Optimus, Opus, Ossa.
-OB. -- Obiit, Obiter, Orbis.
-OCist -- Ordo Cisterciensis
-O.C.S. -- Ob cives servatos.
-OFM -- Ordo Fratrum Minorum
-O.H.F. -- Omnibus honoribus functus.
-O.H.S.S. -- Ossa hic sita sunt.
-O P N -- Ora pro nobis.
-OR. -- Hora, Ordo, Ornamentum.
-OSA -- Ordo Sancti Augustini
-OSB -- Ordo Sancti Benedicti
-OT -- Ordo Teutonicus
-O.T.B.Q. -- Ossa tua bene quiescant.
-OVF -- Oro vos faciatis
-Ob. -- Obiit ("Died")
-Oct. -- Octava ("Octave" — Breviary)
-Omn. -- Omnes, Omnibus ("All", "to all")
-Op. Cit. -- Opere Citato ("In the work cited")
-Or. -- Oratio ("Prayer" — Breviary)
-Ord. -- Ordo, Ordinatio, Ordinarius ("Order", "Ordination", "Ordinary")
-Or -- Orator
-Orat. -- Orator ("Petitioner"), Oratorium ("Oratory")
-O.S. -- Old Style
-O.T. -- Old Testament
-Oxon. -- Oxonium, Oxonienses ("Oxford", "Theologians or Scholars of Oxford")
-Ordinaoni. -- Ordinationi ("Ordination" — dat. case)
-Ordio. -- Ordinario ("Ordinary" — dat. or abl. case)
-O. -- Hora ("Hour"); Obiit ("Died")
-OB. IN XTO. -- Obiit In Christo ("Died In Christ")
-OMS. -- Omnes ("All")
-OP. -- Optimus (Excellent, or Supremely Good)
+O.
+OB.
+OCist
+O.C.S.
+OFM
+O.H.F.
+O.H.S.S.
+O P N
+OR.
+OSA
+OSB
+OT
+O.T.B.Q.
+OVF
+Ob.
+Oct.
+Omn.
+Op. Cit.
+Or.
+Ord.
+Or
+Orat.
+O.S.
+O.T.
+Oxon.
+Ordinaoni.
+Ordio.
+O.
+OB. IN XTO.
+OMS.
+OP.
 
-P. -- Pars, Passus, Pater, Patronus, Pax, Perpetuus, Pes, Pius, Plebs, Pondo, Populus, Post, Posuit, Praeses, Praetor, Primus, Pro, Provincia, Publicus, Publius, Puer.
-P.C. -- Pactum conventum, Patres conscripti, Pecunia constituta, Ponendum curavit, Post consulatum, Potestate censoria.
-P.F. -- Pia fidelis, Pius felix, Promissa fides, Publii filius.
-P.M. -- Piae memoriae, Pius minus, Pontifex maximus. Post meridiem.
-P.P. -- Pater patratus, Pater patriae, Pecunia publica, Praepositus, Primipilus, Propraetor.
-PR. -- Praeses, Praetor, Pridie, Princeps.
-P.R. -- Permissu reipublicae, Populus Romanus.
-P.R.C. -- Post Romam conditam.
-PR.PR. -- Praefectus praetorii, Propraetor.
-P.S. -- Pecunia sua, Plebiscitum, Proprio sumptu, Publicae saluti, Post scriptum.
-P.V. -- Pia victrix, praefectus urbi, Praestantissimus vir.
-P. -- Pars, Passus, Pater, Patronus, Pax, Perpetuus, Pes, Pius, Plebs, Pondo, Populus, Positum, Post, Posuit, Praeses, Praetor, Primus, Pro, Provincia, Publicus/-e, Publius, Puer.
-P.C. -- Pactum conventum, Patres conscripti, Pecunia constituta, Ponendum curavit, Post consulatum, Potestate censoria.
-P.F. -- Pia fidelis, Pius felix, Promissa fides, Publii filius.
-P F INV -- Pius felix invictus.
-P.M. -- Piae memoriae, Pius minus, Pontifex maximus.
-PONT MAX -- Pontifex maximus.
-POS -- Posuit
-P.P. -- Parentes posuerunt, Parentibus pientissimis, Pater patratus, Pater patriae, Patronus posuit, Pecunia publica, Praepositus, Primipilus/Primus pilus, Pro pietate, Propraetor.
-PP -- Posuerunt.
-PR. -- Praeses, Praetor, Pridie, Princeps.
-PRAEF -- Praefectus
-PRAET -- Praetor
-P.R. -- Permissu reipublicae, Populus Romanus.
-P.R.C. -- Post Romam conditam.
-PROC -- Procurator
-PRO SAL -- Pro salute.
-PR.PR. -- Praefectus praetorii, Propraetor.
-P.S. -- Pecunia sua, Plebiscitum, Proprio sumptu, Publicae saluti, Post scriptum.
-PS -- Psalmus.
-P.V. -- Pia victrix, praefectus urbi, Praestantissimus vir.
-P. -- Pax ("Peace"); or Pius ("Dutiful"); or Ponendum ("To be Placed"); or Pridie ("The Day Before"); or Plus ("More")
-P.C. -- Poni Curavit ("Caused to be Placed")
-P.C. -- Post Consulatum
-P. CONS. -- Post Consulatum ("After the Consulate")
-P.I. -- Poni Jussit ("Ordered to be Placed")
-P.M. -- Plus Minus ("More or Less"); or Piae Memoriae ("Of Pious Memory"); or Post Mortem ("After Death")
-PP. -- Præpositus ("Placed over")
-PR.K. -- Pridie Kalendas ("The Day Before the Calends")
-PRB. -- Presbyter ("Priest")
-PR.N. -- Pridie Nonas ("The Day Before the Nones")
-P.T.C.S. -- Pax Tibi Cum Sanctis ("Peace to Thee With the Saints")
-PZ. -- Pie Zeses ("May you Live Piously" — Greek)
-Pbr. -- Presbyter ("Priest")
-Penia. -- Pœnitentia ("Penance", or "repentance")
-Peniaria. -- Pœnitentiaria ("Penitentiary"; i.e. Bureau of the Apostolic Penitentiary)
-Pntium. -- Præsentium ("Of those present", or, "Of this present writing")
-Poe. -- Posse ("To be able", or, "The ability to do a thing")
-Pontus. -- Pontificatus ("Pontificate")
-PP. -- Papa ("Pope")
-Pr. -- Pater ("Father")
-Pror. -- Procurator
-Ptur. -- Præfertur ("Is preferred", or, "Is brought forward")
-Ptus. -- Præfatus ("Aforesaid")
-P. -- Pater, Pere ("Father")
-Pa. -- Papa ("Pope"); Pater ("Father")
-Pact. -- Pactum ("Agreement")
-Pasch. -- Pascha ("Easter" — Breviary)
-Patr. -- Patriarcha ("Patriarch")
-Pent. -- Pentecostes ("Pentecost" — Breviary)
-Ph.B. -- Philosophiæ Baccalaureus ("Bachelor of Philosophy")
-Ph.D. -- Philosophiæ Doctor ("Doctor of Philosophy")
-Phil. -- Philosophia ("Philosophy")
-Ph.M. -- Philosophiæ Magister ("Master of Philosophy")
-P.K. -- Pridie Kalendas ("The day before the Calends")
-Poenit. -- Poenitentia ("Penance")
-Poenit. Ap. -- Pœnitentiaria Apostolica ("Office of the Apostolic Penitentiary")
-Pont. -- Pontifex ("Pontiff", i.e. Bishop — Breviary)
-Pont. -- Pontificatus ("Pontificate")
-Pont. Max. -- Pontifex Maximus ("Supreme Pontiff")
-Poss. -- Possessor, Possessio ("Possessor", "Possession")
-PP. -- Papa ("Pope"); Pontificum ("Of the popes")
-P.P. -- Parochus ("Parish Priest" — used mostly in Ireland)
-PP. AA. -- Patres Amplissimi ("Cardinals")
-P.P.P. -- Propria Pecunia Posuit ("Erected at his own expense")
-P.R. -- Permanens Rector ("Permanent Rector")
-Praef. -- Præfatio ("Preface" of the Mass — Breviary)
-Presbit. -- Presbyter, Priest
-Prof. -- Professus, Professio, Professor ("Professed", "Profession", "Professor")
-Prop. Fid. -- Propaganda Fide (Congregation of the Propaganda, Rome)
-Propr. -- Proprium ("Proper" — Breviary)
-Prov. -- Provisio, Provisum ("Provision", "Provided")
-Ps. -- Psalmus ("Psalm")
-Pub. -- Publicus
-Publ. -- Publicus, Publice ("Public", "Publicly")
-Purg. Can. -- Purgatio Canonica ("Canonical Disculpation")
+P.
+P.C.
+P.F.
+P.M.
+P.P.
+PR.
+P.R.
+P.R.C.
+PR.PR.
+P.S.
+P.V.
+P.
+P.C.
+P.F.
+P F INV
+P.M.
+PONT MAX
+POS
+P.P.
+PP
+PR.
+PRAEF
+PRAET
+P.R.
+P.R.C.
+PROC
+PRO SAL
+PR.PR.
+P.S.
+PS
+P.V.
+P.
+P.C.
+P.C.
+P. CONS.
+P.I.
+P.M.
+PP.
+PR.K.
+PRB.
+PR.N.
+P.T.C.S.
+PZ.
+Pbr.
+Penia.
+Peniaria.
+Pntium.
+Poe.
+Pontus.
+PP.
+Pr.
+Pror.
+Ptur.
+Ptus.
+P.
+Pa.
+Pact.
+Pasch.
+Patr.
+Pent.
+Ph.B.
+Ph.D.
+Phil.
+Ph.M.
+P.K.
+Poenit.
+Poenit. Ap.
+Pont.
+Pont.
+Pont. Max.
+Poss.
+PP.
+P.P.
+PP. AA.
+P.P.P.
+P.R.
+Praef.
+Presbit.
+Prof.
+Prop. Fid.
+Propr.
+Prov.
+Ps.
+Pub.
+Publ.
+Purg. Can.
 
-Q. -- Quaestor, Quando, Quantus, Que, Qui, Quinquennalis, Quintus, Quirites.
-Q.D.R. -- Qua de re.
-Q.I.S.S. -- Quae infra scripta sunt
-Q.S.S.S. -- Quae supra scripta sunt
-QQ. -- Quaecunque, Quinquennalis, Quoque.
-Q.R. -- Quaestor reipublicae.
-Q. -- Quaestor, Quando, Quantus, Que, Qui, Quinquennalis, Quintus, Quirites.
-Q.B.F.F.F.Q.S. -- Quod bonum, faustum, felix fortunatumque sit. (Quod bonum, felix, faustum fortunatumque sit.)
-Q.D.R. -- Qua de re.
-Q.I.D. -- Quater in die.
-Q.I.S.S. -- Quae infra scripta sunt
-Q.S.S.S. -- Quae supra scripta sunt
-QQ. -- Quaecunque, Quinquennalis, Quoque.
-Q.R. -- Quaestor reipublicae.
-Quadrag. -- Quadragesima ("Lent", also the "Fortieth day" before Easter — Breviary)
-Quinquag. -- Quinquagesima (The "Fiftieth day" before Easter — Breviary)
-Qd. -- Quod ("Because", "That", or, "Which")
-Qmlbt. -- Quomodolibet ("In any manner whatsoever")
-Qtnus. -- Quatenus ("In so far as")
-Q. -- Quiescit
-Qui. -- Quiescit ("He Rests")
-Q.B.AN. -- Qui Bixit [for Vixit] Annos ("Who lived . . . years")
-Q.I.P. -- Quiescat In Pace ("May he [or she] Rest in Peace")
-Q.V. -- Qui Vixit ("Who Lived")
+Q.
+Q.D.R.
+Q.I.S.S.
+Q.S.S.S.
+QQ.
+Q.R.
+Q.
+Q.B.F.F.F.Q.S.
+Q.D.R.
+Q.I.D.
+Q.I.S.S.
+Q.S.S.S.
+QQ.
+Q.R.
+Quadrag.
+Quinquag.
+Qd.
+Qmlbt.
+Qtnus.
+Q.
+Qui.
+Q.B.AN.
+Q.I.P.
+Q.V.
 
-R. -- Recte, Res, Res publica, Retro, Rex, Ripa, Roma, Romanus, Rufus, Rursus.
-R.C. -- Romana civitas, Romanus civis.
-RESP., RP. -- Res publica.
-RET.P., RP. -- Retro pedes.
-RIP -- Requiescat in pace.
-ROM IMP -- Romanorum imperator.
-R.R. -- Relationes relatae
-R. -- Recte, Res, Respublica, Retro, Rex, Ripa, Roma, Romanus, Rufus, Rursus.
-R.C. -- Romana civitas, Romanus civis.
-RESP., RP. -- Res publica.
-RET.P., RP. -- Retro pedes.
-R. -- Requiescit ("He Rests"); or Refrigerio ("In [a place of] Refreshment")
-Reg. -- Regionis ("Of the Region")
-Relione. -- Religione ("Religion", or, "Religious Order" — abl. case)
-Rlari. -- Regulari ("Regular")
-Roma. -- Romana ("Roman")
-R. -- Responsorium ("Responsory" — Breviary)
-R. -- Roma (Rome)
-Rescr. -- Rescriptum ("Rescript")
-R.D. -- Rural Dean
-Req. -- Requiescat ("May he [or she] rest", i.e. in peace)
-Resp. -- Responsum ("Reply")
-R.I.P. -- Requiescat In Pace ("May he or she rest in peace")
-Rit. -- Ritus ("Rite", "Rites")
-Rom. -- Romanus, Romana ("Roman")
-R. P. -- Reverendus Pater, Reverend Pere ("Reverend Father")
-RR. -- Rerum ("Of Things, Subjects" — e.g. SS. RR. Ital., Writers on Italian [historical] subjects); Regesta
-Rt. Rev. -- Right Reverend
-Rub. -- Ruber ("Red" — Breviary)
-Rubr. -- Rubrica ("Rubric")
+R.
+R.C.
+RESP.
+RP.
+RET.P.
+RP.
+RIP
+ROM IMP
+R.R.
+R.
+R.C.
+RESP.
+RP.
+RET.P.
+RP.
+R.
+Reg.
+Relione.
+Rlari.
+Roma.
+R.
+R.
+Rescr.
+R.D.
+Req.
+Resp.
+R.I.P.
+Rit.
+Rom.
+R. P.
+RR.
+Rt. Rev.
+Rub.
+Rubr.
 
-S. -- Sacrum, Scriptus, Semis, Senatus, Sepultus, Servius, Servus, Sextus, Sibi, Sine, Situs, Solus, Solvit, Sub, Suus.
-SAC. -- Sacerdos, Sacrificium, Sacrum.
-S.C. -- Senatus consultum.
-S.D. -- Sacrum diis, Salutem dicit, Senatus decreto, Sententiam
-S.D.M. -- Sacrum diis Manibus, Sine dolo malo.
-SER. -- Servius, Servus.
-S.E.T.L. -- Sit ei terra levis.
-SN. -- Senatus, Sententia, Sine nomine.[1]
-S.D. -- Salutem dicit.[2]
-S.P. -- Sacerdos perpetua, Sine pecunia, Sua pecunia.
-S.P.D. -- Salutem plurimam dicit.[2]
-S.P.Q.R. -- Senatus populusque Romanus.
-S.S. -- Sanctissimus senatus, Supra scripture.
-S.T.T.L.-- Sit tibi terra levis.
-S. -- Sacerdos, Sacrum, Sanctus, Scriptus, Semis, Senatus, Sepultus, Servius, Servus, Sestertium, Sextus, Sibi, Sine, Situs, Solus, Solvit, Sub, Suus.
-SAC. -- Sacerdos, Sacrificium, Sacrum.
-S.C. -- Senatus consultum.
-sc., scil. -- scilicet
-S.D. -- Sacrum diis, Salutem dicit, Senatus decreto, Sententiam
-S.D.M. -- Sacrum diis Manibus, Sine dolo malo.
-SER. -- Servius, Servus/-a.
-S.E.T.L. -- Sit ei terra levis.
-SEX -- Sextus.
-SI -- Societas Iesu
-SN. -- Senatus, Sententia, Sine.
-S.P. -- Sacerdos perpetua, Sine pecunia, Spurius, Sua pecunia.
-S.P.D. -- Salutem plurimam dicit, ad caput litterarum.
-S.P.Q.R. -- Senatus populusque Romanus.
-S. R. E. -- Sacra vel Sancta Romana Ecclesia
-S. R. I. (M. P.) -- Sacrum Romanum Imperium
-S.S. -- Sancti, Sanctissimus, Sanctissimus senatus, Supra scripture.
-SSS -- Sanctissimus.
-ST -- Sanctus.
-S.T.B.V.E.B.V. -- Si Tu Bene Valeas Ego Bene Valeo.
-STIP -- Stipendorium.
-STTL -- Sit tibi terra levis.
-S.V.B.E.E.Q.V. -- Si vales bene est, ego quidem valeo.
-S. -- Sacrum
-Sacr. -- Sacrum ("Sacred")
-Sab. -- Sabbatum
-Sabb. -- Sabbatum ("Sabbath", Saturday)
-Saec. -- Saeculum (Century)
-Sal. -- Salus, Salutis ("Salvation", "of Salvation")
-Salmant. -- Salmanticenses (Theologians of Salamanca)
-S.C. -- Sacra Congregatio ("Sacred Congregation")
-S.C.C. -- Sacra Congregatio Concilii ("Sacred Congregation of the Council", i.e. of Trent)
-S.C.EE.RR. -- Sacra Congregatio Episcoporum et Regularium ("Sacred Congregation of Bishops and Regulars")
-S.C.I. -- Sacra Congregatio Indicis ("Sacred Congregation of the Index")
-S.C.P.F. -- Sacra Congregatio de Propaganda Fide ("Sacred Congregation for the Propagation of the Faith")
-SCS -- Sanctus ("Saint")
-s.d. -- sine data (undated book)
-S.D. -- Servus Dei (Servant of God)
-Semid. -- Semiduplex ("Semi" double feast — Breviary)
-Septuag -- Septuagesima ("Seventieth day" before Easter; always a Sunday — Breviary)
-Sexag. -- Sexagesima ("Sixtieth day" before Easter — Breviary)
-Sig. -- Sigillum ("Seal")
-Simpl. -- Simplex ("Simple" feast — Breviary)
-Sine Com. -- Sine Commemoratione ("Without commemoration" of other feast, or feasts — Breviary)
-s.l. -- sine loco ("without indication" of place of printing)
-s.l.n.d. -- sine loco nec data ("without indication of place" or "without date of printing")
-S.M. -- Sanctæ Memoriæ ("Of Holy Memory")
-Soc. -- Socius, Socii ("Companion", "Companions" — Breviary)
-S. Off. -- Sanctum Officium (Congregation of the Holy Office, Inquisition)
-S.P. -- Sanctissime Pater ("Most Holy Father")
-S.P. -- Sanctus Petrus
-S. Petr. -- Sanctus Petrus ("St. Peter")
-S.P. -- Summus Pontifex ("Supreme Pontiff", Pope)
-S.P.A. -- Sacrum Palatium Apostolicum ("Sacred Apostolic Palace", Vatican, Quirinal)
-Sr. -- Soror (Sister)
-S.R.C. -- Sacra Rituum Congregatio ("Sacred Congregation of Rites")
-S.R.E. -- Sancta Romana Ecclesia, Sanctæ Romanæ Ecclesia ("Most Holy Roman Church"; or, "of the Most Holy Roman Church")
-SS. -- Scriptores ("Writers")
-SS.D.N. -- Sanctissimus Dominus Noster ("Our Most Holy Lord [Jesus Christ]", also a title of the Pope)
-S., SS. -- Sanctus, Sancti ("Saint", "Saints")
-S.T.B. -- Sacræ Theologiæ Baccalaureus ("Bachelor of Sacred Theology")
-S.T.D. -- Sacræ Theologiæ Doctor ("Doctor of Sacred Theology")
-S.T.L. -- Sacræ Theologiæ Licentiatus ("Licentiate of Sacred Theology")
-Suffr. -- Suffragia ("Suffrages" — i.e. prayers of the saints; Breviary)
-S.V. -- Sanctitas Vestra ("Your Holiness")
-Syn. -- Synodus ("Synod")
-Salri. -- Salutari ("Salutary")
-Snia. -- Sententia ("Opinion")
-Sntae. -- Sanctæ
-Stae. -- Sanctæ ("Holy", or, "Saints" — feminine)
-Spealer. -- Specialiter ("Specially")
-Spualibus -- Spiritualibus ("In spiritual matters")
-Supplioni. -- Supplicationibus ("Supplication" — dat. or abl. case)
-S. -- Suus ("His"); or Situs ("Placed"); or Sepulchrum ("Sepulchre")
-SC. M. -- Sanctæ Memoriæ ("Of Holy Memory")
-SD. -- Sedit ("He sat")
-SSA. -- Subscripta ("Subscribed")
-S.I.D. -- Spiritus In Deo ("Spirit [rests] in God")
-S.P. -- Sepultus ("Buried"); or Sepulchrum ("Sepulchre")
-SS. -- Sanctorum (Of the Saints)
-S.V. -- Sacra Virgo ("Holy Virgin")
+S.
+SAC.
+S.C.
+S.D.
+S.D.M.
+SER.
+S.E.T.L.
+SN.
+S.D.
+S.P.
+S.P.D.
+S.P.Q.R.
+S.S.
+S.T.T.L.
+S.
+SAC.
+S.C.
+sc.
+scil.
+S.D.
+S.D.M.
+SER.
+S.E.T.L.
+SEX
+SI
+SN.
+S.P.
+S.P.D.
+S.P.Q.R.
+S. R. E.
+S. R. I.
+M. P.
+S.S.
+SSS
+ST
+S.T.B.V.E.B.V.
+STIP
+STTL
+S.V.B.E.E.Q.V.
+S.
+Sacr.
+Sab.
+Sabb.
+Saec.
+Sal.
+Salmant.
+S.C.
+S.C.C.
+S.C.EE.RR.
+S.C.I.
+S.C.P.F.
+SCS
+s.d.
+S.D.
+Semid.
+Septuag
+Sexag.
+Sig.
+Simpl.
+Sine Com.
+s.l.
+s.l.n.d.
+S.M.
+Soc.
+S. Off.
+S.P.
+S.P.
+S. Petr.
+S.P.
+S.P.A.
+Sr.
+S.R.C.
+S.R.E.
+SS.
+SS.D.N.
+S.
+SS.
+S.T.B.
+S.T.D.
+S.T.L.
+Suffr.
+S.V.
+Syn.
+Salri.
+Snia.
+Sntae.
+Stae.
+Spealer.
+Spualibus
+Supplioni.
+S.
+SC. M.
+SD.
+SSA.
+S.I.D.
+S.P.
+SS.
+S.V.
 
-T. -- Terminus, Testamentum, Titus, Tribunus, Tu, Turma, Tutor.
-TB., TI., TIB. -- Tiberius.
-TB., TR., TRB. -- Tribunus.
-T.F. -- Testamentum fecit, Titi filius, Titulum fecit, Titus Flavius.
-TM. -- Terminus, Testamentum, Thermae.
-T.P. -- Terminum posuit, Tribunicia potestate, Tribunus plebis.
-TVL. -- Tullius, Tunus.
-T. -- Terminus, Testamentum, Titus, Tribunus, Tu, Turma, Tutor.
-TB., TI., TIB. -- Tiberius.
-TB., TR., TRB. -- Tribunus.
-T.F. -- Testamentum fecit, Titi filius, Titulum fecit, Titus Flavius.
-TFI -- Testamentum fieri iussit.
-TI(B) -- Tiberius
-TM. -- Terminus, Testamentum, Thermae.
-T.P. -- Terminum posuit, Tribunicia potestate, Tribunus plebis.
-TR PL -- Tribunus plebis
-T.R.E. -- Tempore Regis Eduardi
-TVL. -- Tullius, Tunus.
-T. -- Titulus
-TT. -- Titulus, Tituli ("Title", "Titles")
-TM. -- Testamentum ("Testament")
-Thia -- Theologia
-Theolia. -- Theologia ("Theology")
-Tli. -- Tituli ("Titles")
-Tm. -- Tantum ("So much", or, "Only")
-Tn. -- Tamen ("Nevertheless")
-Temp. -- Tempus, Tempore ("Time", "in time")
-Test. -- Testes, Testimonium ("Witnesses", "Testimony")
-Theol. -- Theologia ("Theology")
-Tit. -- Titulus, Tituli ("Title", "Titles")
-
-Ult. -- Ultimo ("Last" — day, month, year)
-Usq. -- Usque ("As far as")
-Ux. -- Uxor ("Wife")
-
-V. -- Urbs, Usus, Uxor, Vale, Verba, Vestalis, Vester, Vir, Vivus, Vixit, Volo, Votum.
-VA. -- Veterano assignatus, Vixit annos.
-V.C. -- Vale conjux, Vir clarissimus, Vir consularis.
-V.E. -- Verum etiam, Vir egregius (=equestrian), Visum est.
-V.F. -- Usus fructus, Verba fecit, Vivus fecit.
-V.P. -- Urbis praefectus, Vir perfectissimus, Vivus posuit.
-V.R. -- Urbs Roma, Uti rogas, Votum reddidit.
-V.S.L.M. -- Votum Solvit Libens Merito. (willingly and deservedly fulfilled his vow)
-V. -- Urbs, Usus, Uxor, Vale, Verba, Vestalis, Vester, Victrix, Vir, Virgo, Vivus, Vixit, Volo, Votum.
-VA. -- Veterano assignatus, Vixit annos.
-V.C. -- Vale coniunx, Vir clarissimus, Vir consularis.
-V.E. -- Verum etiam, Vir egregius, Visum est.
-V.F. -- Usus fructus, Verba fecit, Vivus fecit.
-v.g., v.gr. - verbi gratia
-VIX -- Vixit
-VLP -- Ulpius
-V.P. -- Urbis praefectus, Vir perfectissimus, Vivus posuit.
-V.R. -- Urbs Roma, Uti rogas, Votum reddidit.
-VS -- Votum solvit, Vir spectabilis.
-VSLLM -- Votum solvit libens laetus merito.
-V. -- Venerabilis
-Ven. -- Venerabilis
-VV. -- Venerabilis, Venerabiles ("Venerable")
-'Venebli — Venerabili ("Venerable")
-Vrae. -- Vestræ ("Your")
-V. -- Vester
-Vest. -- Vester ("Your")
-Vac. -- Vacat, Vacans ("Vacant")
-Val. -- Valor ("Value")
-Vat. -- Vaticanus ("Vatican")
-Vba. -- Verba ("Words")
-Vers. -- Versiculus ("Versicle" — Breviary)
-Vesp. -- Vesperæ ("Vespers" — Breviary)
-V.F. -- Vicarius Foraneus
-Vic. For. -- Vicarius Foraneus ("Vicar-Forane")
-V.G. -- Vicarius Generalis ("Vicar-General")
-Vid. -- Vidua ("Widow" — Breviary)
+T.
+TB.
+TI.
+TIB.
+TB.
+TR.
+TRB.
+T.F.
+TM.
+T.P.
+TVL.
+T.
+TB.
+TI.
+TIB.
+TB.
+TR.
+TRB.
+T.F.
+TFI
+TM.
+T.P.
+TR PL
+T.R.E.
+TVL.
+T.
+TT.
+TM.
+Thia
+Theolia.
+Tli.
+Tm.
+Tn.
+Temp.
+Test.
+Theol.
+Tit.
+Ult.
+Usq.
+Ux.
+V.
+VA.
+V.C.
+V.E.
+V.F.
+V.P.
+V.R.
+V.S.L.M.
+V.
+VA.
+V.C.
+V.E.
+V.F.
+v.g.
+v.gr.
+VIX
+VLP
+V.P.
+V.R.
+VS
+VSLLM
+V.
+Ven.
+VV.
+Vrae.
+V.
+Vest.
+Vac.
+Val.
+Vat.
+Vba.
+Vers.
+Vesp.
+V.F.
+Vic. For.
+V.G.
+Vid.
 Vid.Videlicet
-Videl. -- Videlicet ("Namely")
-Vig. -- Vigilia ("Vigil" of a feast — Breviary)
-Viol. -- Violaceus ("Violet" — Breviary)
-Virg. -- Virgo ("Virgin" — Breviary)
-Virid. -- Viridis ("Green" — Breviary)
-V.M. -- Vir Magnificus ("Great Man")
-V. Rev. -- Very Reverend
-V.T. -- Vetus Testamentum
-V. -- Vixit ("He Lived"); or Vixisti ("Thou didst Live")
-VB. -- Vir Bonus ("A Good Man")
-V.C. -- Vir Clarissimus ("A Most Illustrious Man")
-VV. CC. -- Viri Clarissimi ("Most Illustrious Men")
-V.H. -- Vir Honestus ("A Worthy Man")
-V. X. -- Vivas, Care [or Cara] ("Mayest thou Live, Dear One"); or Uxor Carissima ("Most Dear Wife")
-
-XV V. -- Quindecimvir.
-X. -- Christus
-XPC. -- Christus
-XS. -- Christus ("Christ")
-XC. -- Christus
-XCS. -- Christus ("Christ" — first, middle, and last letters of the Greek name)
-
-ZC, ZE -- Et cetera
+Videl.
+Vig.
+Viol.
+Virg.
+Virid.
+V.M.
+V. Rev.
+V.T.
+V.
+VB.
+V.C.
+VV. CC.
+V.H.
+V. X.
+XV V.
+X.
+XPC.
+XS.
+XC.
+XCS.

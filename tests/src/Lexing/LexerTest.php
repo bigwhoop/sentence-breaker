@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -17,32 +18,33 @@ class LexerTest extends \PHPUnit_Framework_TestCase
 {
     public function testCompleteSentence()
     {
-        $text     = 'He said: "Hello there!" How are you? Good.';
+        $text = 'He said: "Hello there!" How are you? Good.';
         $expected = '"He" "said:" T_QUOTED_STR "How" "are" "you" T_QUESTION_MARK "Good" T_PERIOD';
-        
+
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
-        
+
         $actual = $this->getTokensString($tokens);
-        
+
         $this->assertEquals($expected, $actual);
     }
-    
+
     public function testAbbreviations()
     {
         $text = 'Hello Mr. Jones, please turn on the T.V.';
         $expected = '"Hello" "Mr" T_PERIOD "Jones," "please" "turn" "on" "the" "T.V" T_PERIOD';
-        
+
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
-        
+
         $actual = $this->getTokensString($tokens);
-        
+
         $this->assertEquals($expected, $actual);
     }
 
     /**
      * @param Token[]|string[] $tokens
+     *
      * @return string
      */
     private function getTokensString(array $tokens)
@@ -52,10 +54,10 @@ class LexerTest extends \PHPUnit_Framework_TestCase
             if ($token instanceof WhitespaceToken) {
                 continue;
             }
-            
-            $chunks[] = $token instanceof Token ? $token->getName() : '"' . $token . '"';
+
+            $chunks[] = $token instanceof Token ? $token->getName() : '"'.$token.'"';
         }
-        
-        return join(' ', $chunks);
+
+        return implode(' ', $chunks);
     }
 }

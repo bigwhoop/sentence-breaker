@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -26,7 +27,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
             ],
         ];
     }
-    
+
     /**
      * @return array
      */
@@ -39,11 +40,11 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
             ],
             [
                 'He said: "Tom Jones is here!" and I believed him.',
-                ['He said: "Tom Jones is here!" and I believed him.',],
+                ['He said: "Tom Jones is here!" and I believed him.'],
             ],
             [
                 'He said: "Tom Jones is here!", and I believed him.',
-                ['He said: "Tom Jones is here!", and I believed him.',],
+                ['He said: "Tom Jones is here!", and I believed him.'],
             ],
             [
                 'He said: "Tom \'Tommy\' Jones is here!" And I believed him.',
@@ -51,7 +52,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
             ],
         ];
     }
-    
+
     /**
      * @return array
      */
@@ -78,7 +79,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider dataSimpleSentences
-     * 
+     *
      * @param string $input
      * @param string $expectedResult
      */
@@ -89,7 +90,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider dataQuotes
-     * 
+     *
      * @param string $input
      * @param string $expectedResult
      */
@@ -100,10 +101,10 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @dataProvider dataAbbreviations
-     * 
+     *
      * @param string $input
      * @param string $expectedResult
-     * @param array $abbreviations
+     * @param array  $abbreviations
      */
     public function testAbbreviations($input, $expectedResult, array $abbreviations)
     {
@@ -113,17 +114,17 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
     /**
      * @param string $input
      * @param string $expectedResult
-     * @param array $abbreviations
+     * @param array  $abbreviations
      */
     private function runCalculateTest($input, $expectedResult, array $abbreviations)
     {
         $lexer = new Lexer();
         $tokens = $lexer->run($input);
-        
+
         $calc = new Calculator();
         $calc->setAbbreviations($abbreviations);
         $actual = $calc->calculate($tokens);
-        
+
         $this->assertEquals($expectedResult, $actual);
     }
 }

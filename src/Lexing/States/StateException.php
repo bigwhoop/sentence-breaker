@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -12,4 +13,5 @@ namespace Bigwhoop\SentenceBreaker\Lexing\States;
 use Bigwhoop\SentenceBreaker\Exception;
 
 class StateException extends Exception
-{}
+{
+}

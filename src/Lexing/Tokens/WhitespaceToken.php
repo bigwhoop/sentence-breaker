@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -21,7 +22,7 @@ class WhitespaceToken implements Token
     {
         $this->value = $value;
     }
-    
+
     /**
      * {@inheritdoc}
      */

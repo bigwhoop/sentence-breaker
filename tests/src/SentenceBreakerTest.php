@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -17,9 +18,9 @@ class SentenceBreakerTest extends \PHPUnit_Framework_TestCase
     {
         $breaker = new SentenceBreaker();
         $breaker->addAbbreviations(['Dr', 'Prof']);
-        
+
         $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
-        
+
         $this->assertSame(['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"], $sentences);
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -10,4 +11,5 @@
 namespace Bigwhoop\SentenceBreaker;
 
 class InvalidArgumentException extends Exception
-{}
+{
+}

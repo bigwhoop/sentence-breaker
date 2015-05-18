@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -15,10 +16,10 @@ class TokenProbability
 {
     /** @var Token|string */
     private $token;
-    
+
     /** @var int */
     private $probability = 0;
-    
+
     /**
      * @param Token|string $token
      */
@@ -49,7 +50,7 @@ class TokenProbability
     public function increaseProbability($p)
     {
         $this->probability += $p;
-        
+
         if ($this->probability > 100) {
             $this->probability = 100;
         }
@@ -61,7 +62,7 @@ class TokenProbability
     public function decreaseProbability($p)
     {
         $this->probability -= $p;
-        
+
         if ($this->probability < 0) {
             $this->probability = 0;
         }

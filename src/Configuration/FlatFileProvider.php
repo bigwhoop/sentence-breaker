@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -13,7 +14,7 @@ class FlatFileProvider implements ValueProvider
 {
     /** @var string */
     private $basePath;
-    
+
     /** @var string[] */
     private $fileNames = [];
 
@@ -23,10 +24,10 @@ class FlatFileProvider implements ValueProvider
      */
     public function __construct($basePath, array $fileNames)
     {
-        $this->basePath  = $basePath;
+        $this->basePath = $basePath;
         $this->fileNames = $fileNames;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -36,9 +37,10 @@ class FlatFileProvider implements ValueProvider
         foreach ($this->getPaths() as $path) {
             $values = array_merge($values, file($path,  FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
         }
-        
+
         $values = array_unique($values);
-        
+        sort($values);
+
         return $values;
     }
 
@@ -47,6 +49,6 @@ class FlatFileProvider implements ValueProvider
      */
     private function getPaths()
     {
-        return glob($this->basePath . '/{' . join(',', $this->fileNames) . '}.txt', GLOB_BRACE);
+        return glob($this->basePath.'/{'.implode(',', $this->fileNames).'}.txt', GLOB_BRACE);
     }
 }

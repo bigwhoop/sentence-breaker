@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -15,6 +16,7 @@ abstract class State
 {
     /**
      * @param Lexer $lexer
+     *
      * @return State
      */
     final public function __invoke(Lexer $lexer)
@@ -24,6 +26,7 @@ abstract class State
 
     /**
      * @param Lexer $lexer
+     *
      * @return State
      */
     abstract protected function call(Lexer $lexer);

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of sentence-breaker.
  *
@@ -15,7 +16,7 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 class WhitespaceState extends State
 {
     const CHARS = [' ', "\t", "\r", "\n"];
-    
+
     /**
      * {@inheritdoc}
      */
@@ -24,9 +25,9 @@ class WhitespaceState extends State
         while (in_array($lexer->peek(), self::CHARS, true)) {
             $lexer->next();
         }
-        
+
         $lexer->emit(new WhitespaceToken($lexer->getTokenValue()));
-        
+
         return new TextState();
     }
 }

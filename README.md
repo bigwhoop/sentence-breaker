@@ -16,10 +16,10 @@ Sentence boundary disambiguation (SBD) - or sentence breaking - library written 
     use Bigwhoop\SentenceBreaker\SentenceBreaker;
     
     $breaker = new SentenceBreaker();
-    $breaker->addAbbreviations(['Mr', 'Mrs', 'Ms', 'Dr', 'Prof');
+    $breaker->addAbbreviations(['Dr', 'Prof']);
     
-    $sentences = $breaker->split("Welcome! How are you? I'm fine, thanks!");
-    // ['Welcome!', 'How are you?', 'I'm fine, thanks!']
+    $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
+    // ['Hello Dr. Jones!', 'How are you?', 'I'm fine, thanks!']
 
 ## How does it work?
 

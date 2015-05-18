@@ -9,14 +9,25 @@
  */
 namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-class ExclamationPointToken implements Token
+class QuotedStringToken implements Token
 {
+    /** @var string */
+    private $value;
+
+    /**
+     * @param string $value
+     */
+    public function __construct($value)
+    {
+        $this->value = $value;
+    }
+    
     /**
      * {@inheritdoc}
      */
     public function getName()
     {
-        return 'T_EXCLAMATION_POINT';
+        return 'T_QUOTED_STR';
     }
 
     /**
@@ -24,6 +35,6 @@ class ExclamationPointToken implements Token
      */
     public function getPrintableValue()
     {
-        return '!';
+        return ' ' . $this->value;
     }
 }

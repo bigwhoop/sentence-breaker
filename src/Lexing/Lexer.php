@@ -20,14 +20,14 @@ class Lexer
     /** @var States\State|null */
     private $state;
     
-    /** @var int */
+    /** @var int The current position in $input */
     private $pos = 0;
     
-    /** @var int */
-    private $itemPos = 0;
+    /** @var int The start position of the current token */
+    private $tokenPos = 0;
     
-    /** @var Item[] */
-    private $items = [];
+    /** @var Token[]|string[] */
+    private $tokens = [];
     
     /**
      * @param string $input
@@ -43,11 +43,24 @@ class Lexer
     }
 
     /**
+     * @return Token|string|null
+     */
+    public function getLastToken()
+    {
+        if (!empty($this->tokens)) {
+            return null;
+        }
+        
+        return $this->tokens[count($this->tokens) - 1];
+    }
+
+    /**
+     * @param int $offset
      * @return null|string
      */
-    public function next()
+    public function next($offset = 0)
     {
-        fseek($this->input, $this->pos, SEEK_SET);
+        fseek($this->input, $this->pos + $offset, SEEK_SET);
         
         $c = fread($this->input, 1);
         
@@ -61,11 +74,12 @@ class Lexer
     }
 
     /**
+     * @param int $offset
      * @return null|string
      */
-    public function peek()
+    public function peek($offset = 0)
     {
-        $c = $this->next();
+        $c = $this->next($offset);
         $this->backup();
         
         return $c;
@@ -76,7 +90,7 @@ class Lexer
      */
     public function hasMoved()
     {
-        return $this->pos > $this->itemPos;
+        return $this->pos > $this->tokenPos;
     }
     
     public function backup()
@@ -85,7 +99,7 @@ class Lexer
     }
 
     /**
-     * @return Item[]
+     * @return Token[]
      */
     public function run()
     {
@@ -94,30 +108,51 @@ class Lexer
             $this->state = $stateFn($this);
         }
         
-        return $this->items;
+        return $this->tokens;
+    }
+    
+    public function ignore()
+    {
+        $this->tokenPos = $this->pos;
     }
 
     /**
-     * @param Token $type
+     * @return null|string
      */
-    public function emit(Token $type)
+    public function getTokenValue()
     {
-        $startPos = $this->itemPos;
-        $endPos   = $this->pos;
+        $startPos = $this->tokenPos;
+        $endPos = $this->pos;
         
+        $value = null;
         if ($endPos > $startPos) {
             fseek($this->input, $startPos, SEEK_SET);
             $value = fread($this->input, $endPos - $startPos);
-        } else {
-            $value = '';
         }
         
-        $item = new Item($type, $startPos, $value);
-        
-        $this->items[] = $item;
-        $this->itemPos = $endPos;
+        return $value;
     }
-    
+
+    /**
+     * @param Token|null $token
+     */
+    public function emit(Token $token = null)
+    {
+        $value = $this->getTokenValue();
+        
+        if ($token) {
+            $this->tokens[] = $token;
+        } elseif ($value !== null) {
+            $this->tokens[] = $value;
+        }
+        
+        $this->tokenPos = $this->pos;
+    }
+
+    /**
+     * @param string $msg
+     * @param mixed[] $args
+     */
     public function error($msg, ...$args)
     {
         exit(vsprintf($msg, $args));

@@ -11,5 +11,13 @@ namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
 interface Token
 {
-    
+    /**
+     * @return string
+     */
+    public function getName();
+
+    /**
+     * @return string
+     */
+    public function getPrintableValue();
 }

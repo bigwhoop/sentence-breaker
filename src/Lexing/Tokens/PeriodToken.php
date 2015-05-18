@@ -11,5 +11,19 @@ namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
 class PeriodToken implements Token
 {
-    
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        return 'T_PERIOD';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPrintableValue()
+    {
+        return '.';
+    }
 }

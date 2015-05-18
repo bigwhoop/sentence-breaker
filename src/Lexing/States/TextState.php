@@ -30,64 +30,52 @@ class TextState extends State
             $peek = $lexer->peek();
             
             if ($peek === null) {
-                if ($lexer->hasMoved()) {
-                    $lexer->emit(new WordToken());
-                }
+                $lexer->emit();
                 
                 return null;
             }
             
-            switch ($peek) {
-                case '.':
-                    if ($lexer->hasMoved()) {
-                        $lexer->emit(new WordToken());
-                    }
+            if ('.' === $peek) {
+                if (in_array($lexer->peek(1), [' ', null], true)) {
+                    $lexer->emit();
                     $lexer->next();
                     $lexer->emit(new PeriodToken());
-                    break;
-                
-                case '!':
-                    if ($lexer->hasMoved()) {
-                        $lexer->emit(new WordToken());
-                    }
+                } else {
                     $lexer->next();
-                    $lexer->emit(new ExclamationPointToken());
-                    break;
+                }
                 
-                case '?':
-                    if ($lexer->hasMoved()) {
-                        $lexer->emit(new WordToken());
-                    }
-                    $lexer->next();
-                    $lexer->emit(new QuestionMarkToken());
-                    break;
-                
-                case ' ':
-                    if ($lexer->hasMoved()) {
-                        $lexer->emit(new WordToken());
-                    }
-                    return new SpaceState();
-                
-                case '"':
-                    if ($lexer->hasMoved()) {
-                        $lexer->emit(new WordToken());
-                    }
-                    $lexer->next();
-                    $lexer->emit(new DoubleQuoteToken());
-                    break;
-                
-                case "'":
-                    if ($lexer->hasMoved()) {
-                        $lexer->emit(new WordToken());
-                    }
-                    $lexer->next();
-                    $lexer->emit(new SingleQuoteToken());
-                    break;
-                
-                default:
-                    $lexer->next();
-                    break;
+                continue;
             }
+            
+            if ('?' === $peek) {
+                $lexer->emit();
+                $lexer->next();
+                $lexer->emit(new QuestionMarkToken());
+                
+                continue;
+            }
+            
+            if ('!' === $peek) {
+                $lexer->emit();
+                $lexer->next();
+                $lexer->emit(new ExclamationPointToken());
+                
+                continue;
+            }
+            
+            if (in_array($peek, QuotedStringState::CHARS, true)) {
+                $lexer->emit();
+                
+                return new QuotedStringState();
+            }
+            
+            if (in_array($peek, WhitespaceState::CHARS, true)) {
+                $lexer->emit();
+                
+                return new WhitespaceState();
+            }
+            
+            $lexer->next();
         }
     }
 }

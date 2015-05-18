@@ -10,21 +10,24 @@
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
 
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\SpaceToken;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuotedStringToken;
 
-class SpaceState extends State
+class QuotedStringState extends State
 {
+    const CHARS = ['"', "'"];
+    
     /**
      * {@inheritdoc}
      */
     protected function call(Lexer $lexer)
     {
-        while ($lexer->peek() === ' ') {
-            $lexer->next();
+        $start = $lexer->next();
+        
+        while ($start !== $lexer->next()) {
+            // ...
         }
         
-        $lexer->emit(new SpaceToken());
+        $lexer->emit(new QuotedStringToken($lexer->getTokenValue()));
         
         return new TextState();
     }

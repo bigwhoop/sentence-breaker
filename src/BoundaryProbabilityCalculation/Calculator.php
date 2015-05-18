@@ -9,82 +9,140 @@
  */
 namespace Bigwhoop\SentenceBreaker\BoundaryProbabilityCalculation;
 
-use Bigwhoop\SentenceBreaker\Lexing\Item;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\EOFToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\ExclamationPointToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\PeriodToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuestionMarkToken;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\SpaceToken;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuotedStringToken;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 
 class Calculator
 {
+    /** @var Token[]|string[] */
+    private $tokens = [];
+    
+    /** @var int */
+    private $currentIdx = 0;
+    
+    /** @var string[] */
+    private $abbreviations = [];
+    
     /**
-     * @param Item[] $items
+     * @param Token[]|string[] $tokens
      */
-    public function calculate(array $items)
+    public function __construct(array $tokens)
     {
-        if (count($items) < 2) {
-            throw new \InvalidArgumentException("Need at least 2 items.");
+        if (count($tokens) < 2) {
+            throw new \InvalidArgumentException("Need at least 2 tokens.");
         }
         
-        /** @var LinkedItem[] $linkedItems */
-        $linkedItems = [];
-        foreach ($items as $item) {
-            $linkedItems[] = new LinkedItem($item);
-        }
-        
-        for ($i = 0, $c = count($linkedItems); $i < $c; $i++) {
-            $item = $linkedItems[$i];
-            $item->setPrev($i == 0 ? null : $linkedItems[$i - 1]);
-            $item->setNext($i + 1 < $c ? $linkedItems[$i + 1] : null);
-        }
-         
-        foreach ($linkedItems as $linkedItem) {
-            $prop = $this->calcProbability($linkedItem);
-            
-            echo $linkedItem->getItem()->toString() . ' = ' . $prop . PHP_EOL; 
-        }
-        exit();
+        $this->tokens = array_values($tokens);
     }
 
     /**
-     * @param LinkedItem $linkedItem
+     * @param array $abbreviations
+     */
+    public function setAbbreviations(array $abbreviations)
+    {
+        $this->abbreviations = $this->normalizeAbbreviations($abbreviations);
+    }
+
+    /**
+     * @param array $abbreviations
+     * @return array
+     */
+    private function normalizeAbbreviations(array $abbreviations)
+    {
+        return array_map(function($abbreviation) {
+            return rtrim($abbreviation, '.');
+        }, $abbreviations);
+    }
+
+    /**
+     * @param int $threshold
+     * @return array
+     */
+    public function calculate($threshold = 50)
+    {
+        $sentences = [''];
+        
+        for ($this->currentIdx = 0, $c = count($this->tokens); $this->currentIdx < $c; $this->currentIdx++) {
+            $prop = $this->calculateCurrentTokenProbability();
+            
+            $currentToken = $this->getToken();
+            
+            $sentenceIdx = count($sentences) - 1;
+            $sentences[$sentenceIdx] .= $currentToken instanceof Token ? $currentToken->getPrintableValue() : ' ' . $currentToken;
+            
+            if ($prop >= $threshold && $this->currentIdx !== $c - 1) {
+                $sentences[] = '';
+            }
+            
+            /*echo sprintf(
+                '% 3d%% - %s %s %s' . PHP_EOL,
+                $prop,
+                $this->getToken(-1) instanceof Token ? $this->getToken(-1)->getName() : '"' . $this->getToken(-1) . '"',
+                $this->getToken() instanceof Token ? $this->getToken()->getName() : '"' . $this->getToken() . '"',
+                $this->getToken(1) instanceof Token ? $this->getToken(+1)->getName() : '"' . $this->getToken(+1) . '"'
+            );*/
+        }
+        
+        $sentences = array_map('ltrim', $sentences);
+        
+        return $sentences;
+    }
+
+    /**
      * @return int
      */
-    private function calcProbability(LinkedItem $linkedItem)
+    private function calculateCurrentTokenProbability()
     {
         $prop = 0;
         
-        if (!$linkedItem->hasPrev()) {
-            return $prop;
-        }
-        
-        $currentType = $linkedItem->getItem()->getType();
-        
-        // ! or . or ?
-        if ($currentType instanceof PeriodToken || $currentType instanceof QuestionMarkToken || $currentType instanceof ExclamationPointToken) {
-            // ... as the last item
-            if (!$linkedItem->hasNext() || $linkedItem->getNext()->getItem()->getType() instanceof EOFToken) {
-                $prop += 100;
-            }
-            
-            // ... followed by SPACE
-            if ($linkedItem->hasNext() && $linkedItem->getNext()->getItem()->getType() instanceof SpaceToken) {
-                $prop += 25;
-                
-                // ... followed by uppercase word
-                if ($linkedItem->getNext()->hasNext()) {
-                    $nextNext = $linkedItem->getNext()->getNext()->getItem();
-                    $nextNextValue = $nextNext->getValue();
-                    
-                    if ($nextNext->getType() instanceof WordToken && !empty($nextNextValue) && ctype_upper(substr($nextNextValue, 0, 1))) {
-                        $prop += 50;
+        $currentToken = $this->getToken();
+        if ($currentToken instanceof QuestionMarkToken || $currentToken instanceof ExclamationPointToken) {
+            $prop = 100;
+        } elseif ($currentToken instanceof PeriodToken) {
+            $prevToken = $this->getToken(-1);
+            if (is_string($prevToken)) {
+                if (false !== strpos($prevToken, '.')) {
+                    $nextToken = $this->getToken(+1);
+                    if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
+                        $prop = 60;
+                    } else {
+                        $prop = 25;
                     }
+                } elseif (in_array($prevToken, $this->abbreviations)) {
+                    $prop = 0;
+                } else {
+                    $prop = 75;
                 }
+            } else {
+                $prop = 50;
+            }
+        } elseif ($currentToken instanceof QuotedStringToken) {
+            $nextToken = $this->getToken(+1);
+            if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
+                $prop = 80;
+            } else {
+                $prop = 40;
             }
         }
         
         return $prop;
+    }
+
+    /**
+     * @param int $offset
+     * @return Token|null|string
+     */
+    private function getToken($offset = 0)
+    {
+        $idx = $this->currentIdx + $offset;
+        
+        if (!array_key_exists($idx, $this->tokens)) {
+            return null;
+        }
+        
+        return $this->tokens[$idx];
     }
 }

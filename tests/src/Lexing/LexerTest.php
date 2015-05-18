@@ -9,19 +9,20 @@
  */
 namespace Bigwhoop\SentenceBreaker\Tests\Lexing;
 
-use Bigwhoop\SentenceBreaker\Lexing\Item;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 
 class LexerTest extends \PHPUnit_Framework_TestCase
 {
     public function testCompleteSentence()
     {
         $text     = 'He said: "Hello there!" How are you? Good.';
-        $expected = '"He" SPACETOKEN "said:" SPACETOKEN DOUBLEQUOTETOKEN "Hello" SPACETOKEN "there" EXCLAMATIONPOINTTOKEN DOUBLEQUOTETOKEN SPACETOKEN "How" SPACETOKEN "are" SPACETOKEN "you" QUESTIONMARKTOKEN SPACETOKEN "Good" PERIODTOKEN EOFTOKEN';
+        $expected = '"He" "said:" T_QUOTED_STR "How" "are" "you" T_QUERSTION_MARK "Good" T_PERIOD';
         
         $lexer = new Lexer($text);
-        $items = $lexer->run();
-        $actual = $this->getItemsString($items);
+        $tokens = $lexer->run();
+        
+        $actual = $this->getTokensString($tokens);
         
         $this->assertEquals($expected, $actual);
     }
@@ -29,26 +30,27 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     public function testAbbreviations()
     {
         $text = 'Hello Mr. Jones, please turn on the T.V.';
-        $expected = '"Hello" SPACETOKEN "Mr" PERIODTOKEN SPACETOKEN "Jones," SPACETOKEN "please" SPACETOKEN "turn" SPACETOKEN "on" SPACETOKEN "the" SPACETOKEN "T" PERIODTOKEN "V" PERIODTOKEN EOFTOKEN';
+        $expected = '"Hello" "Mr" T_PERIOD "Jones," "please" "turn" "on" "the" "T.V" T_PERIOD';
         
         $lexer = new Lexer($text);
-        $items = $lexer->run();
-        $actual = $this->getItemsString($items);
+        $tokens = $lexer->run();
+        
+        $actual = $this->getTokensString($tokens);
         
         $this->assertEquals($expected, $actual);
     }
 
     /**
-     * @param Item[] $items
+     * @param Token[]|string[] $tokens
      * @return string
      */
-    private function getItemsString(array $items)
+    private function getTokensString(array $tokens)
     {
-        $actual = [];
-        foreach ($items as $item) {
-            $actual[] = $item->toString();
+        $chunks = [];
+        foreach ($tokens as $token) {
+            $chunks[] = $token instanceof Token ? $token->getName() : '"' . $token . '"';
         }
         
-        return join(' ', $actual);
+        return join(' ', $chunks);
     }
 }

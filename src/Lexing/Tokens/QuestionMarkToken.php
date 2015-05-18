@@ -11,5 +11,19 @@ namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
 class QuestionMarkToken implements Token
 {
-    
+    /**
+     * {@inheritdoc}
+     */
+    public function getName()
+    {
+        return 'T_QUERSTION_MARK';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPrintableValue()
+    {
+        return '?';
+    }
 }

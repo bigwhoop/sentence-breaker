@@ -9,22 +9,46 @@
  */
 namespace Bigwhoop\SentenceBreaker\Tests\Lexing;
 
+use Bigwhoop\SentenceBreaker\Lexing\Item;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 
 class LexerTest extends \PHPUnit_Framework_TestCase
 {
-    public function testLexer()
+    public function testCompleteSentence()
     {
-        $text = <<<TXT
-This is sentence one. Sentence two! Sentence three? Sentence "four". Sentence "five"! Sentence "six"? Sentence
-"seven." Sentence 'eight!' Dr. Jones said: "Mrs. Smith you have a lovely daughter!" The T.V.A. is a big project!
-TXT;
+        $text     = 'He said: "Hello there!" How are you? Good.';
+        $expected = '"He" SPACETOKEN "said:" SPACETOKEN DOUBLEQUOTETOKEN "Hello" SPACETOKEN "there" EXCLAMATIONPOINTTOKEN DOUBLEQUOTETOKEN SPACETOKEN "How" SPACETOKEN "are" SPACETOKEN "you" QUESTIONMARKTOKEN SPACETOKEN "Good" PERIODTOKEN EOFTOKEN';
         
         $lexer = new Lexer($text);
-        $lexer = new Lexer('He said: "Hello there!"');
-        $lexer->run();
+        $items = $lexer->run();
+        $actual = $this->getItemsString($items);
         
-        // He said: "Hello there!"
-        // "He" SPACE "said" COLON SPACE DBL_QUOTE "Hello" SPACE "there" EXCLAMATION_POINT DBL_QUOTE
+        $this->assertEquals($expected, $actual);
+    }
+    
+    public function testAbbreviations()
+    {
+        $text = 'Hello Mr. Jones, please turn on the T.V.';
+        $expected = '"Hello" SPACETOKEN "Mr" PERIODTOKEN SPACETOKEN "Jones," SPACETOKEN "please" SPACETOKEN "turn" SPACETOKEN "on" SPACETOKEN "the" SPACETOKEN "T" PERIODTOKEN "V" PERIODTOKEN EOFTOKEN';
+        
+        $lexer = new Lexer($text);
+        $items = $lexer->run();
+        $actual = $this->getItemsString($items);
+        
+        $this->assertEquals($expected, $actual);
+    }
+
+    /**
+     * @param Item[] $items
+     * @return string
+     */
+    private function getItemsString(array $items)
+    {
+        $actual = [];
+        foreach ($items as $item) {
+            $actual[] = $item->toString();
+        }
+        
+        return join(' ', $actual);
     }
 }

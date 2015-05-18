@@ -9,7 +9,7 @@
  */
 namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-class QuotedStringToken implements Token
+class ExclamationPointToken implements Token
 {
     
 }

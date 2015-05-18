@@ -23,6 +23,7 @@ class SpaceState extends State
         while ($lexer->peek() === ' ') {
             $lexer->next();
         }
+        
         $lexer->emit(new SpaceToken());
         
         return new TextState();

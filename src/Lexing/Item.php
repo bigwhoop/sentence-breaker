@@ -10,6 +10,7 @@
 namespace Bigwhoop\SentenceBreaker\Lexing;
 
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
 
 class Item
 {
@@ -56,5 +57,18 @@ class Item
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @return string
+     */
+    public function toString()
+    {
+        if ($this->type instanceof WordToken) {
+            return '"' . $this->value . '"';
+        }
+        
+        $typeRefl = new \ReflectionClass($this->type);
+        return mb_strtoupper($typeRefl->getShortName());
     }
 }

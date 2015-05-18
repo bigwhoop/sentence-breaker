@@ -9,7 +9,7 @@
  */
 namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-class SentenceBoundaryToken implements Token
+class SingleQuoteToken implements Token
 {
     
 }

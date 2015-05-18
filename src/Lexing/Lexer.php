@@ -43,22 +43,26 @@ class Lexer
     }
 
     /**
-     * @return string
+     * @return null|string
      */
     public function next()
     {
         fseek($this->input, $this->pos, SEEK_SET);
         
         $c = fread($this->input, 1);
-        if (feof($this->input)) {
-            exit('EOF');
-        }
         
         $this->pos++;
         
+        if (feof($this->input)) {
+            return null;
+        }
+        
         return $c;
     }
-    
+
+    /**
+     * @return null|string
+     */
     public function peek()
     {
         $c = $this->next();
@@ -79,13 +83,18 @@ class Lexer
     {
         $this->pos--;
     }
-    
+
+    /**
+     * @return Item[]
+     */
     public function run()
     {
         while ($this->state instanceof States\State) {
             $stateFn = $this->state;
             $this->state = $stateFn($this);
         }
+        
+        return $this->items;
     }
 
     /**
@@ -96,11 +105,16 @@ class Lexer
         $startPos = $this->itemPos;
         $endPos   = $this->pos;
         
-        fseek($this->input, $startPos, SEEK_SET);
-        $value = fread($this->input, $endPos - $startPos);
+        if ($endPos > $startPos) {
+            fseek($this->input, $startPos, SEEK_SET);
+            $value = fread($this->input, $endPos - $startPos);
+        } else {
+            $value = '';
+        }
         
-        $this->items[] = new Item($type, $startPos, $value);
-        var_dump($this->items[count($this->items) - 1]);
+        $item = new Item($type, $startPos, $value);
+        
+        $this->items[] = $item;
         $this->itemPos = $endPos;
     }
     

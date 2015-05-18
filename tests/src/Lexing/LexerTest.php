@@ -11,6 +11,7 @@ namespace Bigwhoop\SentenceBreaker\Tests\Lexing;
 
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
 class LexerTest extends \PHPUnit_Framework_TestCase
 {
@@ -48,6 +49,10 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     {
         $chunks = [];
         foreach ($tokens as $token) {
+            if ($token instanceof WhitespaceToken) {
+                continue;
+            }
+            
             $chunks[] = $token instanceof Token ? $token->getName() : '"' . $token . '"';
         }
         

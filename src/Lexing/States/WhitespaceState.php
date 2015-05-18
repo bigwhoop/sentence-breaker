@@ -10,6 +10,7 @@
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
 
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
 class WhitespaceState extends State
 {
@@ -24,7 +25,7 @@ class WhitespaceState extends State
             $lexer->next();
         }
         
-        $lexer->ignore();
+        $lexer->emit(new WhitespaceToken($lexer->getTokenValue()));
         
         return new TextState();
     }

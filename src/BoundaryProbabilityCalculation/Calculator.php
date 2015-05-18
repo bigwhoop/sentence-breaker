@@ -14,6 +14,7 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\PeriodToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuestionMarkToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuotedStringToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
 class Calculator
 {
@@ -71,9 +72,9 @@ class Calculator
             $currentToken = $this->getToken();
             
             $sentenceIdx = count($sentences) - 1;
-            $sentences[$sentenceIdx] .= $currentToken instanceof Token ? $currentToken->getPrintableValue() : ' ' . $currentToken;
+            $sentences[$sentenceIdx] .= $currentToken instanceof Token ? $currentToken->getPrintableValue() : $currentToken;
             
-            if ($prop >= $threshold && $this->currentIdx !== $c - 1) {
+            if ($prop >= $threshold && $this->currentIdx !== $c - 1 && !empty(trim($sentences[$sentenceIdx]))) {
                 $sentences[] = '';
             }
             
@@ -99,13 +100,22 @@ class Calculator
         $prop = 0;
         
         $currentToken = $this->getToken();
+        
         if ($currentToken instanceof QuestionMarkToken || $currentToken instanceof ExclamationPointToken) {
             $prop = 100;
         } elseif ($currentToken instanceof PeriodToken) {
             $prevToken = $this->getToken(-1);
+            if ($prevToken instanceof WhitespaceToken) {
+                $prevToken = $this->getToken(-2);
+            }
+            
             if (is_string($prevToken)) {
                 if (false !== strpos($prevToken, '.')) {
                     $nextToken = $this->getToken(+1);
+                    if ($nextToken instanceof WhitespaceToken) {
+                        $nextToken = $this->getToken(+2);
+                    }
+                    
                     if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
                         $prop = 60;
                     } else {
@@ -121,6 +131,10 @@ class Calculator
             }
         } elseif ($currentToken instanceof QuotedStringToken) {
             $nextToken = $this->getToken(+1);
+            if ($nextToken instanceof WhitespaceToken) {
+                $nextToken = $this->getToken(+2);
+            }
+            
             if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
                 $prop = 80;
             } else {

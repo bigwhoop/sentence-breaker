@@ -9,7 +9,7 @@
  */
 namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-class QuotedStringToken implements Token
+class WhitespaceToken implements Token
 {
     /** @var string */
     private $value;
@@ -27,7 +27,7 @@ class QuotedStringToken implements Token
      */
     public function getName()
     {
-        return 'T_QUOTED_STR';
+        return 'T_WHITESPACE';
     }
 
     /**

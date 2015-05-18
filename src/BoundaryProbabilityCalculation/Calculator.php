@@ -29,11 +29,12 @@ class Calculator
     
     /**
      * @param Token[]|string[] $tokens
+     * @throws CalculatorException
      */
-    public function __construct(array $tokens)
+    private function setTokens(array $tokens)
     {
         if (count($tokens) < 2) {
-            throw new \InvalidArgumentException("Need at least 2 tokens.");
+            throw new CalculatorException("Need at least 2 tokens.");
         }
         
         $this->tokens = array_values($tokens);
@@ -59,50 +60,32 @@ class Calculator
     }
 
     /**
-     * @param int $threshold
-     * @return array
+     * @param Token[]|string[] $tokens
+     * @return TokenProbability[]
      */
-    public function calculate($threshold = 50)
+    public function calculate(array $tokens)
     {
-        $sentences = [''];
+        $this->setTokens($tokens);
+        
+        $probabilities = [];
         
         for ($this->currentIdx = 0, $c = count($this->tokens); $this->currentIdx < $c; $this->currentIdx++) {
-            $prop = $this->calculateCurrentTokenProbability();
-            
-            $currentToken = $this->getToken();
-            
-            $sentenceIdx = count($sentences) - 1;
-            $sentences[$sentenceIdx] .= $currentToken instanceof Token ? $currentToken->getPrintableValue() : $currentToken;
-            
-            if ($prop >= $threshold && $this->currentIdx !== $c - 1 && !empty(trim($sentences[$sentenceIdx]))) {
-                $sentences[] = '';
-            }
-            
-            /*echo sprintf(
-                '% 3d%% - %s %s %s' . PHP_EOL,
-                $prop,
-                $this->getToken(-1) instanceof Token ? $this->getToken(-1)->getName() : '"' . $this->getToken(-1) . '"',
-                $this->getToken() instanceof Token ? $this->getToken()->getName() : '"' . $this->getToken() . '"',
-                $this->getToken(1) instanceof Token ? $this->getToken(+1)->getName() : '"' . $this->getToken(+1) . '"'
-            );*/
+            $probabilities[] = $this->calculateCurrentTokenProbability();
         }
         
-        $sentences = array_map('ltrim', $sentences);
-        
-        return $sentences;
+        return $probabilities;
     }
 
     /**
-     * @return int
+     * @return TokenProbability
      */
     private function calculateCurrentTokenProbability()
     {
-        $prop = 0;
-        
         $currentToken = $this->getToken();
+        $prop = new TokenProbability($currentToken);
         
         if ($currentToken instanceof QuestionMarkToken || $currentToken instanceof ExclamationPointToken) {
-            $prop = 100;
+            $prop->setProbability(100);
         } elseif ($currentToken instanceof PeriodToken) {
             $prevToken = $this->getToken(-1);
             if ($prevToken instanceof WhitespaceToken) {
@@ -117,17 +100,17 @@ class Calculator
                     }
                     
                     if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
-                        $prop = 60;
+                        $prop->setProbability(60);
                     } else {
-                        $prop = 25;
+                        $prop->setProbability(25);
                     }
                 } elseif (in_array($prevToken, $this->abbreviations)) {
-                    $prop = 0;
+                    $prop->setProbability(0);
                 } else {
-                    $prop = 75;
+                    $prop->setProbability(75);
                 }
             } else {
-                $prop = 50;
+                $prop->setProbability(50);
             }
         } elseif ($currentToken instanceof QuotedStringToken) {
             $nextToken = $this->getToken(+1);
@@ -136,9 +119,9 @@ class Calculator
             }
             
             if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
-                $prop = 80;
+                $prop->setProbability(80);
             } else {
-                $prop = 40;
+                $prop->setProbability(40);
             }
         }
         

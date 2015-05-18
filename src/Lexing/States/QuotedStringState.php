@@ -23,8 +23,16 @@ class QuotedStringState extends State
     {
         $start = $lexer->next();
         
-        while ($start !== $lexer->next()) {
-            // ...
+        while (true) {
+            $next = $lexer->next();
+            
+            if ($next === null) {
+                throw new StateException("Failed to find end of quote. Reached end of input. Read: " . $lexer->getTokenValue());
+            }
+            
+            if ($start === $next) {
+                break;
+            }
         }
         
         $lexer->emit(new QuotedStringToken($lexer->getTokenValue()));

@@ -29,17 +29,47 @@ class Lexer
     /** @var Token[]|string[] */
     private $tokens = [];
     
+    public function __construct()
+    {
+        $this->setInput('');
+    }
+
+    /**
+     * @param string $input
+     * @return Token[]
+     */
+    public function run($input)
+    {
+        $this->setInput($input);
+        
+        while ($this->state instanceof States\State) {
+            $stateFn = $this->state;
+            $this->state = $stateFn($this);
+        }
+        
+        return $this->tokens;
+    }
+
     /**
      * @param string $input
      */
-    public function __construct($input)
+    private function setInput($input)
     {
+        $this->reset();
+        
         $fh = fopen('php://memory', 'r+');
         fwrite($fh, $input);
         rewind($fh);
         
         $this->input = $fh;
-        $this->state = new States\TextState();
+    }
+    
+    private function reset()
+    {
+        $this->pos      = 0;
+        $this->tokenPos = 0;
+        $this->tokens   = [];
+        $this->state    = new States\TextState();
     }
 
     /**
@@ -61,14 +91,27 @@ class Lexer
     public function next($offset = 0)
     {
         fseek($this->input, $this->pos + $offset, SEEK_SET);
-        
         $c = fread($this->input, 1);
-        
         $this->pos++;
         
         if (feof($this->input)) {
             return null;
         }
+        
+        return $c;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function last()
+    {
+        if ($this->pos === 0) {
+            return null;
+        }
+        
+        fseek($this->input, $this->pos - 1, SEEK_SET);
+        $c = fread($this->input, 1);
         
         return $c;
     }
@@ -96,19 +139,6 @@ class Lexer
     public function backup()
     {
         $this->pos--;
-    }
-
-    /**
-     * @return Token[]
-     */
-    public function run()
-    {
-        while ($this->state instanceof States\State) {
-            $stateFn = $this->state;
-            $this->state = $stateFn($this);
-        }
-        
-        return $this->tokens;
     }
     
     public function ignore()
@@ -147,14 +177,5 @@ class Lexer
         }
         
         $this->tokenPos = $this->pos;
-    }
-
-    /**
-     * @param string $msg
-     * @param mixed[] $args
-     */
-    public function error($msg, ...$args)
-    {
-        exit(vsprintf($msg, $args));
     }
 }

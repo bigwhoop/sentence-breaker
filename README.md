@@ -19,7 +19,7 @@ Sentence boundary disambiguation (SBD) - or sentence breaking - library written 
     $breaker->addAbbreviations(['Dr', 'Prof']);
     
     $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
-    // ['Hello Dr. Jones!', 'How are you?', 'I'm fine, thanks!']
+    // ['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"]
 
 ## How does it work?
 

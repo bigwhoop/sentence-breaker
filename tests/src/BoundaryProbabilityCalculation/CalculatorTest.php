@@ -55,40 +55,6 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
     /**
      * @return array
      */
-    public function dataThreshold()
-    {
-        return [
-            [
-                'Hello Mr. Jones. Please turn on the T.V. Thank you very much!',
-                ['Hello', 'Mr', '.', 'Jones', '.', 'Please', 'turn', 'on', 'the', 'T.V', '.', 'Thank', 'you', 'very', 'much', '!'],
-                ['Mr'],
-                0,
-            ],
-            [
-                'Hello Mr. Jones. Please turn on the T.V. Thank you very much!',
-                [
-                    'Hello Mr. Jones.',
-                    'Please turn on the T.V.',
-                    'Thank you very much!',
-                ],
-                ['Mr'],
-                50,
-            ],
-            [
-                'Hello Mr. Jones. Please turn on the T.V. Thank you very much!',
-                [
-                    'Hello Mr. Jones.',
-                    'Please turn on the T.V. Thank you very much!',
-                ],
-                ['Mr'],
-                70,
-            ],
-        ];
-    }
-    
-    /**
-     * @return array
-     */
     public function dataAbbreviations()
     {
         return [
@@ -118,7 +84,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testSimpleSentences($input, $expectedResult)
     {
-        $this->runCalculateTest($input, $expectedResult, [], 50);
+        $this->runCalculateTest($input, $expectedResult, []);
     }
 
     /**
@@ -129,20 +95,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testQuotes($input, $expectedResult)
     {
-        $this->runCalculateTest($input, $expectedResult, [], 50);
-    }
-
-    /**
-     * @dataProvider dataThreshold
-     * 
-     * @param string $input
-     * @param string $expectedResult
-     * @param array $abbreviations
-     * @param int $threshold
-     */
-    public function testThreshold($input, $expectedResult, array $abbreviations, $threshold)
-    {
-        $this->runCalculateTest($input, $expectedResult, $abbreviations, $threshold);
+        $this->runCalculateTest($input, $expectedResult, []);
     }
 
     /**
@@ -154,23 +107,22 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testAbbreviations($input, $expectedResult, array $abbreviations)
     {
-        $this->runCalculateTest($input, $expectedResult, $abbreviations, 50);
+        $this->runCalculateTest($input, $expectedResult, $abbreviations);
     }
 
     /**
      * @param string $input
      * @param string $expectedResult
      * @param array $abbreviations
-     * @param int $threshold
      */
-    private function runCalculateTest($input, $expectedResult, array $abbreviations, $threshold)
+    private function runCalculateTest($input, $expectedResult, array $abbreviations)
     {
-        $lexer = new Lexer($input);
-        $tokens = $lexer->run();
+        $lexer = new Lexer();
+        $tokens = $lexer->run($input);
         
-        $calc = new Calculator($tokens);
+        $calc = new Calculator();
         $calc->setAbbreviations($abbreviations);
-        $actual = $calc->calculate($threshold);
+        $actual = $calc->calculate($tokens);
         
         $this->assertEquals($expectedResult, $actual);
     }

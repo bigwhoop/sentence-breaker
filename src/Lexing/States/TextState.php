@@ -63,9 +63,9 @@ class TextState extends State
                 continue;
             }
             
-            if (in_array($peek, QuotedStringState::CHARS, true)) {
+            if (in_array($peek, QuotedStringState::CHARS, true) && $lexer->last() === ' ') {
                 $lexer->emit();
-                
+            
                 return new QuotedStringState();
             }
             

@@ -18,7 +18,7 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     public function testCompleteSentence()
     {
         $text     = 'He said: "Hello there!" How are you? Good.';
-        $expected = '"He" "said:" T_QUOTED_STR "How" "are" "you" T_QUERSTION_MARK "Good" T_PERIOD';
+        $expected = '"He" "said:" T_QUOTED_STR "How" "are" "you" T_QUESTION_MARK "Good" T_PERIOD';
         
         $lexer = new Lexer($text);
         $tokens = $lexer->run();

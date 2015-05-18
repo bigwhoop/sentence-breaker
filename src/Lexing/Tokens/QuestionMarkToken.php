@@ -16,7 +16,7 @@ class QuestionMarkToken implements Token
      */
     public function getName()
     {
-        return 'T_QUERSTION_MARK';
+        return 'T_QUESTION_MARK';
     }
 
     /**

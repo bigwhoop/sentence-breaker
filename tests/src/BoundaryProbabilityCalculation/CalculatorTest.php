@@ -12,6 +12,8 @@ namespace Bigwhoop\SentenceBreaker\Tests\BoundaryProbabilityCalculation;
 
 use Bigwhoop\SentenceBreaker\BoundaryProbabilityCalculation\Calculator;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
 class CalculatorTest extends \PHPUnit_Framework_TestCase
 {
@@ -23,7 +25,14 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
         return [
             [
                 'Sentence one. Sentence two? Sentence 3! Oh, yeah! Is this it? Yes.',
-                ['Sentence one.', 'Sentence two?', 'Sentence 3!', 'Oh, yeah!', 'Is this it?', 'Yes.'],
+                [
+                    'T_PERIOD 75',
+                    'T_QUESTION_MARK 100',
+                    'T_EXCLAMATION_POINT 100',
+                    'T_EXCLAMATION_POINT 100',
+                    'T_QUESTION_MARK 100',
+                    'T_PERIOD 100',
+                ],
             ],
         ];
     }
@@ -36,19 +45,19 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
         return [
             [
                 'He said: "Today is a good day." I replied: \'Is it?\'',
-                ['He said: "Today is a good day."', "I replied: 'Is it?'"],
+                ['T_QUOTED_STR 75', 'T_QUOTED_STR 100'],
             ],
             [
                 'He said: "Tom Jones is here!" and I believed him.',
-                ['He said: "Tom Jones is here!" and I believed him.'],
+                ['T_QUOTED_STR 25', 'T_PERIOD 100'],
             ],
             [
                 'He said: "Tom Jones is here!", and I believed him.',
-                ['He said: "Tom Jones is here!", and I believed him.'],
+                ['T_QUOTED_STR 25', 'T_PERIOD 100'],
             ],
             [
                 'He said: "Tom \'Tommy\' Jones is here!" And I believed him.',
-                ['He said: "Tom \'Tommy\' Jones is here!"', 'And I believed him.'],
+                ['T_QUOTED_STR 75', 'T_PERIOD 100'],
             ],
         ];
     }
@@ -60,18 +69,18 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
     {
         return [
             [
-                'Dr. Mr. Mrs.',
-                ['Dr.', 'Mr.', 'Mrs.'],
+                'Dr. Mr. Mrs. Foo',
+                ['T_PERIOD 75', 'T_PERIOD 75', 'T_PERIOD 75'],
                 [],
             ],
             [
-                'Dr. Mr. Mrs.',
-                ['Dr.', 'Mr. Mrs.'],
+                'Dr. Mr. Mrs. Foo',
+                ['T_PERIOD 75', 'T_PERIOD 0', 'T_PERIOD 75'],
                 ['Mr.'],
             ],
             [
-                'Dr. Mr. Mrs.',
-                ['Dr. Mr. Mrs.'],
+                'Dr. Mr. Mrs. Foo',
+                ['T_PERIOD 0', 'T_PERIOD 0', 'T_PERIOD 0'],
                 ['Dr', 'Mr', 'Mrs.'],
             ],
         ];
@@ -81,9 +90,9 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
      * @dataProvider dataSimpleSentences
      *
      * @param string $input
-     * @param string $expectedResult
+     * @param array  $expectedResult
      */
-    public function testSimpleSentences($input, $expectedResult)
+    public function testSimpleSentences($input, array $expectedResult)
     {
         $this->runCalculateTest($input, $expectedResult, []);
     }
@@ -92,9 +101,9 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
      * @dataProvider dataQuotes
      *
      * @param string $input
-     * @param string $expectedResult
+     * @param array  $expectedResult
      */
-    public function testQuotes($input, $expectedResult)
+    public function testQuotes($input, array $expectedResult)
     {
         $this->runCalculateTest($input, $expectedResult, []);
     }
@@ -103,27 +112,36 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
      * @dataProvider dataAbbreviations
      *
      * @param string $input
-     * @param string $expectedResult
+     * @param array  $expectedResult
      * @param array  $abbreviations
      */
-    public function testAbbreviations($input, $expectedResult, array $abbreviations)
+    public function testAbbreviations($input, array $expectedResult, array $abbreviations)
     {
         $this->runCalculateTest($input, $expectedResult, $abbreviations);
     }
 
     /**
      * @param string $input
-     * @param string $expectedResult
+     * @param array  $expectedResult
      * @param array  $abbreviations
      */
-    private function runCalculateTest($input, $expectedResult, array $abbreviations)
+    private function runCalculateTest($input, array $expectedResult, array $abbreviations)
     {
         $lexer = new Lexer();
         $tokens = $lexer->run($input);
 
         $calc = new Calculator();
         $calc->setAbbreviations($abbreviations);
-        $actual = $calc->calculate($tokens);
+
+        $propabilities = $calc->calculate($tokens);
+
+        $actual = [];
+        foreach ($propabilities as $propability) {
+            $token = $propability->getToken();
+            if ($token instanceof Token && !($token instanceof WhitespaceToken)) {
+                $actual[] = $token->getName().' '.$propability->getProbability();
+            }
+        }
 
         $this->assertEquals($expectedResult, $actual);
     }

@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b1f7743396c32508cfa67dae9351e1b6",
+    "hash": "521f5d28db48f59306fe03976c06238a",
     "packages": [],
     "packages-dev": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "cd3fe91baa28da6e119d619612439eb2db0d8d88"
+                "reference": "b70d22758c0813ea5fef9c22480caadd3a2b6a56"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/instantiator/zipball/b70d22758c0813ea5fef9c22480caadd3a2b6a56",
-                "reference": "cd3fe91baa28da6e119d619612439eb2db0d8d88",
+                "reference": "b70d22758c0813ea5fef9c22480caadd3a2b6a56",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-05-10 22:20:19"
+            "time": "2015-05-13 13:33:36"
         },
         {
             "name": "fabpot/goutte",
@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/Goutte.git",
-                "reference": "0ad3ee6dc2d0aaa832a80041a1e09bf394e99802"
+                "reference": "c0cea6d928ce58887b8e199fe9e003431d2750e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/0ad3ee6dc2d0aaa832a80041a1e09bf394e99802",
-                "reference": "0ad3ee6dc2d0aaa832a80041a1e09bf394e99802",
+                "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/c0cea6d928ce58887b8e199fe9e003431d2750e6",
+                "reference": "c0cea6d928ce58887b8e199fe9e003431d2750e6",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2015-05-05 21:14:57"
+            "time": "2015-05-16 11:25:55"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1227,12 +1227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/CssSelector.git",
-                "reference": "7fc8d4642711b8929f56b3ffc86fc0c554f4924f"
+                "reference": "5b0968a01e1f6fb724ecc8b7334d662ad4c8cda6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/7fc8d4642711b8929f56b3ffc86fc0c554f4924f",
-                "reference": "7fc8d4642711b8929f56b3ffc86fc0c554f4924f",
+                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/5b0968a01e1f6fb724ecc8b7334d662ad4c8cda6",
+                "reference": "5b0968a01e1f6fb724ecc8b7334d662ad4c8cda6",
                 "shasum": ""
             },
             "require": {
@@ -1272,7 +1272,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-12 15:16:46"
+            "time": "2015-05-15 14:11:12"
         },
         {
             "name": "symfony/dom-crawler",
@@ -1385,7 +1385,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5"
+        "php": ">=5.6"
     },
     "platform-dev": []
 }

@@ -88,44 +88,49 @@ class Calculator
         $currentToken = $this->getToken();
         $prop = new TokenProbability($currentToken);
 
-        if ($currentToken instanceof QuestionMarkToken || $currentToken instanceof ExclamationPointToken) {
+        if ($this->getToken(+1) === null) {
             $prop->setProbability(100);
-        } elseif ($currentToken instanceof PeriodToken) {
-            $prevToken = $this->getToken(-1);
-            if ($prevToken instanceof WhitespaceToken) {
-                $prevToken = $this->getToken(-2);
-            }
+        } else {
+            if ($currentToken instanceof QuestionMarkToken || $currentToken instanceof ExclamationPointToken) {
+                $prop->setProbability(100);
+            } elseif ($currentToken instanceof PeriodToken) {
+                $prevToken = $this->getToken(-1);
 
-            if (is_string($prevToken)) {
-                if (false !== strpos($prevToken, '.')) {
-                    $nextToken = $this->getToken(+1);
-                    if ($nextToken instanceof WhitespaceToken) {
-                        $nextToken = $this->getToken(+2);
-                    }
-
-                    if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
-                        $prop->setProbability(60);
-                    } else {
-                        $prop->setProbability(25);
-                    }
-                } elseif (in_array($prevToken, $this->abbreviations)) {
-                    $prop->setProbability(0);
-                } else {
-                    $prop->setProbability(75);
+                if ($prevToken instanceof WhitespaceToken) {
+                    $prevToken = $this->getToken(-2);
                 }
-            } else {
-                $prop->setProbability(50);
-            }
-        } elseif ($currentToken instanceof QuotedStringToken) {
-            $nextToken = $this->getToken(+1);
-            if ($nextToken instanceof WhitespaceToken) {
-                $nextToken = $this->getToken(+2);
-            }
 
-            if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
-                $prop->setProbability(80);
-            } else {
-                $prop->setProbability(40);
+                if (is_string($prevToken)) {
+                    if (false !== strpos($prevToken, '.')) {
+                        $nextToken = $this->getToken(+1);
+                        if ($nextToken instanceof WhitespaceToken) {
+                            $nextToken = $this->getToken(+2);
+                        }
+
+                        if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
+                            $prop->setProbability(60);
+                        } else {
+                            $prop->setProbability(25);
+                        }
+                    } elseif (in_array($prevToken, $this->abbreviations)) {
+                        $prop->setProbability(0);
+                    } else {
+                        $prop->setProbability(75);
+                    }
+                } else {
+                    $prop->setProbability(50);
+                }
+            } elseif ($currentToken instanceof QuotedStringToken) {
+                $nextToken = $this->getToken(+1);
+                if ($nextToken instanceof WhitespaceToken) {
+                    $nextToken = $this->getToken(+2);
+                }
+
+                if (is_string($nextToken) && ctype_upper(substr($nextToken, 0, 1))) {
+                    $prop->setProbability(75);
+                } else {
+                    $prop->setProbability(25);
+                }
             }
         }
 

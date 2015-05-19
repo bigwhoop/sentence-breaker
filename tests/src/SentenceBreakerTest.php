@@ -10,6 +10,7 @@
  */
 namespace Bigwhoop\SentenceBreaker\Tests;
 
+use Bigwhoop\SentenceBreaker\Configuration\FlatFileProvider;
 use Bigwhoop\SentenceBreaker\SentenceBreaker;
 
 class SentenceBreakerTest extends \PHPUnit_Framework_TestCase
@@ -21,6 +22,16 @@ class SentenceBreakerTest extends \PHPUnit_Framework_TestCase
 
         $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
 
+        $this->assertSame(['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"], $sentences);
+    }
+    
+    public function testSplittingWithFlatFileProvider()
+    {
+        $breaker = new SentenceBreaker();
+        $breaker->addAbbreviations(new FlatFileProvider(__DIR__ . '/../assets/data', ['*']));
+
+        $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
+        
         $this->assertSame(['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"], $sentences);
     }
 }

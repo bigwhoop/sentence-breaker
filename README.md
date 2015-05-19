@@ -1,4 +1,4 @@
-# sentence-breaker (WIP)
+# sentence-breaker
 
 [![Build Status](https://travis-ci.org/bigwhoop/sentence-breaker.svg?branch=master)](https://travis-ci.org/bigwhoop/sentence-breaker)
 [![Code Coverage](https://scrutinizer-ci.com/g/bigwhoop/sentence-breaker/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bigwhoop/sentence-breaker/?branch=master)
@@ -21,6 +21,24 @@ Sentence boundary disambiguation (SBD) - or sentence breaking - library written 
     $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
     // ['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"]
 
+### Abbreviation Providers
+
+Inside the `data` directory are flat files containing abbreviations (in English), collected from various
+ sources. They can be loaded like this:
+
+    use Bigwhoop\SentenceBreaker\Configuration\FlatFileProvider;
+    
+    // Load legal.txt and biz.txt
+    $breaker->addAbbreviations(new FlatFileProvider('/path/to/data/directory', ['legal', 'biz']));
+    
+    // Load all files
+    $breaker->addAbbreviations(new FlatFileProvider('/path/to/data/directory', ['*']));
+
+To make it fast and easy, all abbreviations are available in the `all.txt` file. You can load it like this:
+
+    $breaker->addAbbreviations(new FlatFileProvider('/path/to/data/directory', ['all']));
+    
+
 ## How does it work?
 
 The input text is run through a lexer.
@@ -41,6 +59,12 @@ This sequence of tokens is then run through a probability calculator that calcul
 In the end the tokens are re-assembled into the sentences. The user can choose which threshold he wants to apply
  when starting new sentences. For example the probability must be greater or equal to 50% that a boundary was
  detected.
+
+## TODO
+
+- [ ] `\Bigwhoop\SentenceBreaker\BoundaryProbabilityCalculation\Calculator::calculateCurrentTokenProbability` is a big
+  mess. Let's split it up into multiple *Rule* classes. Maybe use a rules engine.
+- [ ] Add abbreviations support for different languages.
 
 ## License
 

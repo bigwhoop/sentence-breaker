@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+    <rule>
+        <token>T_EOF</token>
+        <patterns>
+            <pattern probability="100">
+                <token>T_EOF</token>
+            </pattern>
+        </patterns>
+    </rule>
+    <rule>
+        <token>T_PERIOD</token>
+        <patterns>
+            <pattern probability="75">
+                <token>T_PERIOD</token>
+                <token>T_PERIOD</token>
+                <token is_start_token="true">T_PERIOD</token>
+                <token>T_CAPITALIZED_WORD</token>
+            </pattern>
+            <pattern probability="0">
+                <token>T_ABBREVIATION</token>
+                <token>T_PERIOD</token>
+            </pattern>
+        </patterns>
+    </rule>
+</rules>

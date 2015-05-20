@@ -8,7 +8,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\BoundaryProbabilityCalculation;
+namespace Bigwhoop\SentenceBreaker\Analysis;
 
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\ExclamationPointToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\PeriodToken;
@@ -17,7 +17,7 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuotedStringToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
-class Calculator
+class SentenceBoundaryProbabilityCalculator
 {
     /** @var Token[]|string[] */
     private $tokens = [];
@@ -31,12 +31,12 @@ class Calculator
     /**
      * @param Token[]|string[] $tokens
      *
-     * @throws CalculatorException
+     * @throws AnalysisException
      */
     private function setTokens(array $tokens)
     {
         if (count($tokens) < 2) {
-            throw new CalculatorException('Need at least 2 tokens.');
+            throw new AnalysisException('Need at least 2 tokens.');
         }
 
         $this->tokens = array_values($tokens);

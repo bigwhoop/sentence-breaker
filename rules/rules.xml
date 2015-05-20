@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+    <rule>
+        <token>T_EOF</token>
+        <patterns>
+            <pattern probability="100">
+                <token>T_EOF</token>
+            </pattern>
+        </patterns>
+    </rule>
+    <rule>
+        <token>T_EXCLAMATION_POINT</token>
+        <patterns>
+            <pattern probability="100">
+                <token>T_EXCLAMATION_POINT</token>
+            </pattern>
+        </patterns>
+    </rule>
+    <rule>
+        <token>T_QUESTION_MARK</token>
+        <patterns>
+            <pattern probability="100">
+                <token>T_QUESTION_MARK</token>
+            </pattern>
+        </patterns>
+    </rule>
+    <rule>
+        <token>T_PERIOD</token>
+        <patterns>
+            <!-- "." "." "." "Capitalized" -->
+            <pattern probability="75">
+                <token>T_PERIOD</token>
+                <token>T_PERIOD</token>
+                <token is_start_token="true">T_PERIOD</token>
+                <token>T_CAPITALIZED_WORD</token>
+            </pattern>
+            <!-- "." "." "." "word" -->
+            <pattern probability="25">
+                <token>T_PERIOD</token>
+                <token>T_PERIOD</token>
+                <token is_start_token="true">T_PERIOD</token>
+                <token>T_WORD</token>
+            </pattern>
+            <!-- Abbreviations followed by a period are never a sentence boundary -->
+            <pattern probability="0">
+                <token>T_ABBREVIATION</token>
+                <token>T_PERIOD</token>
+            </pattern>
+            <!-- "M.T.V" "." "Capitalized" -->
+            <pattern probability="75">
+                <token>T_WORD_WITH_PERIOD</token>
+                <token>T_PERIOD</token>
+                <token>T_CAPITALIZED_WORD</token>
+            </pattern>
+            <!-- "M.T.V" "." "word" -->
+            <pattern probability="25">
+                <token>T_WORD_WITH_PERIOD</token>
+                <token>T_PERIOD</token>
+                <token>T_WORD</token>
+            </pattern>
+            <!-- "word" "." "Capitalized" -->
+            <pattern probability="75">
+                <token>T_WORD</token>
+                <token>T_PERIOD</token>
+                <token>T_CAPITALIZED_WORD</token>
+            </pattern>
+            <!-- "word" "." "word" -->
+            <pattern probability="25">
+                <token>T_WORD</token>
+                <token>T_PERIOD</token>
+                <token>T_WORD</token>
+            </pattern>
+        </patterns>
+    </rule>
+    <rule>
+        <token>T_QUOTED_STR</token>
+        <patterns>
+            <!-- "'Quote!'" "Capitalized" -->
+            <pattern probability="75">
+                <token>T_QUOTED_STR</token>
+                <token>T_CAPITALIZED_WORD</token>
+            </pattern>
+            <!-- "'Quote!'" "word" -->
+            <pattern probability="25">
+                <token>T_QUOTED_STR</token>
+                <token>T_WORD</token>
+            </pattern>
+        </patterns>
+    </rule>
+</rules>

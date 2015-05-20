@@ -10,7 +10,7 @@
  */
 namespace Bigwhoop\SentenceBreaker;
 
-use Bigwhoop\SentenceBreaker\BoundaryProbabilityCalculation\TokenProbability;
+use Bigwhoop\SentenceBreaker\Analysis\TokenProbability;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 
 class SentenceBuilder

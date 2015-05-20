@@ -8,14 +8,14 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Tests\BoundaryProbabilityCalculation;
+namespace Bigwhoop\SentenceBreaker\Tests\Analysis;
 
-use Bigwhoop\SentenceBreaker\BoundaryProbabilityCalculation\Calculator;
+use Bigwhoop\SentenceBreaker\Analysis\SentenceBoundaryProbabilityCalculator;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
-class CalculatorTest extends \PHPUnit_Framework_TestCase
+class SentenceBoundaryProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @return array
@@ -121,6 +121,15 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * @expectedException \Bigwhoop\SentenceBreaker\Analysis\AnalysisException
+     * @expectedExceptionMessage Need at least 2 tokens.
+     */
+    public function testNotEnoughTokens()
+    {
+        $this->runCalculateTest('Hi', [], []);
+    }
+
+    /**
      * @param string $input
      * @param array  $expectedResult
      * @param array  $abbreviations
@@ -130,7 +139,7 @@ class CalculatorTest extends \PHPUnit_Framework_TestCase
         $lexer = new Lexer();
         $tokens = $lexer->run($input);
 
-        $calc = new Calculator();
+        $calc = new SentenceBoundaryProbabilityCalculator();
         $calc->setAbbreviations($abbreviations);
 
         $propabilities = $calc->calculate($tokens);

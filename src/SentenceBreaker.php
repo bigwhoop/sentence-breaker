@@ -10,7 +10,7 @@
  */
 namespace Bigwhoop\SentenceBreaker;
 
-use Bigwhoop\SentenceBreaker\BoundaryProbabilityCalculation\Calculator;
+use Bigwhoop\SentenceBreaker\Analysis\SentenceBoundaryProbabilityCalculator;
 use Bigwhoop\SentenceBreaker\Configuration\ArrayProvider;
 use Bigwhoop\SentenceBreaker\Configuration\ValueProvider;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
@@ -23,7 +23,7 @@ class SentenceBreaker
     /** @var Lexer */
     private $lexer;
 
-    /** @var Calculator */
+    /** @var SentenceBoundaryProbabilityCalculator */
     private $probabilityCalculator;
 
     /** @var SentenceBuilder */
@@ -32,7 +32,7 @@ class SentenceBreaker
     public function __construct()
     {
         $this->setLexer(new Lexer());
-        $this->setSentenceBoundaryProbabilityCalculator(new Calculator());
+        $this->setSentenceBoundaryProbabilityCalculator(new SentenceBoundaryProbabilityCalculator());
         $this->setSentenceBuilder(new SentenceBuilder());
     }
 
@@ -45,9 +45,9 @@ class SentenceBreaker
     }
 
     /**
-     * @param Calculator $calculator
+     * @param SentenceBoundaryProbabilityCalculator $calculator
      */
-    public function setSentenceBoundaryProbabilityCalculator(Calculator $calculator)
+    public function setSentenceBoundaryProbabilityCalculator(SentenceBoundaryProbabilityCalculator $calculator)
     {
         $this->probabilityCalculator = $calculator;
     }

@@ -13,6 +13,7 @@ namespace Bigwhoop\SentenceBreaker\Tests\Analysis\Rules;
 use Bigwhoop\SentenceBreaker\Analysis\Rules\Rule;
 use Bigwhoop\SentenceBreaker\Analysis\Rules\RulePattern;
 use Bigwhoop\SentenceBreaker\Analysis\Rules\RulePatternToken;
+use Bigwhoop\SentenceBreaker\Analysis\Rules\Rules;
 use Bigwhoop\SentenceBreaker\Analysis\Rules\XMLConfiguration;
 
 class XMLConfigurationTest extends \PHPUnit_Framework_TestCase
@@ -21,7 +22,7 @@ class XMLConfigurationTest extends \PHPUnit_Framework_TestCase
     {
         $config = XMLConfiguration::loadFile(__DIR__.'/../../../assets/rules.xml');
 
-        $this->assertEquals([
+        $this->assertEquals(new Rules([
             new Rule('T_EOF', [
                new RulePattern(100, [
                    new RulePatternToken('T_EOF'),
@@ -39,6 +40,6 @@ class XMLConfigurationTest extends \PHPUnit_Framework_TestCase
                     new RulePatternToken('T_PERIOD'),
                 ]),
             ]),
-        ], $config->getRules());
+        ]), $config->getRules());
     }
 }

@@ -10,19 +10,21 @@
  */
 namespace Bigwhoop\SentenceBreaker\Analysis\Rules;
 
-class ConfigurationValidator
+class RulesValidator
 {
     /** @var string[] */
     private $errors = [];
 
     /**
-     * @param Configuration $config
+     * @param Rules $rules
+     *
+     * @return bool
      */
-    public function validate(Configuration $config)
+    public function validate(Rules $rules)
     {
         $this->errors = [];
 
-        foreach ($config->getRules() as $rule) {
+        foreach ($rules->getRules() as $rule) {
             foreach ($rule->getPatterns() as $patternIdx => $pattern) {
                 $ruleTokenClass = $rule->getTokenClass();
                 $numStartTokens = 0;

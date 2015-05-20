@@ -13,7 +13,7 @@ namespace Bigwhoop\SentenceBreaker\Analysis\Rules;
 interface Configuration
 {
     /**
-     * @return Rule[]
+     * @return Rules
      */
     public function getRules();
 }

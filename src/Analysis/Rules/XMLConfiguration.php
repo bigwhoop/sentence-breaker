@@ -56,7 +56,8 @@ class XMLConfiguration implements Configuration
     {
         $data = $this->data;
 
-        $rules = [];
+        $rules = new Rules();
+
         foreach ($data->rule as $ruleData) {
             $rule = new Rule((string) $ruleData->token);
 
@@ -75,7 +76,7 @@ class XMLConfiguration implements Configuration
                 $rule->addPattern($pattern);
             }
 
-            $rules[] = $rule;
+            $rules->addRule($rule);
         }
 
         return $rules;

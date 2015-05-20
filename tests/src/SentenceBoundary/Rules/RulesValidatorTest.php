@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Tests\Analysis\Rules;
+namespace Bigwhoop\SentenceBreaker\Tests\SentenceBoundary\Rules;
 
-use Bigwhoop\SentenceBreaker\Analysis\Rules\RulesValidator;
-use Bigwhoop\SentenceBreaker\Analysis\Rules\XMLConfiguration;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\RulesValidator;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\XMLConfiguration;
 
 class RulesValidatorTest extends \PHPUnit_Framework_TestCase
 {

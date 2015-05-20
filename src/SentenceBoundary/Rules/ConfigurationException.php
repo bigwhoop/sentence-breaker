@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Analysis\Rules;
+namespace Bigwhoop\SentenceBreaker\SentenceBoundary\Rules;
 
-use Bigwhoop\SentenceBreaker\Analysis\AnalysisException;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\SentenceBoundaryException;
 
-class ConfigurationException extends AnalysisException
+class ConfigurationException extends SentenceBoundaryException
 {
 }

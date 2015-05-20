@@ -8,8 +8,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Analysis;
+namespace Bigwhoop\SentenceBreaker\SentenceBoundary;
 
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\Rules;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\ExclamationPointToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\PeriodToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuestionMarkToken;
@@ -17,7 +18,7 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuotedStringToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
-class SentenceBoundaryProbabilityCalculator
+class ProbabilityCalculator
 {
     /** @var Token[]|string[] */
     private $tokens = [];
@@ -28,15 +29,26 @@ class SentenceBoundaryProbabilityCalculator
     /** @var string[] */
     private $abbreviations = [];
 
+    /** @var Rules */
+    private $rules;
+
+    /**
+     * @param Rules $rules
+     */
+    public function __construct(Rules $rules)
+    {
+        $this->rules = $rules;
+    }
+
     /**
      * @param Token[]|string[] $tokens
      *
-     * @throws AnalysisException
+     * @throws SentenceBoundaryException
      */
     private function setTokens(array $tokens)
     {
         if (count($tokens) < 2) {
-            throw new AnalysisException('Need at least 2 tokens.');
+            throw new SentenceBoundaryException('Need at least 2 tokens.');
         }
 
         $this->tokens = array_values($tokens);

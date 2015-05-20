@@ -8,13 +8,13 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Tests\Analysis\Rules;
+namespace Bigwhoop\SentenceBreaker\Tests\SentenceBoundary\Rules;
 
-use Bigwhoop\SentenceBreaker\Analysis\Rules\Rule;
-use Bigwhoop\SentenceBreaker\Analysis\Rules\RulePattern;
-use Bigwhoop\SentenceBreaker\Analysis\Rules\RulePatternToken;
-use Bigwhoop\SentenceBreaker\Analysis\Rules\Rules;
-use Bigwhoop\SentenceBreaker\Analysis\Rules\XMLConfiguration;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\Rule;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\RulePattern;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\RulePatternToken;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\Rules;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\XMLConfiguration;
 
 class XMLConfigurationTest extends \PHPUnit_Framework_TestCase
 {

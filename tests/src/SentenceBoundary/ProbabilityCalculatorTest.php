@@ -8,14 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Tests\Analysis;
+namespace Bigwhoop\SentenceBreaker\Tests\SentenceBoundary;
 
-use Bigwhoop\SentenceBreaker\Analysis\SentenceBoundaryProbabilityCalculator;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\XMLConfiguration;
+use Bigwhoop\SentenceBreaker\SentenceBoundary\ProbabilityCalculator;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 
-class SentenceBoundaryProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
+class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @return array
@@ -121,7 +122,7 @@ class SentenceBoundaryProbabilityCalculatorTest extends \PHPUnit_Framework_TestC
     }
 
     /**
-     * @expectedException \Bigwhoop\SentenceBreaker\Analysis\AnalysisException
+     * @expectedException \Bigwhoop\SentenceBreaker\SentenceBoundary\SentenceBoundaryException
      * @expectedExceptionMessage Need at least 2 tokens.
      */
     public function testNotEnoughTokens()
@@ -139,16 +140,18 @@ class SentenceBoundaryProbabilityCalculatorTest extends \PHPUnit_Framework_TestC
         $lexer = new Lexer();
         $tokens = $lexer->run($input);
 
-        $calc = new SentenceBoundaryProbabilityCalculator();
+        $rules = XMLConfiguration::loadFile(__DIR__.'/../../../rules/rules.xml')->getRules();
+
+        $calc = new ProbabilityCalculator($rules);
         $calc->setAbbreviations($abbreviations);
 
-        $propabilities = $calc->calculate($tokens);
+        $probabilities = $calc->calculate($tokens);
 
         $actual = [];
-        foreach ($propabilities as $propability) {
-            $token = $propability->getToken();
+        foreach ($probabilities as $probability) {
+            $token = $probability->getToken();
             if ($token instanceof Token && !($token instanceof WhitespaceToken)) {
-                $actual[] = $token->getName().' '.$propability->getProbability();
+                $actual[] = $token->getName().' '.$probability->getProbability();
             }
         }
 

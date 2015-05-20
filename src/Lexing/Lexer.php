@@ -93,10 +93,10 @@ class Lexer
     public function next($offset = 0)
     {
         fseek($this->input, $this->pos + $offset, SEEK_SET);
-        $c = fread($this->input, 1);
-        $this->pos++;
+        $c = fgetc($this->input);
+        $this->pos += 1 + $offset;
 
-        if (feof($this->input)) {
+        if ($c === false) {
             return;
         }
 
@@ -113,7 +113,11 @@ class Lexer
         }
 
         fseek($this->input, $this->pos - 1, SEEK_SET);
-        $c = fread($this->input, 1);
+        $c = fgetc($this->input);
+
+        if ($c === false) {
+            return;
+        }
 
         return $c;
     }
@@ -126,7 +130,7 @@ class Lexer
     public function peek($offset = 0)
     {
         $c = $this->next($offset);
-        $this->backup();
+        $this->backup($offset);
 
         return $c;
     }
@@ -139,9 +143,12 @@ class Lexer
         return $this->pos > $this->tokenPos;
     }
 
-    public function backup()
+    /**
+     * @param int $offset
+     */
+    public function backup($offset = 0)
     {
-        $this->pos--;
+        $this->pos -= 1 + $offset;
     }
 
     public function ignore()

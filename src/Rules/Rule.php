@@ -8,32 +8,32 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\SentenceBoundary\Rules;
+namespace Bigwhoop\SentenceBreaker\Rules;
 
 class Rule
 {
     /** @var string */
-    private $tokenClass = '';
+    private $tokenName = '';
 
     /** @var RulePattern[] */
     private $patterns = [];
 
     /**
-     * @param string        $tokenClass
+     * @param string        $tokenName
      * @param RulePattern[] $patterns
      */
-    public function __construct($tokenClass, array $patterns = [])
+    public function __construct($tokenName, array $patterns = [])
     {
-        $this->tokenClass = $tokenClass;
+        $this->tokenName = $tokenName;
         $this->addPatterns($patterns);
     }
 
     /**
      * @return string
      */
-    public function getTokenClass()
+    public function getTokenName()
     {
-        return $this->tokenClass;
+        return $this->tokenName;
     }
 
     /**

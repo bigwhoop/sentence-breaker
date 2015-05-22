@@ -8,13 +8,16 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Tests\SentenceBoundary;
+namespace Bigwhoop\SentenceBreaker\Tests;
 
-use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\XMLConfiguration;
-use Bigwhoop\SentenceBreaker\SentenceBoundary\ProbabilityCalculator;
-use Bigwhoop\SentenceBreaker\Lexing\Lexer;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
+use Bigwhoop\SentenceBreaker\Abbreviations\Abbreviations;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\CapitalizedWordToken;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\EOFToken;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
+use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
+use Bigwhoop\SentenceBreaker\ProbabilityCalculator;
+use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 
 class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
 {
@@ -76,12 +79,12 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
             ],
             [
                 'Dr. Mr. Mrs. Foo',
-                ['T_PERIOD 75', 'T_PERIOD 0', 'T_PERIOD 75'],
+                ['T_PERIOD 75', 'T_ABBREVIATION 0', 'T_PERIOD 0', 'T_PERIOD 75'],
                 ['Mr.'],
             ],
             [
                 'Dr. Mr. Mrs. Foo',
-                ['T_PERIOD 0', 'T_PERIOD 0', 'T_PERIOD 0'],
+                ['T_ABBREVIATION 0', 'T_PERIOD 0', 'T_ABBREVIATION 0', 'T_PERIOD 0', 'T_ABBREVIATION 0', 'T_PERIOD 0'],
                 ['Dr', 'Mr', 'Mrs.'],
             ],
         ];
@@ -122,15 +125,6 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Bigwhoop\SentenceBreaker\SentenceBoundary\SentenceBoundaryException
-     * @expectedExceptionMessage Need at least 2 tokens.
-     */
-    public function testNotEnoughTokens()
-    {
-        $this->runCalculateTest('Hi', [], []);
-    }
-
-    /**
      * @param string $input
      * @param array  $expectedResult
      * @param array  $abbreviations
@@ -140,19 +134,23 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
         $lexer = new Lexer();
         $tokens = $lexer->run($input);
 
-        $rules = XMLConfiguration::loadFile(__DIR__.'/../../../rules/rules.xml')->getRules();
+        $rules = IniConfiguration::loadFile(__DIR__.'/../../rules/rules.ini')->getRules();
 
         $calc = new ProbabilityCalculator($rules);
-        $calc->setAbbreviations($abbreviations);
+        $calc->setAbbreviations(new Abbreviations($abbreviations));
 
         $probabilities = $calc->calculate($tokens);
 
         $actual = [];
         foreach ($probabilities as $probability) {
             $token = $probability->getToken();
-            if ($token instanceof Token && !($token instanceof WhitespaceToken)) {
-                $actual[] = $token->getName().' '.$probability->getProbability();
+
+            if ($token instanceof WordToken || $token instanceof CapitalizedWordToken
+                || $token instanceof WhitespaceToken || $token instanceof EOFToken) {
+                continue;
             }
+
+            $actual[] = $token->getName().' '.$probability->getProbability();
         }
 
         $this->assertEquals($expectedResult, $actual);

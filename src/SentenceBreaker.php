@@ -10,14 +10,14 @@
  */
 namespace Bigwhoop\SentenceBreaker;
 
-use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\Configuration;
-use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\Rules;
-use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\RulesValidator;
-use Bigwhoop\SentenceBreaker\SentenceBoundary\Rules\XMLConfiguration;
-use Bigwhoop\SentenceBreaker\SentenceBoundary\ProbabilityCalculator;
-use Bigwhoop\SentenceBreaker\Configuration\ArrayProvider;
-use Bigwhoop\SentenceBreaker\Configuration\ValueProvider;
+use Bigwhoop\SentenceBreaker\Abbreviations\Abbreviations;
+use Bigwhoop\SentenceBreaker\Exceptions\InvalidArgumentException;
+use Bigwhoop\SentenceBreaker\Rules\Configuration;
+use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
+use Bigwhoop\SentenceBreaker\Abbreviations\ArrayProvider;
+use Bigwhoop\SentenceBreaker\Abbreviations\ValueProvider;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
+use Bigwhoop\SentenceBreaker\Rules\Rules;
 
 class SentenceBreaker
 {
@@ -39,7 +39,6 @@ class SentenceBreaker
     public function __construct(Configuration $rulesConfig = null)
     {
         $rules = $rulesConfig ? $rulesConfig->getRules() : $this->loadDefaultRules();
-        $this->validateRules($rules);
 
         $this->setLexer(new Lexer());
         $this->setSentenceBoundaryProbabilityCalculator(new ProbabilityCalculator($rules));
@@ -47,26 +46,11 @@ class SentenceBreaker
     }
 
     /**
-     * @return XMLConfiguration
-     *
-     * @throws SentenceBoundary\Rules\ConfigurationException
+     * @return Rules
      */
     private function loadDefaultRules()
     {
-        return XMLConfiguration::loadFile(__DIR__.'/../rules/rules.xml')->getRules();
-    }
-
-    /**
-     * @param Rules $rules
-     *
-     * @throws Exception
-     */
-    private function validateRules(Rules $rules)
-    {
-        $validator = new RulesValidator();
-        if (!$validator->validate($rules)) {
-            throw new Exception('Rules validation failed: '.implode(' | ', $validator->getErrors()));
-        }
+        return IniConfiguration::loadFile(__DIR__.'/../rules/rules.ini')->getRules();
     }
 
     /**
@@ -126,19 +110,16 @@ class SentenceBreaker
     }
 
     /**
-     * @return array
+     * @return Abbreviations
      */
     private function getAbbreviations()
     {
-        $values = [];
+        $abbreviations = new Abbreviations();
 
         foreach ($this->abbreviationProviders as $provider) {
-            $values = array_merge($values, $provider->getValues());
+            $abbreviations->addAbbreviations($provider->getValues());
         }
 
-        $values = array_unique($values);
-        sort($values);
-
-        return $values;
+        return $abbreviations;
     }
 }

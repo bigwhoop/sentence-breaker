@@ -10,7 +10,7 @@
  */
 namespace Bigwhoop\SentenceBreaker\Tests;
 
-use Bigwhoop\SentenceBreaker\Configuration\FlatFileProvider;
+use Bigwhoop\SentenceBreaker\Abbreviations\FlatFileProvider;
 use Bigwhoop\SentenceBreaker\SentenceBreaker;
 
 class SentenceBreakerTest extends \PHPUnit_Framework_TestCase

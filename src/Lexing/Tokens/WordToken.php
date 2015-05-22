@@ -8,12 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Configuration;
+namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-interface ValueProvider
+class WordToken extends ValueToken implements PotentialAbbreviationToken
 {
     /**
-     * @return string[]
+     * {@inheritdoc}
      */
-    public function getValues();
+    public function getName()
+    {
+        return 'T_WORD';
+    }
 }

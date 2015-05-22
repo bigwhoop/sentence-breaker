@@ -8,10 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\SentenceBoundary;
+namespace Bigwhoop\SentenceBreaker\Abbreviations;
 
-use Bigwhoop\SentenceBreaker\Exception;
-
-class SentenceBoundaryException extends Exception
+interface ValueProvider
 {
+    /**
+     * @return string[]
+     */
+    public function getValues();
 }

@@ -26,7 +26,7 @@ Sentence boundary disambiguation (SBD) - or sentence breaking - library written 
 Inside the `data` directory are flat files containing abbreviations (in English), collected from various
  sources. They can be loaded like this:
 
-    use Bigwhoop\SentenceBreaker\Configuration\FlatFileProvider;
+    use Bigwhoop\SentenceBreaker\Abbreviations\FlatFileProvider;
     
     // Load legal.txt and biz.txt
     $breaker->addAbbreviations(new FlatFileProvider('/path/to/data/directory', ['legal', 'biz']));

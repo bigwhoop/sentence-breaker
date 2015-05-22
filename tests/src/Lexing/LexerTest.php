@@ -19,7 +19,18 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     public function testCompleteSentence()
     {
         $text = 'He said: "Hello there!" How are you? Good.';
-        $expected = '"He" "said:" T_QUOTED_STR "How" "are" "you" T_QUESTION_MARK "Good" T_PERIOD';
+        $expected = [
+            'T_CAPITALIZED_WORD<"He">',
+            'T_WORD<"said:">',
+            'T_QUOTED_STR<""Hello there!"">',
+            'T_CAPITALIZED_WORD<"How">',
+            'T_WORD<"are">',
+            'T_WORD<"you">',
+            'T_QUESTION_MARK<"?">',
+            'T_CAPITALIZED_WORD<"Good">',
+            'T_PERIOD<".">',
+            'T_EOF',
+        ];
 
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
@@ -32,7 +43,21 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     public function testAbbreviations()
     {
         $text = 'Hello Mr. Jones, please turn on the T.V.';
-        $expected = '"Hello" "Mr" T_PERIOD "Jones," "please" "turn" "on" "the" "T.V" T_PERIOD';
+        $expected = [
+            'T_CAPITALIZED_WORD<"Hello">',
+            'T_CAPITALIZED_WORD<"Mr">',
+            'T_PERIOD<".">',
+            'T_CAPITALIZED_WORD<"Jones,">',
+            'T_WORD<"please">',
+            'T_WORD<"turn">',
+            'T_WORD<"on">',
+            'T_WORD<"the">',
+            'T_CAPITALIZED_WORD<"T">',
+            'T_PERIOD<".">',
+            'T_CAPITALIZED_WORD<"V">',
+            'T_PERIOD<".">',
+            'T_EOF',
+        ];
 
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
@@ -43,21 +68,24 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @param Token[]|string[] $tokens
+     * @param Token[] $tokens
      *
      * @return string
      */
     private function getTokensString(array $tokens)
     {
-        $chunks = [];
+        $values = [];
+
         foreach ($tokens as $token) {
             if ($token instanceof WhitespaceToken) {
                 continue;
             }
 
-            $chunks[] = $token instanceof Token ? $token->getName() : '"'.$token.'"';
+            $value = $token->getPrintableValue();
+
+            $values[] = $token->getName().(empty($value) ? '' : '<"'.$value.'">');
         }
 
-        return implode(' ', $chunks);
+        return $values;
     }
 }

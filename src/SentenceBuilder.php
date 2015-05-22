@@ -10,9 +10,6 @@
  */
 namespace Bigwhoop\SentenceBreaker;
 
-use Bigwhoop\SentenceBreaker\SentenceBoundary\TokenProbability;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
-
 class SentenceBuilder
 {
     /**
@@ -25,21 +22,22 @@ class SentenceBuilder
     {
         $sentences = [''];
 
-        $numTokens = count($tokenProbabilities);
-
         foreach ($tokenProbabilities as $idx => $tokenProbability) {
             $token = $tokenProbability->getToken();
 
             $sentenceIdx = count($sentences) - 1;
-            $sentences[$sentenceIdx] .= $token instanceof Token ? $token->getPrintableValue() : $token;
+            $sentences[$sentenceIdx] .= $token->getPrintableValue();
 
-            $isLastToken = $idx + 1 === $numTokens;
             $meetsThreshold = $tokenProbability->getProbability() >= $threshold;
             $currentSentenceIsEmpty = empty(trim($sentences[$sentenceIdx]));
 
-            if ($meetsThreshold && !$isLastToken && !$currentSentenceIsEmpty) {
+            if ($meetsThreshold && !$currentSentenceIsEmpty) {
                 $sentences[] = '';
             }
+        }
+
+        if ('' === $sentences[count($sentences) - 1]) {
+            unset($sentences[count($sentences) - 1]);
         }
 
         $sentences = array_map('ltrim', $sentences);

@@ -36,7 +36,7 @@ class QuotedStringState extends State
             }
         }
 
-        $lexer->emit(new QuotedStringToken($lexer->getTokenValue()));
+        $lexer->emit(new QuotedStringToken());
 
         return new TextState();
     }

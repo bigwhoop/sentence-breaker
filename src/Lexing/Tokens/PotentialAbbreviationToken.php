@@ -8,10 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Lexing\States;
+namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-use Bigwhoop\SentenceBreaker\Exceptions\Exception;
-
-class StateException extends Exception
+interface PotentialAbbreviationToken
 {
+    /**
+     * @return string
+     */
+    public function getValue();
 }

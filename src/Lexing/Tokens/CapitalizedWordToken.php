@@ -8,12 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\SentenceBoundary\Rules;
+namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-interface Configuration
+class CapitalizedWordToken extends ValueToken implements PotentialAbbreviationToken
 {
     /**
-     * @return Rules
+     * {@inheritdoc}
      */
-    public function getRules();
+    public function getName()
+    {
+        return 'T_CAPITALIZED_WORD';
+    }
 }

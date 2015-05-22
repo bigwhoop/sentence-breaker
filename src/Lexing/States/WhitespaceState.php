@@ -26,7 +26,7 @@ class WhitespaceState extends State
             $lexer->next();
         }
 
-        $lexer->emit(new WhitespaceToken($lexer->getTokenValue()));
+        $lexer->emit(new WhitespaceToken());
 
         return new TextState();
     }

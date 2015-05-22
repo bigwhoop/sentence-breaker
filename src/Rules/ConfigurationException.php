@@ -8,10 +8,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Bigwhoop\SentenceBreaker\Lexing\States;
+namespace Bigwhoop\SentenceBreaker\Rules;
 
 use Bigwhoop\SentenceBreaker\Exceptions\Exception;
 
-class StateException extends Exception
+class ConfigurationException extends Exception
 {
 }

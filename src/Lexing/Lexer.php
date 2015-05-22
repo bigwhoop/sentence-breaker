@@ -11,6 +11,7 @@
 namespace Bigwhoop\SentenceBreaker\Lexing;
 
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\ValueToken;
 
 class Lexer
 {
@@ -74,15 +75,23 @@ class Lexer
     }
 
     /**
-     * @return Token|string|null
+     * @return Token|null
      */
-    public function getLastToken()
+    public function lastToken()
     {
-        if (!empty($this->tokens)) {
+        if (empty($this->tokens)) {
             return;
         }
 
         return $this->tokens[count($this->tokens) - 1];
+    }
+
+    /**
+     * @return int
+     */
+    public function pos()
+    {
+        return $this->pos;
     }
 
     /**
@@ -174,17 +183,15 @@ class Lexer
     }
 
     /**
-     * @param Token|null $token
+     * @param Token $token
      */
-    public function emit(Token $token = null)
+    public function emit(Token $token)
     {
-        $value = $this->getTokenValue();
-
-        if ($token) {
-            $this->tokens[] = $token;
-        } elseif ($value !== null) {
-            $this->tokens[] = $value;
+        if ($token instanceof ValueToken) {
+            $token->setValue($this->getTokenValue());
         }
+
+        $this->tokens[] = $token;
 
         $this->tokenPos = $this->pos;
     }

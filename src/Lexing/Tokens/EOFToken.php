@@ -10,13 +10,21 @@
  */
 namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
-class WhitespaceToken extends ValueToken
+class EOFToken implements Token
 {
     /**
      * {@inheritdoc}
      */
     public function getName()
     {
-        return 'T_WHITESPACE';
+        return 'T_EOF';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getPrintableValue()
+    {
+        return '';
     }
 }

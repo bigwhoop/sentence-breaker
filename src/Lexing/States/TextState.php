@@ -11,6 +11,7 @@
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
 
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\EOFToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\ExclamationPointToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\PeriodToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuestionMarkToken;
@@ -24,27 +25,21 @@ class TextState extends State
     {
         while (true) {
             $peek = $lexer->peek();
-
+            //file_put_contents(__DIR__ . '/foo.log', '#' . $lexer->pos() . ' ' . $peek . ' (' . $lexer->getTokenValue() . ')' . PHP_EOL, FILE_APPEND);
             if ($peek === null) {
-                $lexer->emit();
+                $lexer->emit(new EOFToken());
 
                 return;
             }
 
             if ('.' === $peek) {
-                if (in_array($lexer->peek(1), [' ', null], true)) {
-                    $lexer->emit();
-                    $lexer->next();
-                    $lexer->emit(new PeriodToken());
-                } else {
-                    $lexer->next();
-                }
+                $lexer->next();
+                $lexer->emit(new PeriodToken());
 
                 continue;
             }
 
             if ('?' === $peek) {
-                $lexer->emit();
                 $lexer->next();
                 $lexer->emit(new QuestionMarkToken());
 
@@ -52,26 +47,21 @@ class TextState extends State
             }
 
             if ('!' === $peek) {
-                $lexer->emit();
                 $lexer->next();
                 $lexer->emit(new ExclamationPointToken());
 
                 continue;
             }
 
-            if (in_array($peek, QuotedStringState::CHARS, true) && $lexer->last() === ' ') {
-                $lexer->emit();
-
+            if (in_array($peek, QuotedStringState::CHARS, true)) {
                 return new QuotedStringState();
             }
 
             if (in_array($peek, WhitespaceState::CHARS, true)) {
-                $lexer->emit();
-
                 return new WhitespaceState();
             }
 
-            $lexer->next();
+            return new WordState();
         }
     }
 }

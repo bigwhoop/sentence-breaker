@@ -8,7 +8,7 @@ Sentence boundary disambiguation (SBD) - or sentence breaking - library written 
 
 ## Installation
 
-    composer require "bigwhoop/sentence-breaker":"~1.0"
+    composer require "bigwhoop/sentence-breaker":"~2.0"
 
 ## Usage
 

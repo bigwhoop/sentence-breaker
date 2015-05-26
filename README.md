@@ -93,7 +93,7 @@ In the end the tokens are re-assembled into the sentences. The user can choose w
 
 ## TODO
 
-- [ ] `calculateCurrentTokenProbability` is a big mess. Let's split it up into multiple *Rule* classes. Maybe use a rules engine.
+- [X] `calculateCurrentTokenProbability` is a big mess. Let's split it up into multiple *Rule* classes. Maybe use a rules engine.
 - [ ] Add abbreviations support for different languages.
 
 ## License

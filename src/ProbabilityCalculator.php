@@ -42,6 +42,30 @@ class ProbabilityCalculator
     }
 
     /**
+     * @param Abbreviations $abbreviations
+     */
+    public function addAbbreviations(Abbreviations $abbreviations)
+    {
+        $this->abbreviations->addAbbreviations($abbreviations->getAbbreviations());
+    }
+
+    /**
+     * @param Rules $rules
+     */
+    public function setRules(Rules $rules)
+    {
+        $this->rules = $rules;
+    }
+
+    /**
+     * @param Rules $rules
+     */
+    public function addRules(Rules $rules)
+    {
+        $this->rules->addRules($rules->getRules());
+    }
+
+    /**
      * @param Token[] $tokens
      *
      * @return TokenProbability[]

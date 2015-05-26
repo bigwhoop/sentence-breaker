@@ -78,6 +78,22 @@ class SentenceBreaker
     }
 
     /**
+     * @param Rules $rules
+     */
+    public function setRules(Rules $rules)
+    {
+        $this->probabilityCalculator->setRules($rules);
+    }
+
+    /**
+     * @param Rules $rules
+     */
+    public function addRules(Rules $rules)
+    {
+        $this->probabilityCalculator->addRules($rules);
+    }
+
+    /**
      * @param array|ValueProvider $values
      *
      * @throws InvalidArgumentException

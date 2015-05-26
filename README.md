@@ -21,6 +21,37 @@ Sentence boundary disambiguation (SBD) - or sentence breaking - library written 
     $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
     // ['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"]
 
+### Rules
+
+By default the `rules/rules.ini` file is loaded. Its format is a list of patterns ...
+
+    TOKEN [... TOKEN] = PROBABILITY
+    T_CAPITALIZED_WORD <T_PERIOD> T_WHITESPACE T_CAPITALIZED_WORD = 75
+
+The token enclosed in `<` / `>` is the one that defines for which token the pattern is applied. The example pattern
+ above would be applied to each `T_PERIOD` token found in the input data. The probability defines how likely a sentence
+ boundary is **after** this token.
+
+So for this pattern to match, the input text would need to contain something along the lines of *This is **Waldo.
+ He** likes dogs.*.
+
+The available tokens are:
+
+Token | Description | Example
+--- | --- | ---
+`T_WORD` | A non-capitalized word. | `hello`, `world`
+`T_CAPITALIZED_WORD` | A capitalized word. | `Hello`, `World`
+`T_EOF` | The end of the input. | -
+`T_PERIOD` | A period. | `.`
+`T_EXCLAMATION_POINT` | An exclamation point. | `!`
+`T_QUESTION_MARK` | A question mark. | `?`
+`T_QUOTED_STR` | A string enclosed in single or double quotes | `"Hello world!"`, `'Hello world...'`
+`T_WHITESPACE` | Whitespace characters like spaces, LF, CR. | -
+`T_ABBREVIATION` | An abbreviation without the trailing period. | `Dr`, `Prof`
+
+**TIP:** You can add your own rules via `$breaker->addRules()`.
+
+
 ### Abbreviation Providers
 
 Inside the `data` directory are flat files containing abbreviations (in English), collected from various

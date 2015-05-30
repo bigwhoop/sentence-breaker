@@ -40,6 +40,30 @@ class LexerTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $actual);
     }
 
+    public function testQuote()
+    {
+        $text = "the Latin verb docēre [dɔˈkeːrɛ] 'to teach'. It has";
+        $expected = [
+            'T_WORD<"the">',
+            'T_CAPITALIZED_WORD<"Latin">',
+            'T_WORD<"verb">',
+            'T_WORD<"docēre">',
+            'T_WORD<"[dɔˈkeːrɛ]">',
+            'T_QUOTED_STR<"\'to teach\'">',
+            'T_PERIOD<".">',
+            'T_CAPITALIZED_WORD<"It">',
+            'T_WORD<"has">',
+            'T_EOF',
+        ];
+
+        $lexer = new Lexer();
+        $tokens = $lexer->run($text);
+
+        $actual = $this->getTokensString($tokens);
+
+        $this->assertEquals($expected, $actual);
+    }
+
     public function testAbbreviations()
     {
         $text = 'Hello Mr. Jones, please turn on the T.V.';

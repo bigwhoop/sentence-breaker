@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 @unlink(__DIR__ . '/all.txt');
 
 $lines = [];
@@ -12,6 +15,5 @@ asort($lines);
 
 $data = join("\n", $lines);
 file_put_contents(__DIR__ . '/all.txt', $data);
-
 
 echo "DONE.\n";

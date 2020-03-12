@@ -1,13 +1,7 @@
 <?php
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+declare(strict_types=1);
+
 namespace Bigwhoop\SentenceBreaker\Abbreviations;
 
 class Abbreviations
@@ -26,29 +20,21 @@ class Abbreviations
     /**
      * @param string[] $abbreviations
      */
-    public function addAbbreviations(array $abbreviations)
+    public function addAbbreviations(array $abbreviations): void
     {
         foreach ($abbreviations as $abbreviation) {
             $this->addAbbreviation($abbreviation);
         }
     }
 
-    /**
-     * @param string $abbreviation
-     */
-    public function addAbbreviation($abbreviation)
+    public function addAbbreviation(string $abbreviation): void
     {
         $abbreviation = $this->normalizeAbbreviation($abbreviation);
 
         $this->abbreviations[$abbreviation] = $abbreviation;
     }
 
-    /**
-     * @param string $abbreviation
-     *
-     * @return string
-     */
-    private function normalizeAbbreviation($abbreviation)
+    private function normalizeAbbreviation(string $abbreviation): string
     {
         return rtrim($abbreviation, '.');
     }
@@ -56,17 +42,12 @@ class Abbreviations
     /**
      * @return string[]
      */
-    public function getAbbreviations()
+    public function getAbbreviations(): array
     {
         return array_keys($this->abbreviations);
     }
 
-    /**
-     * @param string $abbreviation
-     *
-     * @return bool
-     */
-    public function hasAbbreviation($abbreviation)
+    public function hasAbbreviation(string $abbreviation): bool
     {
         return array_key_exists($this->normalizeAbbreviation($abbreviation), $this->abbreviations);
     }

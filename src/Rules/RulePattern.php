@@ -1,19 +1,12 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Rules;
 
 class RulePattern
 {
     /** @var int */
-    private $probability = 0;
+    private $probability;
 
     /** @var RulePatternToken[] */
     private $tokens = [];
@@ -22,16 +15,13 @@ class RulePattern
      * @param int                $probability
      * @param RulePatternToken[] $tokens
      */
-    public function __construct($probability, array $tokens = [])
+    public function __construct(int $probability, array $tokens = [])
     {
         $this->probability = $probability;
         $this->addTokens($tokens);
     }
-
-    /**
-     * @return int
-     */
-    public function getProbability()
+    
+    public function getProbability(): int
     {
         return $this->probability;
     }
@@ -39,27 +29,16 @@ class RulePattern
     /**
      * @param RulePatternToken[] $tokens
      */
-    public function addTokens(array $tokens)
+    public function addTokens(array $tokens): void
     {
         foreach ($tokens as $token) {
             $this->addToken($token);
         }
     }
 
-    /**
-     * @param RulePatternToken $token
-     */
-    public function addToken(RulePatternToken $token)
+    public function addToken(RulePatternToken $token): void
     {
         $this->tokens[] = $token;
-    }
-
-    /**
-     * @return RulePatternToken[]
-     */
-    public function getTokens()
-    {
-        return $this->tokens;
     }
 
     /**
@@ -75,7 +54,7 @@ class RulePattern
      *
      * @throws ConfigurationException
      */
-    public function getTokensOffsetRelativeToStartToken($startTokenName)
+    public function getTokensOffsetRelativeToStartToken($startTokenName): array
     {
         $startTokenIdx = null;
 
@@ -93,7 +72,7 @@ class RulePattern
 
         $numTokens = count($this->tokens);
 
-        $offsets = array_map(function ($idx) use ($startTokenIdx) {
+        $offsets = array_map(static function ($idx) use ($startTokenIdx) {
             return $idx - $startTokenIdx;
         }, range(0, $numTokens - 1));
 

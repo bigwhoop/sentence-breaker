@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Tests;
 
 use Bigwhoop\SentenceBreaker\Abbreviations\Abbreviations;
@@ -18,13 +11,11 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
 use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
 use Bigwhoop\SentenceBreaker\ProbabilityCalculator;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
+use PHPUnit\Framework\TestCase;
 
-class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
+class ProbabilityCalculatorTest extends TestCase
 {
-    /**
-     * @return array
-     */
-    public function dataSimpleSentences()
+    public function dataSimpleSentences(): array
     {
         return [
             [
@@ -41,10 +32,7 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-    /**
-     * @return array
-     */
-    public function dataQuotes()
+    public function dataQuotes(): array
     {
         return [
             [
@@ -66,10 +54,7 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-    /**
-     * @return array
-     */
-    public function dataAbbreviations()
+    public function dataAbbreviations(): array
     {
         return [
             [
@@ -96,7 +81,7 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
      * @param string $input
      * @param array  $expectedResult
      */
-    public function testSimpleSentences($input, array $expectedResult)
+    public function testSimpleSentences(string $input, array $expectedResult): void
     {
         $this->runCalculateTest($input, $expectedResult, []);
     }
@@ -107,7 +92,7 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
      * @param string $input
      * @param array  $expectedResult
      */
-    public function testQuotes($input, array $expectedResult)
+    public function testQuotes(string $input, array $expectedResult): void
     {
         $this->runCalculateTest($input, $expectedResult, []);
     }
@@ -119,7 +104,7 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
      * @param array  $expectedResult
      * @param array  $abbreviations
      */
-    public function testAbbreviations($input, array $expectedResult, array $abbreviations)
+    public function testAbbreviations(string $input, array $expectedResult, array $abbreviations): void
     {
         $this->runCalculateTest($input, $expectedResult, $abbreviations);
     }
@@ -129,7 +114,7 @@ class ProbabilityCalculatorTest extends \PHPUnit_Framework_TestCase
      * @param array  $expectedResult
      * @param array  $abbreviations
      */
-    private function runCalculateTest($input, array $expectedResult, array $abbreviations)
+    private function runCalculateTest(string $input, array $expectedResult, array $abbreviations): void
     {
         $lexer = new Lexer();
         $tokens = $lexer->run($input);

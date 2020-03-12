@@ -1,19 +1,12 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Rules;
 
 class Rule
 {
     /** @var string */
-    private $tokenName = '';
+    private $tokenName;
 
     /** @var RulePattern[] */
     private $patterns = [];
@@ -22,16 +15,13 @@ class Rule
      * @param string        $tokenName
      * @param RulePattern[] $patterns
      */
-    public function __construct($tokenName, array $patterns = [])
+    public function __construct(string $tokenName, array $patterns = [])
     {
         $this->tokenName = $tokenName;
         $this->addPatterns($patterns);
     }
 
-    /**
-     * @return string
-     */
-    public function getTokenName()
+    public function getTokenName(): string
     {
         return $this->tokenName;
     }
@@ -39,17 +29,14 @@ class Rule
     /**
      * @param RulePattern[] $patterns
      */
-    public function addPatterns(array $patterns)
+    public function addPatterns(array $patterns): void
     {
         foreach ($patterns as $pattern) {
             $this->addPattern($pattern);
         }
     }
 
-    /**
-     * @param RulePattern $pattern
-     */
-    public function addPattern(RulePattern $pattern)
+    public function addPattern(RulePattern $pattern): void
     {
         $this->patterns[] = $pattern;
     }
@@ -57,7 +44,7 @@ class Rule
     /**
      * @return RulePattern[]
      */
-    public function getPatterns()
+    public function getPatterns(): array
     {
         return $this->patterns;
     }

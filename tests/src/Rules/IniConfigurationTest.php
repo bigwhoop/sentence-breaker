@@ -1,24 +1,19 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Tests\Rules;
 
+use Bigwhoop\SentenceBreaker\Rules\ConfigurationException;
 use Bigwhoop\SentenceBreaker\Rules\Rule;
 use Bigwhoop\SentenceBreaker\Rules\RulePattern;
 use Bigwhoop\SentenceBreaker\Rules\RulePatternToken;
 use Bigwhoop\SentenceBreaker\Rules\Rules;
 use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
+use PHPUnit\Framework\TestCase;
 
-class IniConfigurationTest extends \PHPUnit_Framework_TestCase
+class IniConfigurationTest extends TestCase
 {
-    public function testValidFile()
+    public function testValidFile(): void
     {
         $config = IniConfiguration::loadFile(__DIR__.'/../../assets/rules.ini');
 
@@ -44,12 +39,11 @@ class IniConfigurationTest extends \PHPUnit_Framework_TestCase
         ]), $config->getRules());
     }
 
-    /**
-     * @expectedException \Bigwhoop\SentenceBreaker\Rules\ConfigurationException
-     * @expectedExceptionMessage .INI Configuration must contain 'rules' section.
-     */
-    public function testMissingRulesSection()
+    public function testMissingRulesSection(): void
     {
+        $this->expectException(ConfigurationException::class);
+        $this->expectExceptionMessage('.INI Configuration must contain \'rules\' section.');
+        
         $ini = <<<INI
 T_WORD <T_EOF> = 100
 INI;
@@ -57,13 +51,12 @@ INI;
         $config = new IniConfiguration($ini);
         $config->getRules();
     }
-
-    /**
-     * @expectedException \Bigwhoop\SentenceBreaker\Rules\ConfigurationException
-     * @expectedExceptionMessage Pattern T_WORD T_EOF: Must contain start token.
-     */
-    public function testMissingStartToken()
+    
+    public function testMissingStartToken(): void
     {
+        $this->expectException(ConfigurationException::class);
+        $this->expectExceptionMessage('Pattern T_WORD T_EOF: Must contain start token.');
+        
         $ini = <<<INI
 [rules]
 T_WORD T_EOF = 100
@@ -73,12 +66,11 @@ INI;
         $config->getRules();
     }
 
-    /**
-     * @expectedException \Bigwhoop\SentenceBreaker\Rules\ConfigurationException
-     * @expectedExceptionMessage Pattern T_WORD AA <T_EOF>: Token AA must exceed 2 characters.
-     */
-    public function testInvalidTokenLength()
+    public function testInvalidTokenLength(): void
     {
+        $this->expectException(ConfigurationException::class);
+        $this->expectExceptionMessage('Pattern T_WORD AA <T_EOF>: Token AA must exceed 2 characters.');
+        
         $ini = <<<INI
 [rules]
 T_WORD AA <T_EOF> = 100

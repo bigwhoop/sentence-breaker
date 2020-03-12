@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
 
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
@@ -16,10 +9,7 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
 
 class WordState extends State
 {
-    /**
-     * @return array
-     */
-    private function getNonWordChars()
+    private function getNonWordChars(): array
     {
         return array_merge(['.', '?', '!', null], WhitespaceState::CHARS);
     }
@@ -27,7 +17,7 @@ class WordState extends State
     /**
      * {@inheritdoc}
      */
-    protected function call(Lexer $lexer)
+    protected function call(Lexer $lexer): ?State
     {
         $nonWordChars = $this->getNonWordChars();
 
@@ -36,7 +26,7 @@ class WordState extends State
         }
 
         $value = $lexer->getTokenValue();
-        $firstChar = substr($value, 0, 1);
+        $firstChar = $value[0] ?? '';
 
         if (ctype_upper($firstChar)) {
             $lexer->emit(new CapitalizedWordToken());

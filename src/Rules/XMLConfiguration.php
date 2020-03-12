@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Rules;
 
 class XMLConfiguration implements Configuration
@@ -17,12 +10,10 @@ class XMLConfiguration implements Configuration
 
     /**
      * @param string $path
-     *
-     * @return XMLConfiguration
-     *
+     * @return static
      * @throws ConfigurationException
      */
-    public static function loadFile($path)
+    public static function loadFile(string $path): self
     {
         if (!is_readable($path)) {
             throw new ConfigurationException("File '{$path}' must be readable.");
@@ -31,28 +22,17 @@ class XMLConfiguration implements Configuration
         return new self(file_get_contents($path));
     }
 
-    /**
-     * @param string $xml
-     */
-    public function __construct($xml)
+    public function __construct(string $xml)
     {
         $this->load($xml);
     }
 
-    /**
-     * @param string $xml
-     *
-     * @throws ConfigurationException
-     */
-    private function load($xml)
+    private function load(string $xml): void
     {
         $this->data = simplexml_load_string($xml);
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function getRules()
+    public function getRules(): Rules
     {
         $data = $this->data;
 
@@ -82,9 +62,9 @@ class XMLConfiguration implements Configuration
 
                         if ($hasStartToken) {
                             throw new ConfigurationException("$patternName: Multiple {$rule->getTokenName()} tokens with 'is_start_token' attribute found. Only one is allowed.");
-                        } else {
-                            $hasStartToken = true;
                         }
+
+                        $hasStartToken = true;
                     }
 
                     if ($tokenName === $rule->getTokenName()) {
@@ -95,12 +75,14 @@ class XMLConfiguration implements Configuration
                 if (!$hasStartToken) {
                     if (count($potentialStartTokenIdxs) === 0) {
                         throw new ConfigurationException("Pattern {$rule->getTokenName()}/#{$patternIdx} must have unambiguous start token. No {$rule->getTokenName()} token found.");
-                    } elseif (count($potentialStartTokenIdxs) > 1) {
-                        throw new ConfigurationException("Pattern {$rule->getTokenName()}/#{$patternIdx} must have unambiguous start token. Multiple {$rule->getTokenName()} tokens found.");
-                    } else {
-                        $potentialStartTokenIdx = $potentialStartTokenIdxs[0];
-                        $tokens[$potentialStartTokenIdx]['is_start_token'] = true;
                     }
+                    
+                    if (count($potentialStartTokenIdxs) > 1) {
+                        throw new ConfigurationException("Pattern {$rule->getTokenName()}/#{$patternIdx} must have unambiguous start token. Multiple {$rule->getTokenName()} tokens found.");
+                    } 
+                    
+                    $potentialStartTokenIdx = $potentialStartTokenIdxs[0];
+                    $tokens[$potentialStartTokenIdx]['is_start_token'] = true;
                 }
 
                 $pattern = new RulePattern((int) $patternData['probability']);

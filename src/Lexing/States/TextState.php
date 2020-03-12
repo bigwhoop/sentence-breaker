@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
 
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
@@ -21,15 +14,15 @@ class TextState extends State
     /**
      * {@inheritdoc}
      */
-    protected function call(Lexer $lexer)
+    protected function call(Lexer $lexer): ?State
     {
         while (true) {
             $peek = $lexer->peek();
-            //file_put_contents(__DIR__ . '/foo.log', '#' . $lexer->pos() . ' ' . $peek . ' (' . $lexer->getTokenValue() . ')' . PHP_EOL, FILE_APPEND);
+            
             if ($peek === null) {
                 $lexer->emit(new EOFToken());
 
-                return;
+                return null;
             }
 
             if ('.' === $peek) {

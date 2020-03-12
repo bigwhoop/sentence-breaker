@@ -1,45 +1,32 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Rules;
 
 class RulePatternToken
 {
     /** @var string */
-    private $tokenName = '';
+    private $tokenName;
 
     /** @var bool */
-    private $isStartToken = false;
+    private $isStartToken;
 
     /**
      * @param string $tokenName
      * @param bool   $isStartToken
      */
-    public function __construct($tokenName, $isStartToken = false)
+    public function __construct(string $tokenName, bool $isStartToken = false)
     {
         $this->tokenName = $tokenName;
         $this->isStartToken = $isStartToken;
     }
 
-    /**
-     * @return string
-     */
-    public function getTokenName()
+    public function getTokenName(): string
     {
         return $this->tokenName;
     }
 
-    /**
-     * @return bool
-     */
-    public function isStartToken()
+    public function isStartToken(): bool
     {
         return $this->isStartToken;
     }

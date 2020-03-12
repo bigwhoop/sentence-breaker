@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Lexing;
 
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
@@ -37,10 +30,10 @@ class Lexer
 
     /**
      * @param string $input
-     *
      * @return Token[]
+     * @throws States\StateException
      */
-    public function run($input)
+    public function run(string $input): array
     {
         $this->setInput($input);
 
@@ -52,10 +45,7 @@ class Lexer
         return $this->tokens;
     }
 
-    /**
-     * @param string $input
-     */
-    private function setInput($input)
+    private function setInput(string $input): void
     {
         $this->reset();
 
@@ -66,7 +56,7 @@ class Lexer
         $this->input = $fh;
     }
 
-    private function reset()
+    private function reset(): void
     {
         $this->pos = 0;
         $this->tokenPos = 0;
@@ -74,69 +64,41 @@ class Lexer
         $this->state = new States\TextState();
     }
 
-    /**
-     * @return Token|null
-     */
-    public function lastToken()
-    {
-        if (empty($this->tokens)) {
-            return;
-        }
-
-        return $this->tokens[count($this->tokens) - 1];
-    }
-
-    /**
-     * @return int
-     */
-    public function pos()
+    public function pos(): int
     {
         return $this->pos;
     }
 
-    /**
-     * @param int $offset
-     *
-     * @return null|string
-     */
-    public function next($offset = 0)
+    public function next(int $offset = 0): ?string
     {
         fseek($this->input, $this->pos + $offset, SEEK_SET);
         $c = fgetc($this->input);
         $this->pos += 1 + $offset;
 
         if ($c === false) {
-            return;
+            return null;
         }
 
         return $c;
     }
 
-    /**
-     * @return null|string
-     */
-    public function last()
+    public function last(): ?string
     {
         if ($this->pos === 0) {
-            return;
+            return null;
         }
 
         fseek($this->input, $this->pos - 1, SEEK_SET);
         $c = fgetc($this->input);
 
         if ($c === false) {
-            return;
+            return null;
         }
 
         return $c;
     }
 
-    /**
-     * @param int $offset
-     *
-     * @return null|string
-     */
-    public function peek($offset = 0)
+    public function peek(int $offset = 0): ?string
     {
         $c = $this->next($offset);
         $this->backup($offset);
@@ -144,31 +106,17 @@ class Lexer
         return $c;
     }
 
-    /**
-     * @return bool
-     */
-    public function hasMoved()
-    {
-        return $this->pos > $this->tokenPos;
-    }
-
-    /**
-     * @param int $offset
-     */
-    public function backup($offset = 0)
+    public function backup(int $offset = 0): void
     {
         $this->pos -= 1 + $offset;
     }
 
-    public function ignore()
+    public function ignore(): void
     {
         $this->tokenPos = $this->pos;
     }
 
-    /**
-     * @return null|string
-     */
-    public function getTokenValue()
+    public function getTokenValue(): ?string
     {
         $startPos = $this->tokenPos;
         $endPos = $this->pos;
@@ -182,10 +130,7 @@ class Lexer
         return $value;
     }
 
-    /**
-     * @param Token $token
-     */
-    public function emit(Token $token)
+    public function emit(Token $token): void
     {
         if ($token instanceof ValueToken) {
             $token->setValue($this->getTokenValue());

@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Rules;
 
 class IniConfiguration implements Configuration
@@ -17,12 +10,10 @@ class IniConfiguration implements Configuration
 
     /**
      * @param string $path
-     *
-     * @return IniConfiguration
-     *
+     * @return static
      * @throws ConfigurationException
      */
-    public static function loadFile($path)
+    public static function loadFile(string $path): self
     {
         if (!is_readable($path)) {
             throw new ConfigurationException("File '{$path}' must be readable.");
@@ -31,18 +22,12 @@ class IniConfiguration implements Configuration
         return new self(file_get_contents($path));
     }
 
-    /**
-     * @param string $data
-     */
-    public function __construct($data)
+    public function __construct(string $data)
     {
         $this->data = parse_ini_string($data, true);
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function getRules()
+    public function getRules(): Rules
     {
         $rules = new Rules();
 

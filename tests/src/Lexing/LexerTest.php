@@ -1,22 +1,16 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Tests\Lexing;
 
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
+use PHPUnit\Framework\TestCase;
 
-class LexerTest extends \PHPUnit_Framework_TestCase
+class LexerTest extends TestCase
 {
-    public function testCompleteSentence()
+    public function testCompleteSentence(): void
     {
         $text = 'He said: "Hello there!" How are you? Good.';
         $expected = [
@@ -35,12 +29,12 @@ class LexerTest extends \PHPUnit_Framework_TestCase
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
 
-        $actual = $this->getTokensString($tokens);
+        $actual = $this->getTokenStrings($tokens);
 
         $this->assertEquals($expected, $actual);
     }
 
-    public function testQuote()
+    public function testQuote(): void
     {
         $text = "the Latin verb docēre [dɔˈkeːrɛ] 'to teach'. It has";
         $expected = [
@@ -59,12 +53,12 @@ class LexerTest extends \PHPUnit_Framework_TestCase
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
 
-        $actual = $this->getTokensString($tokens);
+        $actual = $this->getTokenStrings($tokens);
 
         $this->assertEquals($expected, $actual);
     }
 
-    public function testAbbreviations()
+    public function testAbbreviations(): void
     {
         $text = 'Hello Mr. Jones, please turn on the T.V.';
         $expected = [
@@ -86,7 +80,7 @@ class LexerTest extends \PHPUnit_Framework_TestCase
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
 
-        $actual = $this->getTokensString($tokens);
+        $actual = $this->getTokenStrings($tokens);
 
         $this->assertEquals($expected, $actual);
     }
@@ -94,9 +88,9 @@ class LexerTest extends \PHPUnit_Framework_TestCase
     /**
      * @param Token[] $tokens
      *
-     * @return string
+     * @return string[]
      */
-    private function getTokensString(array $tokens)
+    private function getTokenStrings(array $tokens): array
     {
         $values = [];
 

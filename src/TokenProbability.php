@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker;
 
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
@@ -36,18 +29,12 @@ class TokenProbability
         return $this->token;
     }
 
-    /**
-     * @param int $p
-     */
-    public function setProbability($p)
+    public function setProbability(int $p): void
     {
         $this->probability = $p;
     }
 
-    /**
-     * @param int $p
-     */
-    public function increaseProbability($p)
+    public function increaseProbability(int $p): void
     {
         $this->probability += $p;
 
@@ -56,10 +43,7 @@ class TokenProbability
         }
     }
 
-    /**
-     * @param int $p
-     */
-    public function decreaseProbability($p)
+    public function decreaseProbability(int $p): void
     {
         $this->probability -= $p;
 
@@ -68,10 +52,7 @@ class TokenProbability
         }
     }
 
-    /**
-     * @return int
-     */
-    public function getProbability()
+    public function getProbability(): int
     {
         return $this->probability;
     }

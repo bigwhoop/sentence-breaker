@@ -1,18 +1,12 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker;
 
 use Bigwhoop\SentenceBreaker\Abbreviations\Abbreviations;
 use Bigwhoop\SentenceBreaker\Exceptions\InvalidArgumentException;
 use Bigwhoop\SentenceBreaker\Rules\Configuration;
+use Bigwhoop\SentenceBreaker\Rules\ConfigurationException;
 use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
 use Bigwhoop\SentenceBreaker\Abbreviations\ArrayProvider;
 use Bigwhoop\SentenceBreaker\Abbreviations\ValueProvider;
@@ -35,8 +29,9 @@ class SentenceBreaker
 
     /**
      * @param Configuration|null $rulesConfig
+     * @throws ConfigurationException
      */
-    public function __construct(Configuration $rulesConfig = null)
+    public function __construct(?Configuration $rulesConfig = null)
     {
         $rules = $rulesConfig ? $rulesConfig->getRules() : $this->loadDefaultRules();
 
@@ -47,48 +42,34 @@ class SentenceBreaker
 
     /**
      * @return Rules
+     * @throws ConfigurationException
      */
-    private function loadDefaultRules()
+    private function loadDefaultRules(): Rules
     {
         return IniConfiguration::loadFile(__DIR__.'/../rules/rules.ini')->getRules();
     }
 
-    /**
-     * @param Lexer $lexer
-     */
-    public function setLexer(Lexer $lexer)
+    public function setLexer(Lexer $lexer): void
     {
         $this->lexer = $lexer;
     }
 
-    /**
-     * @param ProbabilityCalculator $calculator
-     */
-    public function setSentenceBoundaryProbabilityCalculator(ProbabilityCalculator $calculator)
+    public function setSentenceBoundaryProbabilityCalculator(ProbabilityCalculator $calculator): void
     {
         $this->probabilityCalculator = $calculator;
     }
 
-    /**
-     * @param SentenceBuilder $builder
-     */
-    public function setSentenceBuilder(SentenceBuilder $builder)
+    public function setSentenceBuilder(SentenceBuilder $builder): void
     {
         $this->sentenceBuilder = $builder;
     }
 
-    /**
-     * @param Rules $rules
-     */
-    public function setRules(Rules $rules)
+    public function setRules(Rules $rules): void
     {
         $this->probabilityCalculator->setRules($rules);
     }
 
-    /**
-     * @param Rules $rules
-     */
-    public function addRules(Rules $rules)
+    public function addRules(Rules $rules): void
     {
         $this->probabilityCalculator->addRules($rules);
     }
@@ -98,7 +79,7 @@ class SentenceBreaker
      *
      * @throws InvalidArgumentException
      */
-    public function addAbbreviations($values)
+    public function addAbbreviations($values): void
     {
         if (is_array($values)) {
             $values = new ArrayProvider($values);
@@ -111,24 +92,21 @@ class SentenceBreaker
 
     /**
      * @param string $text
-     *
      * @return string[]
+     * @throws ConfigurationException
+     * @throws Lexing\States\StateException
      */
-    public function split($text)
+    public function split(string $text): array
     {
         $this->probabilityCalculator->setAbbreviations($this->getAbbreviations());
 
         $tokens = $this->lexer->run($text);
         $probabilities = $this->probabilityCalculator->calculate($tokens);
-        $sentences = $this->sentenceBuilder->build($probabilities);
-
-        return $sentences;
+        
+        return $this->sentenceBuilder->build($probabilities);
     }
 
-    /**
-     * @return Abbreviations
-     */
-    private function getAbbreviations()
+    private function getAbbreviations(): Abbreviations
     {
         $abbreviations = new Abbreviations();
 

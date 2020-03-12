@@ -1,13 +1,6 @@
 <?php
+declare(strict_types=1);
 
-/**
- * This file is part of sentence-breaker.
- *
- * (c) Philippe Gerber
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
 namespace Bigwhoop\SentenceBreaker\Rules;
 
 class Rules
@@ -26,17 +19,14 @@ class Rules
     /**
      * @param Rule[] $rules
      */
-    public function addRules(array $rules)
+    public function addRules(array $rules): void
     {
         foreach ($rules as $rule) {
             $this->addRule($rule);
         }
     }
 
-    /**
-     * @param Rule $rule
-     */
-    public function addRule(Rule $rule)
+    public function addRule(Rule $rule): void
     {
         if (array_key_exists($rule->getTokenName(), $this->rules)) {
             $this->rules[$rule->getTokenName()]->addPatterns($rule->getPatterns());
@@ -48,29 +38,22 @@ class Rules
     /**
      * @return Rule[]
      */
-    public function getRules()
+    public function getRules(): array
     {
         return array_values($this->rules);
     }
 
-    /**
-     * @param string $tokenName
-     *
-     * @return bool
-     */
-    public function hasRule($tokenName)
+    public function hasRule(string $tokenName): bool
     {
         return array_key_exists($tokenName, $this->rules);
     }
 
     /**
      * @param string $tokenName
-     *
      * @return Rule
-     *
      * @throws ConfigurationException
      */
-    public function getRule($tokenName)
+    public function getRule(string $tokenName): Rule 
     {
         if (!array_key_exists($tokenName, $this->rules)) {
             throw new ConfigurationException("No rule for {$tokenName} defined.");

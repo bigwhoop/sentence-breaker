@@ -17,6 +17,14 @@ class SentenceBreakerTest extends TestCase
         $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
         $this->assertSame(['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"], $sentences);
     }
+    
+    public function testPluralizedAbbreviation(): void
+    {
+        $breaker = new SentenceBreaker();
+
+        $sentences = $breaker->split("So it looks like they've got F.D.R.'s for One Marine right now.");
+        $this->assertSame(["So it looks like they've got F.D.R.'s for One Marine right now."], $sentences);
+    }
 
     /**
      * @dataProvider dataSentences

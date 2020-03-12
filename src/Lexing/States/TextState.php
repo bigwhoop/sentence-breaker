@@ -51,7 +51,7 @@ class TextState extends State
                 return new WhitespaceState();
             }
 
-            if (in_array($peek, QuotedStringState::getLeftMarks(), true)) {
+            if ('.' !== $lexer->last() && in_array($peek, QuotedStringState::getLeftMarks(), true)) {
                 return new QuotedStringState();
             }
 

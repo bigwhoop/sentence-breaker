@@ -61,7 +61,13 @@ class SentenceBreakerTest extends TestCase
                     'He said: ‘Look at me, I am fancy.’ and the other replied “You really are!”',
                     'True story ...'
                 ],
-            ]
+            ],
+            [
+                'Currently I am storing my bottles in the crates at a (about) 20 degree angle (bottles are upwards!).',
+                [
+                    'Currently I am storing my bottles in the crates at a (about) 20 degree angle (bottles are upwards!).',
+                ]
+            ],
         ];
     }
 }

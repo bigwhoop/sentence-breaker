@@ -82,6 +82,26 @@ class LexerTest extends TestCase
         $this->assertEquals($expected, $actual);
     }
 
+    public function testParenthesis(): void
+    {
+        $text = 'It is (really. really!) important!';
+        $expected = [
+            'T_CAPITALIZED_WORD<"It">',
+            'T_WORD<"is">',
+            'T_PARENTHESES_STR<"(really. really!)">',
+            'T_WORD<"important">',
+            'T_EXCLAMATION_POINT<"!">',
+            'T_EOF',
+        ];
+
+        $lexer = new Lexer();
+        $tokens = $lexer->run($text);
+
+        $actual = $this->getTokenStrings($tokens);
+
+        $this->assertEquals($expected, $actual);
+    }
+
     public function testAbbreviations(): void
     {
         $text = 'Hello Mr. Jones, please turn on the T.V.';

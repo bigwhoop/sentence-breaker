@@ -8,6 +8,7 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\EOFToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\ExclamationPointToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\PeriodToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuestionMarkToken;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\StringInParenthesesToken;
 
 class TextState extends State
 {
@@ -46,12 +47,16 @@ class TextState extends State
                 continue;
             }
 
+            if (in_array($peek, WhitespaceState::CHARS, true)) {
+                return new WhitespaceState();
+            }
+
             if (in_array($peek, QuotedStringState::getLeftMarks(), true)) {
                 return new QuotedStringState();
             }
 
-            if (in_array($peek, WhitespaceState::CHARS, true)) {
-                return new WhitespaceState();
+            if (in_array($peek, ParenthesesState::getOpeningParentheses(), true)) {
+                return new ParenthesesState();
             }
 
             return new WordState();

@@ -46,7 +46,7 @@ class TextState extends State
                 continue;
             }
 
-            if (in_array($peek, QuotedStringState::CHARS, true)) {
+            if (in_array($peek, QuotedStringState::getLeftMarks(), true)) {
                 return new QuotedStringState();
             }
 

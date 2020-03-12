@@ -8,7 +8,7 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\ValueToken;
 
 class Lexer
 {
-    /** @var resource */
+    /** @var string */
     private $input;
 
     /** @var States\State|null */
@@ -48,12 +48,7 @@ class Lexer
     private function setInput(string $input): void
     {
         $this->reset();
-
-        $fh = fopen('php://memory', 'r+');
-        fwrite($fh, $input);
-        rewind($fh);
-
-        $this->input = $fh;
+        $this->input = $input;
     }
 
     private function reset(): void
@@ -71,11 +66,10 @@ class Lexer
 
     public function next(int $offset = 0): ?string
     {
-        fseek($this->input, $this->pos + $offset, SEEK_SET);
-        $c = fgetc($this->input);
+        $c = mb_substr($this->input, $this->pos + $offset, 1);
         $this->pos += 1 + $offset;
 
-        if ($c === false) {
+        if ($c === '') {
             return null;
         }
 
@@ -87,11 +81,10 @@ class Lexer
         if ($this->pos === 0) {
             return null;
         }
+        
+        $c = mb_substr($this->input, $this->pos - 1, 1);
 
-        fseek($this->input, $this->pos - 1, SEEK_SET);
-        $c = fgetc($this->input);
-
-        if ($c === false) {
+        if ($c === '') {
             return null;
         }
 
@@ -123,8 +116,7 @@ class Lexer
 
         $value = null;
         if ($endPos > $startPos) {
-            fseek($this->input, $startPos, SEEK_SET);
-            $value = fread($this->input, $endPos - $startPos);
+            $value = mb_substr($this->input, $startPos, $endPos - $startPos);
         }
 
         return $value;

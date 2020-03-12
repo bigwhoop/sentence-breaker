@@ -8,11 +8,22 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuotedStringToken;
 
 class QuotedStringState extends State
 {
-    public const CHARS = ['"', "'"];
+    private const MARKS = [
+        '"' => '"',
+        "'" => "'",
+        '‘' => '’',
+        '“' => '”',
+    ];
+    
+    public static function getLeftMarks(): array
+    {
+        return array_keys(self::MARKS);
+    }
 
     protected function call(Lexer $lexer): ?State
     {
-        $start = $lexer->next();
+        $leftMark = $lexer->next();
+        $rightMark = self::MARKS[$leftMark];
 
         while (true) {
             $next = $lexer->next();
@@ -21,7 +32,7 @@ class QuotedStringState extends State
                 throw new StateException('Failed to find end of quote. Reached end of input. Read: '.$lexer->getTokenValue());
             }
 
-            if ($start === $next) {
+            if ($next === $rightMark) {
                 break;
             }
         }

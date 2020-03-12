@@ -16,7 +16,7 @@ class LexerTest extends TestCase
         $expected = [
             'T_CAPITALIZED_WORD<"He">',
             'T_WORD<"said:">',
-            'T_QUOTED_STR<""Hello there!"">',
+            'T_QUOTED_STR<"\"Hello there!\"">',
             'T_CAPITALIZED_WORD<"How">',
             'T_WORD<"are">',
             'T_WORD<"you">',
@@ -34,16 +34,40 @@ class LexerTest extends TestCase
         $this->assertEquals($expected, $actual);
     }
 
-    public function testQuote(): void
+    public function testQuotes(): void
     {
-        $text = "the Latin verb docēre [dɔˈkeːrɛ] 'to teach'. It has";
+        $text = "the Latin verb \"docēre\" [dɔˈkeːrɛ] 'to teach'. It has";
         $expected = [
             'T_WORD<"the">',
             'T_CAPITALIZED_WORD<"Latin">',
             'T_WORD<"verb">',
-            'T_WORD<"docēre">',
+            'T_QUOTED_STR<"\"docēre\"">',
             'T_WORD<"[dɔˈkeːrɛ]">',
             'T_QUOTED_STR<"\'to teach\'">',
+            'T_PERIOD<".">',
+            'T_CAPITALIZED_WORD<"It">',
+            'T_WORD<"has">',
+            'T_EOF',
+        ];
+
+        $lexer = new Lexer();
+        $tokens = $lexer->run($text);
+
+        $actual = $this->getTokenStrings($tokens);
+
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function testFancyQuotes(): void
+    {
+        $text = 'the Latin verb ‘docēre’ [dɔˈkeːrɛ] “to teach”. It has';
+        $expected = [
+            'T_WORD<"the">',
+            'T_CAPITALIZED_WORD<"Latin">',
+            'T_WORD<"verb">',
+            'T_QUOTED_STR<"‘docēre’">',
+            'T_WORD<"[dɔˈkeːrɛ]">',
+            'T_QUOTED_STR<"“to teach”">',
             'T_PERIOD<".">',
             'T_CAPITALIZED_WORD<"It">',
             'T_WORD<"has">',
@@ -99,7 +123,7 @@ class LexerTest extends TestCase
                 continue;
             }
 
-            $value = $token->getPrintableValue();
+            $value = str_replace('"', '\"', $token->getPrintableValue());
 
             $values[] = $token->getName().(empty($value) ? '' : '<"'.$value.'">');
         }

@@ -20,11 +20,8 @@ class SentenceBreakerTest extends TestCase
 
     /**
      * @dataProvider dataSentences
-     *
-     * @param string $text
-     * @param array  $sentences
      */
-    public function testSplittingWithFlatFileProvider($text, array $sentences): void
+    public function testSplittingWithFlatFileProvider(string $text, array $sentences): void
     {
         $breaker = new SentenceBreaker();
         $breaker->addAbbreviations(new FlatFileProvider(__DIR__.'/../assets/data', ['*']));
@@ -58,6 +55,13 @@ class SentenceBreakerTest extends TestCase
                     'Doctorates may be research doctorates or professional doctorates.',
                 ],
             ],
+            [
+                'He said: ‘Look at me, I am fancy.’ and the other replied “You really are!” True story ...',
+                [
+                    'He said: ‘Look at me, I am fancy.’ and the other replied “You really are!”',
+                    'True story ...'
+                ],
+            ]
         ];
     }
 }

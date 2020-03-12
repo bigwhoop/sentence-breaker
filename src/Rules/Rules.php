@@ -53,7 +53,7 @@ class Rules
      * @return Rule
      * @throws ConfigurationException
      */
-    public function getRule(string $tokenName): Rule 
+    public function getRule(string $tokenName): Rule
     {
         if (!array_key_exists($tokenName, $this->rules)) {
             throw new ConfigurationException("No rule for {$tokenName} defined.");

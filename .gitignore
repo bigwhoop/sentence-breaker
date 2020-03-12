@@ -1,3 +1,5 @@
-.idea
-vendor
-tests/_output/*
+.idea/
+vendor/
+.php_cs.cache
+phpunit.xml
+phpstan.neon

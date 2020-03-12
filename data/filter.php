@@ -7,13 +7,13 @@ foreach (glob(__DIR__ . '/*.txt') as $file) {
     
     $lines = explode("\n", $data);
     
-    $lines = array_map(static function($line) {
+    $lines = array_map(static function ($line) {
         [$line] = explode('--', $line);
         
         return trim($line);
     }, $lines);
     
-    $lines = array_filter($lines, static function($line) {
+    $lines = array_filter($lines, static function ($line) {
         return '.' === substr($line, -1);
     });
     

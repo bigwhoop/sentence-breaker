@@ -5,12 +5,11 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 
 class IniConfiguration implements Configuration
 {
-    /** @var string */
-    private $data;
+    private $data = [];
 
     /**
      * @param string $path
-     * @return static
+     * @return self
      * @throws ConfigurationException
      */
     public static function loadFile(string $path): self
@@ -22,9 +21,18 @@ class IniConfiguration implements Configuration
         return new self(file_get_contents($path));
     }
 
+    /**
+     * @param string $data
+     * @throws ConfigurationException
+     */
     public function __construct(string $data)
     {
-        $this->data = parse_ini_string($data, true);
+        $parsedData = parse_ini_string($data, true);
+        if ($parsedData === false) {
+            throw new ConfigurationException('Failed parsing given INI string');
+        }
+        
+        $this->data = $parsedData;
     }
 
     public function getRules(): Rules

@@ -22,7 +22,7 @@ class FlatFileProvider implements ValueProvider
         $this->fileNames = $fileNames;
     }
 
-    public function getValues(): array 
+    public function getValues(): array
     {
         $values = [];
         foreach ($this->getPaths() as $path) {
@@ -34,7 +34,7 @@ class FlatFileProvider implements ValueProvider
 
         return $values;
     }
-
+    
     private function getPaths(): array
     {
         return glob($this->basePath.'/{'.implode(',', $this->fileNames).'}.txt', GLOB_BRACE);

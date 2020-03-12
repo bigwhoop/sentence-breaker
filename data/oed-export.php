@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 /**
  * Exports data from Oxford English Dictionary
- * 
+ *
  * @link http://public.oed.com/how-to-use-the-oed/abbreviations/
  */
 

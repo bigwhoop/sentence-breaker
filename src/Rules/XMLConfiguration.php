@@ -10,7 +10,7 @@ class XMLConfiguration implements Configuration
 
     /**
      * @param string $path
-     * @return static
+     * @return self
      * @throws ConfigurationException
      */
     public static function loadFile(string $path): self
@@ -79,7 +79,7 @@ class XMLConfiguration implements Configuration
                     
                     if (count($potentialStartTokenIdxs) > 1) {
                         throw new ConfigurationException("Pattern {$rule->getTokenName()}/#{$patternIdx} must have unambiguous start token. Multiple {$rule->getTokenName()} tokens found.");
-                    } 
+                    }
                     
                     $potentialStartTokenIdx = $potentialStartTokenIdxs[0];
                     $tokens[$potentialStartTokenIdx]['is_start_token'] = true;

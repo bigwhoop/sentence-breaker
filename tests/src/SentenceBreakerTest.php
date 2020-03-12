@@ -35,7 +35,7 @@ class SentenceBreakerTest extends TestCase
     /**
      * @return array
      */
-    public function dataSentences(): array 
+    public function dataSentences(): array
     {
         return [
             [

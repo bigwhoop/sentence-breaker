@@ -13,6 +13,7 @@ class QuotedStringState extends State
         "'" => "'",
         '‘' => '’',
         '“' => '”',
+        '„' => '”',
     ];
     
     public static function getLeftMarks(): array

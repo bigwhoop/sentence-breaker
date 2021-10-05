@@ -3,3 +3,4 @@ vendor/
 .php_cs.cache
 phpunit.xml
 phpstan.neon
+.phpunit.result.cache

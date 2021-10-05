@@ -8,8 +8,9 @@ jobs:
     strategy:
       matrix:
         operating-system: [ ubuntu-latest ]
-        php-versions: [ '8.0', '8.1' ]
-    name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
+        php-versions: [ '7.3', '7.4', '8.0', '8.1' ]
+        composer-deps: [ 'lowest', 'latest' ]
+    name: PHP ${{ matrix.php-versions }} on ${{ matrix.operating-system }} with ${{ matrix.composer-deps }} deps
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -18,8 +19,12 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
           extensions: xml
-      - name: Install deps
-        run: composer install
+      - name: Update dependencies (lowest)
+        run: composer update --no-interaction --no-progress --no-suggest --prefer-lowest --prefer-stable
+        if: ${{ matrix.composer-deps == 'lowest' }}
+      - name: Update dependencies (latest)
+        run: composer update --no-interaction --no-progress --no-suggest
+        if: ${{ matrix.composer-deps == 'latest' }}
       - name: Run phpunit
         run: vendor/bin/phpunit
       - name: Run phpstan

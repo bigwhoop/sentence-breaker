@@ -9,7 +9,7 @@ foreach (glob(__DIR__ . '/*.txt') as $file) {
     $data = file_get_contents($file);
     $lines = array_merge($lines, explode("\n", $data));
 }
-    
+
 $lines = array_unique($lines);
 asort($lines);
 

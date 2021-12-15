@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
@@ -15,7 +16,10 @@ class QuotedStringState extends State
         '“' => '”',
         '„' => '”',
     ];
-    
+
+    /**
+     * @return array<string>
+     */
     public static function getLeftMarks(): array
     {
         return array_keys(self::MARKS);

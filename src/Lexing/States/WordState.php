@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
@@ -9,6 +10,9 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
 
 class WordState extends State
 {
+    /**
+     * @return array<string|null>
+     */
     private function getNonWordChars(): array
     {
         return array_merge(['.', '?', '!', null], WhitespaceState::CHARS);

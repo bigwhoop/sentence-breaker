@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Rules;
@@ -6,7 +7,7 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 class Rules
 {
     /** @var Rule[] */
-    private $rules = [];
+    private array $rules = [];
 
     /**
      * @param Rule[] $rules

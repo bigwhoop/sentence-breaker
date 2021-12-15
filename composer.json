@@ -10,15 +10,15 @@
     }
   ],
   "require": {
-    "php": "^7.3 || ~8.0.0 || ~8.1.0",
+    "php": "^7.4 || ~8.0.0 || ~8.1.0",
     "ext-simplexml": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "^9",
     "fabpot/goutte": "^2",
-    "friendsofphp/php-cs-fixer": "^2.16",
-    "phpstan/phpstan": "^0.12.14",
-    "phpstan/phpstan-phpunit": "^0.12.6"
+    "friendsofphp/php-cs-fixer": "^3.4",
+    "phpstan/phpstan": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0"
   },
   "autoload": {
     "psr-4": {

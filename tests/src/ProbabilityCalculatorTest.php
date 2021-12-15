@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Tests;
@@ -15,6 +16,9 @@ use PHPUnit\Framework\TestCase;
 
 class ProbabilityCalculatorTest extends TestCase
 {
+    /**
+     * @return array<mixed>
+     */
     public function dataSimpleSentences(): array
     {
         return [
@@ -32,6 +36,9 @@ class ProbabilityCalculatorTest extends TestCase
         ];
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function dataQuotes(): array
     {
         return [
@@ -54,6 +61,9 @@ class ProbabilityCalculatorTest extends TestCase
         ];
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function dataAbbreviations(): array
     {
         return [
@@ -79,7 +89,7 @@ class ProbabilityCalculatorTest extends TestCase
      * @dataProvider dataSimpleSentences
      *
      * @param string $input
-     * @param array  $expectedResult
+     * @param array<string>  $expectedResult
      */
     public function testSimpleSentences(string $input, array $expectedResult): void
     {
@@ -90,7 +100,7 @@ class ProbabilityCalculatorTest extends TestCase
      * @dataProvider dataQuotes
      *
      * @param string $input
-     * @param array  $expectedResult
+     * @param array<string>  $expectedResult
      */
     public function testQuotes(string $input, array $expectedResult): void
     {
@@ -101,8 +111,8 @@ class ProbabilityCalculatorTest extends TestCase
      * @dataProvider dataAbbreviations
      *
      * @param string $input
-     * @param array  $expectedResult
-     * @param array  $abbreviations
+     * @param array<string>  $expectedResult
+     * @param array<string>  $abbreviations
      */
     public function testAbbreviations(string $input, array $expectedResult, array $abbreviations): void
     {
@@ -111,8 +121,8 @@ class ProbabilityCalculatorTest extends TestCase
 
     /**
      * @param string $input
-     * @param array  $expectedResult
-     * @param array  $abbreviations
+     * @param array<string>  $expectedResult
+     * @param array<string>  $abbreviations
      */
     private function runCalculateTest(string $input, array $expectedResult, array $abbreviations): void
     {

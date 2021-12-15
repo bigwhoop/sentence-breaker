@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker;
@@ -7,24 +8,16 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 
 class TokenProbability
 {
-    /** @var Token|string */
-    private $token;
+    private Token $token;
 
-    /** @var int */
-    private $probability = 0;
+    private int $probability = 0;
 
-    /**
-     * @param Token|string $token
-     */
-    public function __construct($token)
+    public function __construct(Token $token)
     {
         $this->token = $token;
     }
 
-    /**
-     * @return Token|string
-     */
-    public function getToken()
+    public function getToken(): Token
     {
         return $this->token;
     }

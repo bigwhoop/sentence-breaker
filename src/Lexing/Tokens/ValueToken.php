@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
@@ -6,7 +7,7 @@ namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 abstract class ValueToken implements Token
 {
     /** @var string */
-    private $value;
+    private string $value;
 
     public function __construct(string $value = '')
     {

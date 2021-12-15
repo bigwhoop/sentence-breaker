@@ -8,4 +8,4 @@ $finder = PhpCsFixer\Finder::create()->in([
     __DIR__ . '/data',
 ]);
 
-return PhpCsFixer\Config::create()->setFinder($finder);
+return (new PhpCsFixer\Config())->setFinder($finder);

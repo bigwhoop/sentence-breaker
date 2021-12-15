@@ -6,13 +6,19 @@ namespace Bigwhoop\SentenceBreaker\Abbreviations;
 
 class ArrayProvider implements ValueProvider
 {
-    private $values = [];
+    /**
+     * @var array<string>
+     */
+    private $values;
 
+    /**
+     * @param array<string> $values
+     */
     public function __construct(array $values)
     {
         $this->values = $values;
     }
-    
+
     public function getValues(): array
     {
         return $this->values;

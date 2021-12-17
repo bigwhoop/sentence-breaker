@@ -13,8 +13,7 @@ class LexerTest extends TestCase
 {
     public function testCompleteSentence(): void
     {
-        $text = 'He said: "Hello there!" How are you? Good.';
-        $expected = [
+        $this->assertTokens('He said: "Hello there!" How are you? Good.', [
             'T_CAPITALIZED_WORD<"He">',
             'T_WORD<"said:">',
             'T_QUOTED_STR<"\"Hello there!\"">',
@@ -25,20 +24,12 @@ class LexerTest extends TestCase
             'T_CAPITALIZED_WORD<"Good">',
             'T_PERIOD<".">',
             'T_EOF',
-        ];
-
-        $lexer = new Lexer();
-        $tokens = $lexer->run($text);
-
-        $actual = $this->getTokenStrings($tokens);
-
-        $this->assertEquals($expected, $actual);
+        ]);
     }
 
     public function testQuotes(): void
     {
-        $text = "the Latin verb \"docēre\" [dɔˈkeːrɛ] 'to teach'. It has";
-        $expected = [
+        $this->assertTokens("the Latin verb \"docēre\" [dɔˈkeːrɛ] 'to teach'. It has", [
             'T_WORD<"the">',
             'T_CAPITALIZED_WORD<"Latin">',
             'T_WORD<"verb">',
@@ -49,20 +40,12 @@ class LexerTest extends TestCase
             'T_CAPITALIZED_WORD<"It">',
             'T_WORD<"has">',
             'T_EOF',
-        ];
-
-        $lexer = new Lexer();
-        $tokens = $lexer->run($text);
-
-        $actual = $this->getTokenStrings($tokens);
-
-        $this->assertEquals($expected, $actual);
+        ]);
     }
 
     public function testFancyQuotes(): void
     {
-        $text = 'the Latin verb ‘docēre’ [dɔˈkeːrɛ] “to teach”. It has';
-        $expected = [
+        $this->assertTokens('the Latin verb ‘docēre’ [dɔˈkeːrɛ] “to teach”. It has', [
             'T_WORD<"the">',
             'T_CAPITALIZED_WORD<"Latin">',
             'T_WORD<"verb">',
@@ -73,40 +56,24 @@ class LexerTest extends TestCase
             'T_CAPITALIZED_WORD<"It">',
             'T_WORD<"has">',
             'T_EOF',
-        ];
-
-        $lexer = new Lexer();
-        $tokens = $lexer->run($text);
-
-        $actual = $this->getTokenStrings($tokens);
-
-        $this->assertEquals($expected, $actual);
+        ]);
     }
 
     public function testParenthesis(): void
     {
-        $text = 'It is (really. really!) important!';
-        $expected = [
+        $this->assertTokens('It is (really. really!) important!', [
             'T_CAPITALIZED_WORD<"It">',
             'T_WORD<"is">',
             'T_PARENTHESES_STR<"(really. really!)">',
             'T_WORD<"important">',
             'T_EXCLAMATION_POINT<"!">',
             'T_EOF',
-        ];
-
-        $lexer = new Lexer();
-        $tokens = $lexer->run($text);
-
-        $actual = $this->getTokenStrings($tokens);
-
-        $this->assertEquals($expected, $actual);
+        ]);
     }
 
     public function testAbbreviations(): void
     {
-        $text = 'Hello Mr. Jones, please turn on the T.V.';
-        $expected = [
+        $this->assertTokens('Hello Mr. Jones, please turn on the T.V.', [
             'T_CAPITALIZED_WORD<"Hello">',
             'T_CAPITALIZED_WORD<"Mr">',
             'T_PERIOD<".">',
@@ -120,11 +87,36 @@ class LexerTest extends TestCase
             'T_CAPITALIZED_WORD<"V">',
             'T_PERIOD<".">',
             'T_EOF',
-        ];
+        ]);
+    }
 
+    public function testDecadeString(): void
+    {
+        $this->assertTokens("It was in the '80s. Es waren die '80er, ja?", [
+            'T_CAPITALIZED_WORD<"It">',
+            'T_WORD<"was">',
+            'T_WORD<"in">',
+            'T_WORD<"the">',
+            'T_WORD<"\'80s">',
+            'T_PERIOD<".">',
+            'T_CAPITALIZED_WORD<"Es">',
+            'T_WORD<"waren">',
+            'T_WORD<"die">',
+            'T_WORD<"\'80er">',
+            'T_WORD<",">',
+            'T_WORD<"ja">',
+            'T_QUESTION_MARK<"?">',
+            'T_EOF',
+        ]);
+    }
+
+    /**
+     * @param array<string> $expected
+     */
+    public function assertTokens(string $text, array $expected): void
+    {
         $lexer = new Lexer();
         $tokens = $lexer->run($text);
-
         $actual = $this->getTokenStrings($tokens);
 
         $this->assertEquals($expected, $actual);
@@ -146,7 +138,7 @@ class LexerTest extends TestCase
 
             $value = str_replace('"', '\"', $token->getPrintableValue());
 
-            $values[] = $token->getName().(empty($value) ? '' : '<"'.$value.'">');
+            $values[] = $token->getName() . (empty($value) ? '' : '<"' . $value . '">');
         }
 
         return $values;

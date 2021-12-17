@@ -79,6 +79,15 @@ class SentenceBreakerTest extends TestCase
                     'Currently I am storing my bottles in the crates at a (about) 20 degree angle (bottles are upwards!).',
                 ]
             ],
+            [
+                "I'm a '90s kid. Yes, it's not 90's. I'm born in the '80s! The '80s, yes?",
+                [
+                    "I'm a '90s kid.",
+                    "Yes, it's not 90's.",
+                    "I'm born in the '80s!",
+                    "The '80s, yes?",
+                ]
+            ]
         ];
     }
 }

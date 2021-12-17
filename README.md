@@ -104,6 +104,14 @@ In the end the tokens are re-assembled into the sentences. The user can choose w
 - [X] `calculateCurrentTokenProbability` is a big mess. Let's split it up into multiple *Rule* classes. Maybe use a rules engine.
 - [ ] Add abbreviations support for different languages.
 
+## Contributors
+
+<a href="https://github.com/bigwhoop/sentence-breaker/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bigwhoop/sentence-breaker" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
 ## License
 
 MIT. See LICENSE file.

@@ -1,14 +1,17 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Rules;
 
 class IniConfiguration implements Configuration
 {
-    private $data = [];
+    /**
+     * @var array<mixed>
+     */
+    private array $data = [];
 
     /**
-     * @param string $path
      * @return self
      * @throws ConfigurationException
      */
@@ -18,12 +21,16 @@ class IniConfiguration implements Configuration
             throw new ConfigurationException("File '{$path}' must be readable.");
         }
 
-        return new self(file_get_contents($path));
+        $contents = file_get_contents($path);
+        if ($contents === false) {
+            throw new ConfigurationException("Unable to read '{$path}'.");
+        }
+
+        return new self($contents);
     }
 
     /**
-     * @param string $data
-     * @throws ConfigurationException
+      @throws ConfigurationException
      */
     public function __construct(string $data)
     {
@@ -31,7 +38,7 @@ class IniConfiguration implements Configuration
         if ($parsedData === false) {
             throw new ConfigurationException('Failed parsing given INI string');
         }
-        
+
         $this->data = $parsedData;
     }
 

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Rules;
@@ -6,10 +7,10 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 class RulePatternToken
 {
     /** @var string */
-    private $tokenName;
+    private string $tokenName;
 
     /** @var bool */
-    private $isStartToken;
+    private bool $isStartToken;
 
     /**
      * @param string $tokenName

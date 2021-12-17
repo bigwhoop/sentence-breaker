@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Rules;
@@ -6,21 +7,21 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 class RulePattern
 {
     /** @var int */
-    private $probability;
+    private int $probability;
 
-    /** @var RulePatternToken[] */
-    private $tokens = [];
+    /** @var array<int, RulePatternToken> */
+    private array $tokens = [];
 
     /**
      * @param int                $probability
-     * @param RulePatternToken[] $tokens
+     * @param array<int, RulePatternToken> $tokens
      */
     public function __construct(int $probability, array $tokens = [])
     {
         $this->probability = $probability;
         $this->addTokens($tokens);
     }
-    
+
     public function getProbability(): int
     {
         return $this->probability;
@@ -48,13 +49,11 @@ class RulePattern
      * If the $startTokenName were T_A we'd return: 0, 1, 2, 3
      * If the $startTokenName were T_C we'd return: -2, -1, 0, 1
      *
-     * @param string $startTokenName
-     *
      * @return RulePatternToken[]
      *
      * @throws ConfigurationException
      */
-    public function getTokensOffsetRelativeToStartToken($startTokenName): array
+    public function getTokensOffsetRelativeToStartToken(string $startTokenName): array
     {
         $startTokenIdx = null;
 
@@ -70,12 +69,12 @@ class RulePattern
             throw new ConfigurationException('No start token found for pattern '.print_r($this, true));
         }
 
-        $numTokens = count($this->tokens);
+        $offsets = array_map(
+            static fn (int $idx) => $idx - $startTokenIdx,
+            range(0, count($this->tokens) -1)
+        );
 
-        $offsets = array_map(static function ($idx) use ($startTokenIdx) {
-            return $idx - $startTokenIdx;
-        }, range(0, $numTokens - 1));
-
+        /** @phpstan-ignore-next-line */
         return array_combine($offsets, $this->tokens);
     }
 }

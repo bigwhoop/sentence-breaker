@@ -18,8 +18,16 @@ Sentence boundary disambiguation (SBD) - or sentence breaking - library written 
     $breaker = new SentenceBreaker();
     $breaker->addAbbreviations(['Dr', 'Prof']);
     
+    // returns a generator, the text is parsed lazily
     $sentences = $breaker->split("Hello Dr. Jones! How are you? I'm fine, thanks!");
-    // ['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"]
+
+    // get first
+    $sentences->current() // 'Hello Dr. Jones!'
+
+    // get all as array
+    iterator_to_array($sentences) // ['Hello Dr. Jones!', 'How are you?', "I'm fine, thanks!"]
+    
+
 
 ### Rules
 

@@ -1,12 +1,14 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Rules;
 
+use SimpleXMLElement;
+
 class XMLConfiguration implements Configuration
 {
-    /** @var \SimpleXMLElement */
-    private $data;
+    private SimpleXMLElement $data;
 
     /**
      * @param string $path
@@ -19,7 +21,12 @@ class XMLConfiguration implements Configuration
             throw new ConfigurationException("File '{$path}' must be readable.");
         }
 
-        return new self(file_get_contents($path));
+        $contents = file_get_contents($path);
+        if ($contents === false) {
+            throw new ConfigurationException("Unable to read '{$path}'.");
+        }
+
+        return new self($contents);
     }
 
     public function __construct(string $xml)
@@ -29,7 +36,13 @@ class XMLConfiguration implements Configuration
 
     private function load(string $xml): void
     {
-        $this->data = simplexml_load_string($xml);
+        $data = simplexml_load_string($xml);
+
+        if ($data === false) {
+            throw new ConfigurationException("Unable to parse xml '{$xml}'.");
+        }
+
+        $this->data = $data;
     }
 
     public function getRules(): Rules
@@ -76,11 +89,11 @@ class XMLConfiguration implements Configuration
                     if (count($potentialStartTokenIdxs) === 0) {
                         throw new ConfigurationException("Pattern {$rule->getTokenName()}/#{$patternIdx} must have unambiguous start token. No {$rule->getTokenName()} token found.");
                     }
-                    
+
                     if (count($potentialStartTokenIdxs) > 1) {
                         throw new ConfigurationException("Pattern {$rule->getTokenName()}/#{$patternIdx} must have unambiguous start token. Multiple {$rule->getTokenName()} tokens found.");
                     }
-                    
+
                     $potentialStartTokenIdx = $potentialStartTokenIdxs[0];
                     $tokens[$potentialStartTokenIdx]['is_start_token'] = true;
                 }

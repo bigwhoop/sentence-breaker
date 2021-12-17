@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
@@ -11,7 +12,10 @@ class ParenthesesState extends State
     private const CHARS = [
         '(' => ')',
     ];
-    
+
+    /**
+     * @return array<string>
+     */
     public static function getOpeningParentheses(): array
     {
         return array_keys(self::CHARS);

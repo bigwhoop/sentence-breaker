@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Abbreviations;
 
+use Bigwhoop\SentenceBreaker\Exceptions\Exception;
+
 class FlatFileProvider implements ValueProvider
 {
-    /** @var string */
-    private $basePath;
+    private string $basePath;
 
     /** @var string[] */
-    private $fileNames = [];
+    private array $fileNames;
 
     /**
      * @param string   $basePath
@@ -22,11 +23,20 @@ class FlatFileProvider implements ValueProvider
         $this->fileNames = $fileNames;
     }
 
+    /**
+     * @return array<string>
+     * @throws Exception
+     */
     public function getValues(): array
     {
         $values = [];
         foreach ($this->getPaths() as $path) {
-            $values = array_merge($values, file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+            $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            if ($lines === false) {
+                throw new Exception(sprintf('Unable to read file "%s"', $path));
+            }
+
+            $values = array_merge($values, $lines);
         }
 
         $values = array_unique($values);
@@ -34,9 +44,18 @@ class FlatFileProvider implements ValueProvider
 
         return $values;
     }
-    
+
+    /**
+     * @return array<string>
+     */
     private function getPaths(): array
     {
-        return glob($this->basePath.'/{'.implode(',', $this->fileNames).'}.txt', GLOB_BRACE);
+        $pattern = $this->basePath.'/{'.implode(',', $this->fileNames).'}.txt';
+        $paths = glob($pattern, GLOB_BRACE);
+        if ($paths === false) {
+            throw new Exception(sprintf('Unable to find files with pattern "%s"', $pattern));
+        }
+
+        return $paths;
     }
 }

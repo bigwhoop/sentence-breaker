@@ -7,7 +7,7 @@ namespace Bigwhoop\SentenceBreaker\Abbreviations;
 class Abbreviations
 {
     /** @var string[] */
-    private $abbreviations = [];
+    private array $abbreviations = [];
 
     /**
      * @param string[] $abbreviations

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Tests\Lexing;
@@ -134,7 +135,7 @@ class LexerTest extends TestCase
      *
      * @return string[]
      */
-    private function getTokenStrings(array $tokens): array
+    private function getTokenStrings(iterable $tokens): array
     {
         $values = [];
 

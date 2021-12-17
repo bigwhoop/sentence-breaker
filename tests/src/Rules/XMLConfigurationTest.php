@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Tests\Rules;
@@ -42,7 +43,7 @@ class XMLConfigurationTest extends TestCase
     {
         $this->expectException(ConfigurationException::class);
         $this->expectExceptionMessage('Pattern T_EOF/#0 must have unambiguous start token. No T_EOF token found.');
-    
+
         $xml = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <rules>
@@ -65,7 +66,7 @@ XML;
     {
         $this->expectException(ConfigurationException::class);
         $this->expectExceptionMessage('Pattern T_EOF/#0 must have unambiguous start token. Multiple T_EOF tokens found.');
-    
+
         $xml = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <rules>
@@ -89,7 +90,7 @@ XML;
     {
         $this->expectException(ConfigurationException::class);
         $this->expectExceptionMessage('Pattern T_EOF#0: Multiple T_EOF tokens with \'is_start_token\' attribute found. Only one is allowed.');
-    
+
         $xml = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <rules>
@@ -113,7 +114,7 @@ XML;
     {
         $this->expectException(ConfigurationException::class);
         $this->expectExceptionMessage('Pattern T_EOF#0: Only T_EOF tokens can have the \'is_start_token\' attribute.');
-    
+
         $xml = <<<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <rules>

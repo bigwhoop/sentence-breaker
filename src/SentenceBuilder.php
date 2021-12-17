@@ -1,40 +1,32 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker;
 
+use Generator;
+
 class SentenceBuilder
 {
     /**
-     * @param TokenProbability[] $tokenProbabilities
-     * @param int                $threshold
+     * @param iterable<TokenProbability> $tokenProbabilities
      *
-     * @return array
+     * @return Generator<string>
      */
-    public function build(array $tokenProbabilities, int $threshold = 50): array
+    public function build(iterable $tokenProbabilities, int $threshold = 50): Generator
     {
-        $sentences = [''];
+        $currentSentence = '';
 
-        foreach ($tokenProbabilities as $idx => $tokenProbability) {
+        foreach ($tokenProbabilities as $tokenProbability) {
             $token = $tokenProbability->getToken();
-
-            $sentenceIdx = count($sentences) - 1;
-            $sentences[$sentenceIdx] .= $token->getPrintableValue();
-
+            $currentSentence .= $token->getPrintableValue();
             $meetsThreshold = $tokenProbability->getProbability() >= $threshold;
-            $currentSentenceIsEmpty = empty(trim($sentences[$sentenceIdx]));
+            $currentSentenceIsEmpty = empty(trim($currentSentence));
 
             if ($meetsThreshold && !$currentSentenceIsEmpty) {
-                $sentences[] = '';
+                yield ltrim($currentSentence);
+                $currentSentence = '';
             }
         }
-
-        if ('' === $sentences[count($sentences) - 1]) {
-            unset($sentences[count($sentences) - 1]);
-        }
-
-        $sentences = array_map('ltrim', $sentences);
-
-        return $sentences;
     }
 }

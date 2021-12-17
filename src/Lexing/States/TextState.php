@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Lexing\States;
@@ -8,7 +9,6 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\EOFToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\ExclamationPointToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\PeriodToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuestionMarkToken;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\StringInParenthesesToken;
 
 class TextState extends State
 {
@@ -19,7 +19,7 @@ class TextState extends State
     {
         while (true) {
             $peek = $lexer->peek();
-            
+
             if ($peek === null) {
                 $lexer->emit(new EOFToken());
 

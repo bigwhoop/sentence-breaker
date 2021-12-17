@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker;
@@ -9,18 +10,14 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\PotentialAbbreviationToken;
 use Bigwhoop\SentenceBreaker\Rules\ConfigurationException;
 use Bigwhoop\SentenceBreaker\Rules\Rules;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
+use Generator;
 
 class ProbabilityCalculator
 {
-    /** @var Abbreviations */
-    private $abbreviations;
+    private Abbreviations $abbreviations;
 
-    /** @var Rules */
-    private $rules;
+    private Rules $rules;
 
-    /**
-     * @param Rules $rules
-     */
     public function __construct(Rules $rules)
     {
         $this->rules = $rules;
@@ -48,36 +45,39 @@ class ProbabilityCalculator
     }
 
     /**
-     * @param Token[] $tokens
-     * @return TokenProbability[]
+     * @param iterable<Token> $tokens
+     * @return Generator<TokenProbability>
      * @throws ConfigurationException
      */
-    public function calculate(array $tokens): array
+    public function calculate(iterable $tokens): Generator
     {
-        foreach ($tokens as $idx => $token) {
-            if ($token instanceof PotentialAbbreviationToken && $this->abbreviations->hasAbbreviation($token->getValue())) {
-                $tokens[$idx] = new AbbreviationToken($token->getValue());
+        $tokenGenerator = function () use ($tokens) {
+            foreach ($tokens as $token) {
+                if ($token instanceof PotentialAbbreviationToken && $this->abbreviations->hasAbbreviation(
+                    $token->getValue()
+                )) {
+                    $token = new AbbreviationToken($token->getValue());
+                }
+
+                yield $token;
             }
-        }
+        };
 
-        $probabilities = [];
+        $iterator = new GeneratorOffsetIterator($tokenGenerator());
 
-        foreach ($tokens as $i => $token) {
+        foreach ($iterator as $token) {
             $probability = new TokenProbability($token);
-
             if ($this->rules->hasRule($token->getName())) {
                 $patterns = $this->rules->getRule($token->getName())->getPatterns();
 
                 foreach ($patterns as $pattern) {
                     $offsets = $pattern->getTokensOffsetRelativeToStartToken($token->getName());
-
                     foreach ($offsets as $offset => $expectedToken) {
-                        if (!array_key_exists($i + $offset, $tokens)) {
+                        if ($iterator->getByOffset($offset) === false) {
                             continue 2;
                         }
 
-                        $actualToken = $tokens[$i + $offset];
-
+                        $actualToken = $iterator->getByOffset($offset);
                         if ($actualToken->getName() !== $expectedToken->getTokenName()) {
                             continue 2;
                         }
@@ -87,9 +87,7 @@ class ProbabilityCalculator
                 }
             }
 
-            $probabilities[] = $probability;
+            yield $probability;
         }
-
-        return $probabilities;
     }
 }

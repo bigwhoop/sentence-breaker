@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Tests\Rules;
@@ -43,7 +44,7 @@ class IniConfigurationTest extends TestCase
     {
         $this->expectException(ConfigurationException::class);
         $this->expectExceptionMessage('.INI Configuration must contain \'rules\' section.');
-        
+
         $ini = <<<INI
 T_WORD <T_EOF> = 100
 INI;
@@ -51,12 +52,12 @@ INI;
         $config = new IniConfiguration($ini);
         $config->getRules();
     }
-    
+
     public function testMissingStartToken(): void
     {
         $this->expectException(ConfigurationException::class);
         $this->expectExceptionMessage('Pattern T_WORD T_EOF: Must contain start token.');
-        
+
         $ini = <<<INI
 [rules]
 T_WORD T_EOF = 100
@@ -70,7 +71,7 @@ INI;
     {
         $this->expectException(ConfigurationException::class);
         $this->expectExceptionMessage('Pattern T_WORD AA <T_EOF>: Token AA must exceed 2 characters.');
-        
+
         $ini = <<<INI
 [rules]
 T_WORD AA <T_EOF> = 100

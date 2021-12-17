@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Lexing;
@@ -8,20 +9,18 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\ValueToken;
 
 class Lexer
 {
-    /** @var string */
-    private $input;
+    private string $input;
 
-    /** @var States\State|null */
-    private $state;
+    private ?States\State $state;
 
     /** @var int The current position in $input */
-    private $pos = 0;
+    private int $pos = 0;
 
     /** @var int The start position of the current token */
-    private $tokenPos = 0;
+    private int $tokenPos = 0;
 
-    /** @var Token[]|string[] */
-    private $tokens = [];
+    /** @var Token[] */
+    private array $tokens = [];
 
     public function __construct()
     {
@@ -30,19 +29,21 @@ class Lexer
 
     /**
      * @param string $input
-     * @return Token[]
+     * @return iterable<Token>
      * @throws States\StateException
      */
-    public function run(string $input): array
+    public function run(string $input): iterable
     {
         $this->setInput($input);
 
         while ($this->state instanceof States\State) {
             $stateFn = $this->state;
             $this->state = $stateFn($this);
+            yield from $this->tokens;
+            $this->tokens = [];
         }
 
-        return $this->tokens;
+        yield from $this->tokens;
     }
 
     private function setInput(string $input): void
@@ -81,7 +82,7 @@ class Lexer
         if ($this->pos === 0) {
             return null;
         }
-        
+
         $c = mb_substr($this->input, $this->pos - 1, 1);
 
         if ($c === '') {
@@ -109,12 +110,12 @@ class Lexer
         $this->tokenPos = $this->pos;
     }
 
-    public function getTokenValue(): ?string
+    public function getTokenValue(): string
     {
         $startPos = $this->tokenPos;
         $endPos = $this->pos;
 
-        $value = null;
+        $value = '';
         if ($endPos > $startPos) {
             $value = mb_substr($this->input, $startPos, $endPos - $startPos);
         }

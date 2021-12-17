@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker;
@@ -12,20 +13,21 @@ use Bigwhoop\SentenceBreaker\Abbreviations\ArrayProvider;
 use Bigwhoop\SentenceBreaker\Abbreviations\ValueProvider;
 use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Rules\Rules;
+use Generator;
 
 class SentenceBreaker
 {
     /** @var ValueProvider[] */
-    private $abbreviationProviders = [];
+    private array $abbreviationProviders = [];
 
     /** @var Lexer */
-    private $lexer;
+    private Lexer $lexer;
 
     /** @var ProbabilityCalculator */
-    private $probabilityCalculator;
+    private ProbabilityCalculator $probabilityCalculator;
 
     /** @var SentenceBuilder */
-    private $sentenceBuilder;
+    private SentenceBuilder $sentenceBuilder;
 
     /**
      * @param Configuration|null $rulesConfig
@@ -41,7 +43,6 @@ class SentenceBreaker
     }
 
     /**
-     * @return Rules
      * @throws ConfigurationException
      */
     private function loadDefaultRules(): Rules
@@ -75,7 +76,7 @@ class SentenceBreaker
     }
 
     /**
-     * @param array|ValueProvider $values
+     * @param array<string>|ValueProvider $values
      *
      * @throws InvalidArgumentException
      */
@@ -91,18 +92,18 @@ class SentenceBreaker
     }
 
     /**
-     * @param string $text
-     * @return string[]
+     * @return Generator<string>
      * @throws ConfigurationException
      * @throws Lexing\States\StateException
      */
-    public function split(string $text): array
+    public function split(string $text): Generator
     {
         $this->probabilityCalculator->setAbbreviations($this->getAbbreviations());
 
         $tokens = $this->lexer->run($text);
+
         $probabilities = $this->probabilityCalculator->calculate($tokens);
-        
+
         return $this->sentenceBuilder->build($probabilities);
     }
 

@@ -31,21 +31,22 @@ class QuotedStringState extends State
         $leftMark = $lexer->next();
         $rightMark = self::MARKS[$leftMark];
 
-        $text = '';
         $doDecadeCheck = $leftMark === "'";
 
         while (true) {
+            $text = $lexer->getTokenValue();
+
             // match something like "'90s" oder "'80er"
-            if ($text !== '' && $doDecadeCheck) {
-                if (preg_match('/^\d+/', $text)) {
-                    if (preg_match('/^\d+(s|er)$/', $text)) {
-                        $lexer->emit(new WordToken($leftMark . $text));
+            if ($doDecadeCheck) {
+                if (preg_match("/^'\d*/", $text)) {
+                    if (preg_match("/^'\d*(s|er)$/", $text)) {
+                        $lexer->emit(new WordToken($text));
 
                         return new TextState();
                     }
                 } else {
                     // we can stop checking if a quote doesn't start with a numeric string
-                    // or if such a numeric string didn't end up being a decade representation. 
+                    // or if such a numeric string didn't end up being a decade representation.
                     $doDecadeCheck = false;
                 }
             }
@@ -55,8 +56,6 @@ class QuotedStringState extends State
             if ($next === null) {
                 throw new StateException('Failed to find end of quote. Reached end of input. Read: ' . $lexer->getTokenValue());
             }
-
-            $text .= $next;
 
             if ($next === $rightMark) {
                 break;

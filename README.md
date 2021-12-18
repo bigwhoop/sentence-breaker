@@ -1,8 +1,6 @@
 # sentence-breaker
 
 [![Build Status](https://github.com/bigwhoop/sentence-breaker/actions/workflows/ci.yml/badge.svg)](https://github.com/bigwhoop/sentence-breaker/actions/workflows/ci.yml)
-[![Code Coverage](https://scrutinizer-ci.com/g/bigwhoop/sentence-breaker/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bigwhoop/sentence-breaker/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bigwhoop/sentence-breaker/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bigwhoop/sentence-breaker/?branch=master)
 
 Sentence boundary disambiguation (SBD) - or sentence breaking - library written in PHP.
 

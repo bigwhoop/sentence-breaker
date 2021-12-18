@@ -25,7 +25,9 @@ jobs:
       - name: Update dependencies (latest)
         run: composer update --no-interaction --no-progress --no-suggest
         if: ${{ matrix.composer-deps == 'latest' }}
-      - name: Run phpunit
+      - name: Code style check
+        run: vendor/bin/php-cs-fixer fix --dry-run
+      - name: Unit tests
         run: vendor/bin/phpunit
-      - name: Run phpstan
+      - name: Static analysis
         run: vendor/bin/phpstan

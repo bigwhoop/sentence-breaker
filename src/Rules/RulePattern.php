@@ -6,14 +6,12 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 
 class RulePattern
 {
-    /** @var int */
     private int $probability;
 
     /** @var array<int, RulePatternToken> */
     private array $tokens = [];
 
     /**
-     * @param int                $probability
      * @param array<int, RulePatternToken> $tokens
      */
     public function __construct(int $probability, array $tokens = [])
@@ -66,15 +64,15 @@ class RulePattern
         }
 
         if ($startTokenIdx === null) {
-            throw new ConfigurationException('No start token found for pattern '.print_r($this, true));
+            throw new ConfigurationException('No start token found for pattern ' . print_r($this, true));
         }
 
         $offsets = array_map(
             static fn (int $idx) => $idx - $startTokenIdx,
-            range(0, count($this->tokens) -1)
+            range(0, count($this->tokens) - 1)
         );
 
-        /** @phpstan-ignore-next-line */
+        /* @phpstan-ignore-next-line */
         return array_combine($offsets, $this->tokens);
     }
 }

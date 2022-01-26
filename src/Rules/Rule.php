@@ -6,14 +6,12 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 
 class Rule
 {
-    /** @var string */
     private string $tokenName;
 
     /** @var RulePattern[] */
     private array $patterns = [];
 
     /**
-     * @param string        $tokenName
      * @param RulePattern[] $patterns
      */
     public function __construct(string $tokenName, array $patterns = [])

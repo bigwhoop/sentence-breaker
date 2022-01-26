@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Bigwhoop\SentenceBreaker\Tests;
 
 use Bigwhoop\SentenceBreaker\Abbreviations\Abbreviations;
+use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\CapitalizedWordToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\EOFToken;
-use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\WhitespaceToken;
-use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
+use Bigwhoop\SentenceBreaker\Lexing\Tokens\WordToken;
 use Bigwhoop\SentenceBreaker\ProbabilityCalculator;
-use Bigwhoop\SentenceBreaker\Lexing\Lexer;
+use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
 use PHPUnit\Framework\TestCase;
 
 class ProbabilityCalculatorTest extends TestCase
@@ -88,8 +88,7 @@ class ProbabilityCalculatorTest extends TestCase
     /**
      * @dataProvider dataSimpleSentences
      *
-     * @param string $input
-     * @param array<string>  $expectedResult
+     * @param array<string> $expectedResult
      */
     public function testSimpleSentences(string $input, array $expectedResult): void
     {
@@ -99,8 +98,7 @@ class ProbabilityCalculatorTest extends TestCase
     /**
      * @dataProvider dataQuotes
      *
-     * @param string $input
-     * @param array<string>  $expectedResult
+     * @param array<string> $expectedResult
      */
     public function testQuotes(string $input, array $expectedResult): void
     {
@@ -110,9 +108,8 @@ class ProbabilityCalculatorTest extends TestCase
     /**
      * @dataProvider dataAbbreviations
      *
-     * @param string $input
-     * @param array<string>  $expectedResult
-     * @param array<string>  $abbreviations
+     * @param array<string> $expectedResult
+     * @param array<string> $abbreviations
      */
     public function testAbbreviations(string $input, array $expectedResult, array $abbreviations): void
     {
@@ -120,16 +117,15 @@ class ProbabilityCalculatorTest extends TestCase
     }
 
     /**
-     * @param string $input
-     * @param array<string>  $expectedResult
-     * @param array<string>  $abbreviations
+     * @param array<string> $expectedResult
+     * @param array<string> $abbreviations
      */
     private function runCalculateTest(string $input, array $expectedResult, array $abbreviations): void
     {
         $lexer = new Lexer();
         $tokens = $lexer->run($input);
 
-        $rules = IniConfiguration::loadFile(__DIR__.'/../../rules/rules.ini')->getRules();
+        $rules = IniConfiguration::loadFile(__DIR__ . '/../../rules/rules.ini')->getRules();
 
         $calc = new ProbabilityCalculator($rules);
         $calc->setAbbreviations(new Abbreviations($abbreviations));
@@ -145,7 +141,7 @@ class ProbabilityCalculatorTest extends TestCase
                 continue;
             }
 
-            $actual[] = $token->getName().' '.$probability->getProbability();
+            $actual[] = $token->getName() . ' ' . $probability->getProbability();
         }
 
         $this->assertEquals($expectedResult, $actual);

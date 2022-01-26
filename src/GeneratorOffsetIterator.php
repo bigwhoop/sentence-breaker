@@ -44,7 +44,7 @@ class GeneratorOffsetIterator implements Iterator
             $this->addCurrentToCache();
         }
 
-        $this->currentIndex++;
+        ++$this->currentIndex;
     }
 
     public function key(): int

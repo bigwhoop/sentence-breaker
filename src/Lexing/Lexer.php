@@ -13,7 +13,7 @@ class Lexer
 
     private ?States\State $state;
 
-    /** @var int The current position in $input */
+    /** @var int The current position in */
     private int $pos = 0;
 
     /** @var int The start position of the current token */
@@ -28,8 +28,8 @@ class Lexer
     }
 
     /**
-     * @param string $input
      * @return iterable<Token>
+     *
      * @throws States\StateException
      */
     public function run(string $input): iterable

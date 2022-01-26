@@ -50,8 +50,6 @@ class Rules
     }
 
     /**
-     * @param string $tokenName
-     * @return Rule
      * @throws ConfigurationException
      */
     public function getRule(string $tokenName): Rule

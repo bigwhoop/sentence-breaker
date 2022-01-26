@@ -23,8 +23,8 @@ class SentenceBreakerPerformanceTest extends TestCase
     public function testCanAccessTheFirstSentenceOfLargeText(): void
     {
         $exampleSentences = $this->generateSentencesInRandomOrder(self::MAX_SENTENCES);
-        $firstSentence    = $exampleSentences[0];
-        $text             = implode(' ', $exampleSentences);
+        $firstSentence = $exampleSentences[0];
+        $text = implode(' ', $exampleSentences);
         unset($exampleSentences);
 
         $breaker = new SentenceBreaker();

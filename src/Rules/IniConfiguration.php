@@ -12,7 +12,6 @@ class IniConfiguration implements Configuration
     private array $data = [];
 
     /**
-     * @return self
      * @throws ConfigurationException
      */
     public static function loadFile(string $path): self

@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Bigwhoop\SentenceBreaker;
 
 use Bigwhoop\SentenceBreaker\Abbreviations\Abbreviations;
+use Bigwhoop\SentenceBreaker\Abbreviations\ArrayProvider;
+use Bigwhoop\SentenceBreaker\Abbreviations\ValueProvider;
 use Bigwhoop\SentenceBreaker\Exceptions\InvalidArgumentException;
+use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Rules\Configuration;
 use Bigwhoop\SentenceBreaker\Rules\ConfigurationException;
 use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
-use Bigwhoop\SentenceBreaker\Abbreviations\ArrayProvider;
-use Bigwhoop\SentenceBreaker\Abbreviations\ValueProvider;
-use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 use Bigwhoop\SentenceBreaker\Rules\Rules;
 use Generator;
 
@@ -20,17 +20,13 @@ class SentenceBreaker
     /** @var ValueProvider[] */
     private array $abbreviationProviders = [];
 
-    /** @var Lexer */
     private Lexer $lexer;
 
-    /** @var ProbabilityCalculator */
     private ProbabilityCalculator $probabilityCalculator;
 
-    /** @var SentenceBuilder */
     private SentenceBuilder $sentenceBuilder;
 
     /**
-     * @param Configuration|null $rulesConfig
      * @throws ConfigurationException
      */
     public function __construct(?Configuration $rulesConfig = null)
@@ -47,7 +43,7 @@ class SentenceBreaker
      */
     private function loadDefaultRules(): Rules
     {
-        return IniConfiguration::loadFile(__DIR__.'/../rules/rules.ini')->getRules();
+        return IniConfiguration::loadFile(__DIR__ . '/../rules/rules.ini')->getRules();
     }
 
     public function setLexer(Lexer $lexer): void
@@ -85,7 +81,7 @@ class SentenceBreaker
         if (is_array($values)) {
             $values = new ArrayProvider($values);
         } elseif (!($values instanceof ValueProvider)) {
-            throw new InvalidArgumentException('Values argument must either be an array or an instance of '.ValueProvider::class);
+            throw new InvalidArgumentException('Values argument must either be an array or an instance of ' . ValueProvider::class);
         }
 
         $this->abbreviationProviders[] = $values;
@@ -93,6 +89,7 @@ class SentenceBreaker
 
     /**
      * @return Generator<string>
+     *
      * @throws ConfigurationException
      * @throws Lexing\States\StateException
      */

@@ -5,18 +5,18 @@ declare(strict_types=1);
 namespace Bigwhoop\SentenceBreaker\Tests\Rules;
 
 use Bigwhoop\SentenceBreaker\Rules\ConfigurationException;
+use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
 use Bigwhoop\SentenceBreaker\Rules\Rule;
 use Bigwhoop\SentenceBreaker\Rules\RulePattern;
 use Bigwhoop\SentenceBreaker\Rules\RulePatternToken;
 use Bigwhoop\SentenceBreaker\Rules\Rules;
-use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
 use PHPUnit\Framework\TestCase;
 
 class IniConfigurationTest extends TestCase
 {
     public function testValidFile(): void
     {
-        $config = IniConfiguration::loadFile(__DIR__.'/../../assets/rules.ini');
+        $config = IniConfiguration::loadFile(__DIR__ . '/../../assets/rules.ini');
 
         $this->assertEquals(new Rules([
             new Rule('T_EOF', [

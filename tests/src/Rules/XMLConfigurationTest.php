@@ -16,7 +16,7 @@ class XMLConfigurationTest extends TestCase
 {
     public function testValidFile(): void
     {
-        $config = XMLConfiguration::loadFile(__DIR__.'/../../assets/rules.xml');
+        $config = XMLConfiguration::loadFile(__DIR__ . '/../../assets/rules.xml');
 
         $this->assertEquals(new Rules([
             new Rule('T_EOF', [

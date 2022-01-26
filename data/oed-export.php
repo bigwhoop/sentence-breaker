@@ -3,11 +3,10 @@
 declare(strict_types=1);
 
 /**
- * Exports data from Oxford English Dictionary
+ * Exports data from Oxford English Dictionary.
  *
- * @link http://public.oed.com/how-to-use-the-oed/abbreviations/
+ * @see http://public.oed.com/how-to-use-the-oed/abbreviations/
  */
-
 require __DIR__ . '/../vendor/autoload.php';
 
 use Goutte\Client;

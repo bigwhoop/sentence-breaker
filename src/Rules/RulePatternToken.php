@@ -6,16 +6,10 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 
 class RulePatternToken
 {
-    /** @var string */
     private string $tokenName;
 
-    /** @var bool */
     private bool $isStartToken;
 
-    /**
-     * @param string $tokenName
-     * @param bool   $isStartToken
-     */
     public function __construct(string $tokenName, bool $isStartToken = false)
     {
         $this->tokenName = $tokenName;

@@ -9,8 +9,6 @@ use Bigwhoop\SentenceBreaker\Lexing\Lexer;
 abstract class State
 {
     /**
-     * @param Lexer $lexer
-     * @return State|null
      * @throws StateException
      */
     final public function __invoke(Lexer $lexer): ?State
@@ -19,8 +17,6 @@ abstract class State
     }
 
     /**
-     * @param Lexer $lexer
-     * @return State|null
      * @throws StateException
      */
     abstract protected function call(Lexer $lexer): ?State;

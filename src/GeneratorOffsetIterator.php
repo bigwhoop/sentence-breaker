@@ -32,6 +32,7 @@ class GeneratorOffsetIterator implements Iterator
         $this->addCurrentToCache();
     }
 
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->cache[$this->currentIndex];

@@ -30,7 +30,7 @@ class ParenthesesState extends State
             $next = $lexer->next();
 
             if ($next === null) {
-                throw new StateException('Failed to find closing parentheses. Reached end of input. Read: '.$lexer->getTokenValue());
+                throw new StateException('Failed to find closing parentheses. Reached end of input. Read: ' . $lexer->getTokenValue());
             }
 
             if ($next === $closing) {

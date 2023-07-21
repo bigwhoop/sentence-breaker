@@ -7,7 +7,6 @@ namespace Bigwhoop\SentenceBreaker\Rules;
 interface Configuration
 {
     /**
-     * @return Rules
      * @throws ConfigurationException
      */
     public function getRules(): Rules;

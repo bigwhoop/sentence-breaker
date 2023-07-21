@@ -4,15 +4,11 @@ declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Rules;
 
-use SimpleXMLElement;
-
 class XMLConfiguration implements Configuration
 {
-    private SimpleXMLElement $data;
+    private \SimpleXMLElement $data;
 
     /**
-     * @param string $path
-     * @return self
      * @throws ConfigurationException
      */
     public static function loadFile(string $path): self
@@ -106,7 +102,7 @@ class XMLConfiguration implements Configuration
 
                 $rule->addPattern($pattern);
 
-                $patternIdx++;
+                ++$patternIdx;
             }
 
             $rules->addRule($rule);

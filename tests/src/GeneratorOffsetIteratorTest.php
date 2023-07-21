@@ -13,7 +13,7 @@ class GeneratorOffsetIteratorTest extends TestCase
     {
         $generatorInvocationCount = 0;
         $yieldSequence = function () use (&$generatorInvocationCount) {
-            $generatorInvocationCount++;
+            ++$generatorInvocationCount;
             yield from range(100, 110);
         };
 

@@ -4,16 +4,14 @@ declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker;
 
-use Generator;
-
 class SentenceBuilder
 {
     /**
      * @param iterable<TokenProbability> $tokenProbabilities
      *
-     * @return Generator<string>
+     * @return \Generator<string>
      */
-    public function build(iterable $tokenProbabilities, int $threshold = 50): Generator
+    public function build(iterable $tokenProbabilities, int $threshold = 50): \Generator
     {
         $currentSentence = '';
 

@@ -102,6 +102,22 @@ In the end the tokens are re-assembled into the sentences. The user can choose w
 - [X] `calculateCurrentTokenProbability` is a big mess. Let's split it up into multiple *Rule* classes. Maybe use a rules engine.
 - [ ] Add abbreviations support for different languages.
 
+## Contributing
+
+```
+# Check code style
+vendor/bin/php-cs-fixer fix --diff --dry-run
+
+# Fix code style
+vendor/bin/php-cs-fixer fix --diff
+
+# Run tests
+vendor/bin/phpunit
+
+# Run static analysis
+vendor/bin/phpstan
+```
+
 ## Contributors
 
 <a href="https://github.com/bigwhoop/sentence-breaker/graphs/contributors">

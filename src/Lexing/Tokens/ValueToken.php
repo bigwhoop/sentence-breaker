@@ -6,7 +6,6 @@ namespace Bigwhoop\SentenceBreaker\Lexing\Tokens;
 
 abstract class ValueToken implements Token
 {
-    /** @var string */
     private string $value;
 
     public function __construct(string $value = '')

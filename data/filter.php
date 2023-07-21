@@ -28,5 +28,4 @@ foreach (glob(__DIR__ . '/*.txt') as $file) {
     echo $file . " ... DONE\n";
 }
 
-
 echo "DONE.\n";

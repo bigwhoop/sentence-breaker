@@ -11,9 +11,6 @@ class WhitespaceState extends State
 {
     public const CHARS = [' ', "\t", "\r", "\n"];
 
-    /**
-     * {@inheritdoc}
-     */
     protected function call(Lexer $lexer): ?State
     {
         while (in_array($lexer->peek(), self::CHARS, true)) {

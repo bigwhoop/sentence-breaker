@@ -12,7 +12,6 @@ class IniConfiguration implements Configuration
     private array $data = [];
 
     /**
-     * @return self
      * @throws ConfigurationException
      */
     public static function loadFile(string $path): self
@@ -30,7 +29,7 @@ class IniConfiguration implements Configuration
     }
 
     /**
-      @throws ConfigurationException
+     * @throws ConfigurationException
      */
     public function __construct(string $data)
     {

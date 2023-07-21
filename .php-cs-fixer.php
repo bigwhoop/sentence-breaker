@@ -8,4 +8,14 @@ $finder = PhpCsFixer\Finder::create()->in([
     __DIR__ . '/data',
 ]);
 
-return (new PhpCsFixer\Config())->setFinder($finder);
+$config = new PhpCsFixer\Config();
+$config->setFinder($finder);
+$config->setRules([
+    '@Symfony' => true,
+    'concat_space' => [
+        'spacing' => 'one',
+    ],
+    'yoda_style' => false,
+]);
+
+return $config;

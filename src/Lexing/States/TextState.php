@@ -12,9 +12,6 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\QuestionMarkToken;
 
 class TextState extends State
 {
-    /**
-     * {@inheritdoc}
-     */
     protected function call(Lexer $lexer): ?State
     {
         while (true) {

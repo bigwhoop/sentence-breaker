@@ -14,7 +14,6 @@ class FlatFileProvider implements ValueProvider
     private array $fileNames;
 
     /**
-     * @param string   $basePath
      * @param string[] $fileNames
      */
     public function __construct(string $basePath, array $fileNames)
@@ -25,6 +24,7 @@ class FlatFileProvider implements ValueProvider
 
     /**
      * @return array<string>
+     *
      * @throws Exception
      */
     public function getValues(): array
@@ -50,7 +50,7 @@ class FlatFileProvider implements ValueProvider
      */
     private function getPaths(): array
     {
-        $pattern = $this->basePath.'/{'.implode(',', $this->fileNames).'}.txt';
+        $pattern = $this->basePath . '/{' . implode(',', $this->fileNames) . '}.txt';
         $paths = glob($pattern, GLOB_BRACE);
         if ($paths === false) {
             throw new Exception(sprintf('Unable to find files with pattern "%s"', $pattern));

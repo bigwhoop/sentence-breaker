@@ -4,19 +4,17 @@ declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker;
 
-use Generator;
 use Iterator;
 
 /**
  * @template T
+ *
  * @implements Iterator<T>
  */
-class GeneratorOffsetIterator implements Iterator
+class GeneratorOffsetIterator implements \Iterator
 {
-    /**
-     * @var Generator<int, T, mixed, void>
-     */
-    private Generator $generator;
+    /** @var \Generator<int, T, mixed, void> */
+    private \Generator $generator;
 
     /** @var array<T> */
     private array $cache = [];
@@ -24,14 +22,18 @@ class GeneratorOffsetIterator implements Iterator
     private int $currentIndex = 0;
 
     /**
-     * @param Generator<int, T, mixed, void> $generator
+     * @param \Generator<int, T, mixed, void> $generator
      */
-    public function __construct(iterable $generator)
+    public function __construct(\Generator $generator)
     {
         $this->generator = $generator;
         $this->addCurrentToCache();
     }
 
+    /**
+     * @return T
+     */
+    #[\ReturnTypeWillChange]
     public function current()
     {
         return $this->cache[$this->currentIndex];

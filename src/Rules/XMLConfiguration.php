@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Bigwhoop\SentenceBreaker\Rules;
 
-use SimpleXMLElement;
-
 class XMLConfiguration implements Configuration
 {
-    private SimpleXMLElement $data;
+    private \SimpleXMLElement $data;
 
     /**
      * @throws ConfigurationException

@@ -13,7 +13,6 @@ use Bigwhoop\SentenceBreaker\Rules\Configuration;
 use Bigwhoop\SentenceBreaker\Rules\ConfigurationException;
 use Bigwhoop\SentenceBreaker\Rules\IniConfiguration;
 use Bigwhoop\SentenceBreaker\Rules\Rules;
-use Generator;
 
 class SentenceBreaker
 {
@@ -29,7 +28,7 @@ class SentenceBreaker
     /**
      * @throws ConfigurationException
      */
-    public function __construct(?Configuration $rulesConfig = null)
+    public function __construct(Configuration $rulesConfig = null)
     {
         $rules = $rulesConfig ? $rulesConfig->getRules() : $this->loadDefaultRules();
 
@@ -88,12 +87,12 @@ class SentenceBreaker
     }
 
     /**
-     * @return Generator<string>
+     * @return \Generator<string>
      *
      * @throws ConfigurationException
      * @throws Lexing\States\StateException
      */
-    public function split(string $text): Generator
+    public function split(string $text): \Generator
     {
         $this->probabilityCalculator->setAbbreviations($this->getAbbreviations());
 

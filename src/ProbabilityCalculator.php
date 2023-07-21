@@ -10,7 +10,6 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\PotentialAbbreviationToken;
 use Bigwhoop\SentenceBreaker\Lexing\Tokens\Token;
 use Bigwhoop\SentenceBreaker\Rules\ConfigurationException;
 use Bigwhoop\SentenceBreaker\Rules\Rules;
-use Generator;
 
 class ProbabilityCalculator
 {
@@ -47,11 +46,11 @@ class ProbabilityCalculator
     /**
      * @param iterable<Token> $tokens
      *
-     * @return Generator<TokenProbability>
+     * @return \Generator<TokenProbability>
      *
      * @throws ConfigurationException
      */
-    public function calculate(iterable $tokens): Generator
+    public function calculate(iterable $tokens): \Generator
     {
         $tokenGenerator = function () use ($tokens) {
             foreach ($tokens as $token) {

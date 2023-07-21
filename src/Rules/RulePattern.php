@@ -72,7 +72,6 @@ class RulePattern
             range(0, count($this->tokens) - 1)
         );
 
-        /* @phpstan-ignore-next-line */
         return array_combine($offsets, $this->tokens);
     }
 }

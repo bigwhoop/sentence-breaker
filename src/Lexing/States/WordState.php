@@ -18,9 +18,6 @@ class WordState extends State
         return array_merge(['.', '?', '!', null], WhitespaceState::CHARS);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function call(Lexer $lexer): ?State
     {
         $nonWordChars = $this->getNonWordChars();

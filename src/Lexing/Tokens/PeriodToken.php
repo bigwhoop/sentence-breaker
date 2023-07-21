@@ -11,9 +11,6 @@ class PeriodToken implements Token
         return 'T_PERIOD';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPrintableValue(): string
     {
         return '.';

@@ -70,11 +70,7 @@ class Lexer
         $c = mb_substr($this->input, $this->pos + $offset, 1);
         $this->pos += 1 + $offset;
 
-        if ($c === '') {
-            return null;
-        }
-
-        return $c;
+        return $c === '' ? null : $c;
     }
 
     public function last(): ?string
@@ -94,10 +90,9 @@ class Lexer
 
     public function peek(int $offset = 0): ?string
     {
-        $c = $this->next($offset);
-        $this->backup($offset);
+        $c = mb_substr($this->input, $this->pos + $offset, 1);
 
-        return $c;
+        return $c === '' ? null : $c;
     }
 
     public function backup(int $offset = 0): void

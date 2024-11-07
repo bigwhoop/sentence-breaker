@@ -59,6 +59,7 @@ class Lexer
         $this->tokenPos = 0;
         $this->tokens = [];
         $this->state = new States\TextState();
+        $this->inputChars = [];
     }
 
     public function pos(): int
@@ -68,12 +69,10 @@ class Lexer
 
     public function next(int $offset = 0): ?string
     {
-        $this->pos += $offset;
-        if (!isset($this->inputChars[$this->pos])) {
-            return null;
-        }
+        $next = $this->inputChars[$this->pos + $offset] ?? null;
+        $this->pos += $offset + 1;
 
-        return $this->inputChars[$this->pos++];
+        return $next;
     }
 
     public function last(): ?string
@@ -104,6 +103,10 @@ class Lexer
     {
         $startPos = $this->tokenPos;
         $endPos = $this->pos;
+
+        if ($endPos <= $startPos) {
+            return '';
+        }
 
         return implode('', array_slice($this->inputChars, $startPos, $endPos - $startPos));
     }

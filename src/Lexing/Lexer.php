@@ -9,7 +9,8 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\ValueToken;
 
 class Lexer
 {
-    private string $input;
+    /** @var string[] */
+    private array $inputChars = [];
 
     private ?States\State $state;
 
@@ -49,7 +50,7 @@ class Lexer
     private function setInput(string $input): void
     {
         $this->reset();
-        $this->input = $input;
+        $this->inputChars = mb_str_split($input);
     }
 
     private function reset(): void
@@ -67,10 +68,12 @@ class Lexer
 
     public function next(int $offset = 0): ?string
     {
-        $c = mb_substr($this->input, $this->pos + $offset, 1);
-        $this->pos += 1 + $offset;
+        $this->pos += $offset;
+        if (!isset($this->inputChars[$this->pos])) {
+            return null;
+        }
 
-        return $c === '' ? null : $c;
+        return $this->inputChars[$this->pos++];
     }
 
     public function last(): ?string
@@ -79,20 +82,12 @@ class Lexer
             return null;
         }
 
-        $c = mb_substr($this->input, $this->pos - 1, 1);
-
-        if ($c === '') {
-            return null;
-        }
-
-        return $c;
+        return $this->inputChars[$this->pos - 1] ?? null;
     }
 
     public function peek(int $offset = 0): ?string
     {
-        $c = mb_substr($this->input, $this->pos + $offset, 1);
-
-        return $c === '' ? null : $c;
+        return $this->inputChars[$this->pos + $offset] ?? null;
     }
 
     public function backup(int $offset = 0): void
@@ -110,12 +105,7 @@ class Lexer
         $startPos = $this->tokenPos;
         $endPos = $this->pos;
 
-        $value = '';
-        if ($endPos > $startPos) {
-            $value = mb_substr($this->input, $startPos, $endPos - $startPos);
-        }
-
-        return $value;
+        return implode('', array_slice($this->inputChars, $startPos, $endPos - $startPos));
     }
 
     public function emit(Token $token): void

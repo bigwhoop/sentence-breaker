@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ ubuntu-latest ]
-        php-versions: [ '8.0', '8.1', '8.2' ]
+        php-versions: [ '8.0', '8.1', '8.2', '8.3', '8.4' ]
         composer-deps: [ 'lowest', 'latest' ]
     name: PHP ${{ matrix.php-versions }} on ${{ matrix.operating-system }} with ${{ matrix.composer-deps }} deps
     steps:
@@ -26,7 +26,7 @@ jobs:
         run: composer update --no-interaction --no-progress --no-suggest
         if: ${{ matrix.composer-deps == 'latest' }}
       - name: Code style check
-        run: vendor/bin/php-cs-fixer fix --dry-run
+        run: PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix --dry-run
       - name: Unit tests
         run: vendor/bin/phpunit
       - name: Static analysis

@@ -9,7 +9,8 @@ use Bigwhoop\SentenceBreaker\Lexing\Tokens\ValueToken;
 
 class Lexer
 {
-    private string $input;
+    /** @var string[] */
+    private array $inputChars = [];
 
     private ?States\State $state;
 
@@ -49,7 +50,7 @@ class Lexer
     private function setInput(string $input): void
     {
         $this->reset();
-        $this->input = $input;
+        $this->inputChars = mb_str_split($input);
     }
 
     private function reset(): void
@@ -58,6 +59,7 @@ class Lexer
         $this->tokenPos = 0;
         $this->tokens = [];
         $this->state = new States\TextState();
+        $this->inputChars = [];
     }
 
     public function pos(): int
@@ -67,14 +69,10 @@ class Lexer
 
     public function next(int $offset = 0): ?string
     {
-        $c = mb_substr($this->input, $this->pos + $offset, 1);
-        $this->pos += 1 + $offset;
+        $next = $this->inputChars[$this->pos + $offset] ?? null;
+        $this->pos += $offset + 1;
 
-        if ($c === '') {
-            return null;
-        }
-
-        return $c;
+        return $next;
     }
 
     public function last(): ?string
@@ -83,21 +81,12 @@ class Lexer
             return null;
         }
 
-        $c = mb_substr($this->input, $this->pos - 1, 1);
-
-        if ($c === '') {
-            return null;
-        }
-
-        return $c;
+        return $this->inputChars[$this->pos - 1] ?? null;
     }
 
     public function peek(int $offset = 0): ?string
     {
-        $c = $this->next($offset);
-        $this->backup($offset);
-
-        return $c;
+        return $this->inputChars[$this->pos + $offset] ?? null;
     }
 
     public function backup(int $offset = 0): void
@@ -115,12 +104,11 @@ class Lexer
         $startPos = $this->tokenPos;
         $endPos = $this->pos;
 
-        $value = '';
-        if ($endPos > $startPos) {
-            $value = mb_substr($this->input, $startPos, $endPos - $startPos);
+        if ($endPos <= $startPos) {
+            return '';
         }
 
-        return $value;
+        return implode('', array_slice($this->inputChars, $startPos, $endPos - $startPos));
     }
 
     public function emit(Token $token): void

@@ -28,7 +28,7 @@ class SentenceBreaker
     /**
      * @throws ConfigurationException
      */
-    public function __construct(Configuration $rulesConfig = null)
+    public function __construct(?Configuration $rulesConfig = null)
     {
         $rules = $rulesConfig ? $rulesConfig->getRules() : $this->loadDefaultRules();
 
@@ -79,7 +79,7 @@ class SentenceBreaker
     {
         if (is_array($values)) {
             $values = new ArrayProvider($values);
-        } elseif (!($values instanceof ValueProvider)) {
+        } elseif (!($values instanceof ValueProvider)) { // @phpstan-ignore-line
             throw new InvalidArgumentException('Values argument must either be an array or an instance of ' . ValueProvider::class);
         }
 

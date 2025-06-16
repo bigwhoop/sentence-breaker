@@ -20,9 +20,9 @@ class XMLConfigurationTest extends TestCase
 
         $this->assertEquals(new Rules([
             new Rule('T_EOF', [
-               new RulePattern(100, [
-                   new RulePatternToken('T_EOF', true),
-               ]),
+                new RulePattern(100, [
+                    new RulePatternToken('T_EOF', true),
+                ]),
             ]),
             new Rule('T_PERIOD', [
                 new RulePattern(75, [
